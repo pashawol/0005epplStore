@@ -1,9 +1,44 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col-lg-auto.col 
+					+e.logo(href="/")
+						img(src="img/@2x/logo-top.png", alt="")
+				.col.d-none.d-lg-block
+					ul
+						li: a(href="#") Каталог
+						li: a(href="#") Про нас
+						li: a(href="#") Контакти
+						li: a(href="#") Гарантія на повернення
+						li: a(href="#") Оплата та доставка
+						li: a(href="#")
+							+icon('user')
+							span.d-none.d-xl-inline Особистий кабінет
+				+e.divider.w-100.d-none.d-lg-block
+				.col-auto.d-none.d-sm-block
+						ul
+							li: a(href="#")
+								+icon('search')
+				+e.col.col.d-none.d-lg-block
+					ul 
+						li: a(href="#") Mac
+						li: a(href="#") iPad
+						li: a(href="#") iPhone
+						li: a(href="#") Watch
+						li: a(href="#") Аксесуари
+						li: a(href="#") Гаджети
+				.col-auto
+					ul
+						li: a(href="#")
+							+icon('heart')
+						li
+							+b.basket-block
+								+e.btn
+									+icon('basket')
+									+e.count 2
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
 	// end topLine

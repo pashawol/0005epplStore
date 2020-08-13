@@ -1,7 +1,84 @@
 
 	// start .topLine
 	.topLine {
-		 
+		 background-color: $body-color;
+		//  padding: rem(23) 0;
+		position: relative;
+		z-index: 2;
+		font-size: $small;
+		padding-top: rem(13);
+		padding-bottom: rem(13);
+		@include media-breakpoint-up(lg){
+			padding-top: rem(20);
+			padding-bottom: 0;
+			
+			&::before{
+				content: '';
+				position: absolute;
+			z-index: -1;
+			left: 0; 
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: #242424;
+			bottom: 0;
+			height: rem(44);
+		}
+	}
+		&__divider{
+			margin-top: 15px;
+			position: relative;
+
+		}
+		 .row{
+			 align-items: center;
+		 }
+		 &__col{
+			 ul{
+				//  max-width: rem(800);
+				max-width: rem(795px);
+
+			 }
+		 }
+		 ul{
+			 display: flex;
+			 align-items: center;
+			 margin-bottom: 0;
+			 justify-content: space-between;
+			 list-style: none;
+			 @include media-breakpoint-up(xl) {
+
+				 @include roww(rem(36));
+				 
+				}
+				@include roww(rem(30));
+			// margin-left: rem(-10px);
+			// margin-right: rem(-10px);
+			a{
+				color: #ffffff;
+				display: inline-block;
+				text-align: center;
+				padding: rem(11) 0;
+				span{
+
+					margin-left: rem(12);
+				}
+				&:hover{
+					color: $primary;
+				}
+			}
+			}
+
+			.icon{
+				font-size: rem(20);
+			}
+
+			&__logo{
+
+				@include media-breakpoint-up(xl) {
+					margin-right: 40px;
+				}
+			}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -23,7 +100,38 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
+	@include media-breakpoint-down(sm) {
+		.row{
+			@include roww(20px)
+		}
+	}
+	@include media-breakpoint-down(xs) {
+
+	} 
 
 } // end.topLine
+
+.basket-block{
+	&__btn{
+		color: #ffffff;
+		position: relative;
+		cursor: pointer;
+		@include mt;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__count{
+		color: #3d424a;
+		position: absolute;
+		background-color: $primary;
+		width: rem(13px);
+		height: rem(13px);
+		border-radius: 50%;
+		font-weight: 900;
+		font-size: rem(9);
+		text-align: center;
+		right: rem(-6);
+		top: rem(-6);
+	}
+}

@@ -6,6 +6,8 @@ module.exports = () => {
 			$.autoprefixer(),
 			$.cssnano(),
 			$.nested(),
+			$.flexGapPolyfill(),
+			// $.postcssPresetEnv(),
 		];
 		return $.gulp.src($.sourse + '/sass/main.scss')
 			.pipe($.sassGlob())

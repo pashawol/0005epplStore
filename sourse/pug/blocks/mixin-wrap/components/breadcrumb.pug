@@ -5,5 +5,10 @@ mixin breadcrumb(...items)
 			-for (var i = 0; i < items.length; i++)
 				li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem")
 					a(href=(i == 0 ? "/" : '#') itemprop="item" )
-						span( itemprop="name")= items[i]
-						meta(itemprop="position" content= (i + 1) )
+						if i == 0
+							span( itemprop="name")
+								+icon('home')
+							meta(itemprop="position" content="1")
+						else
+							span( itemprop="name")= items[i]
+							meta(itemprop="position" content= (i + 1) )

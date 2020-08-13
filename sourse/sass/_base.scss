@@ -411,3 +411,26 @@ img.img-bg,
 iframe {
 	border: none;
 }
+ .pageHead{
+	 
+ }
+
+.pageHead{
+		@include media-breakpoint-up(sm) {
+
+			padding-bottom: rem(40);
+		}
+		padding-bottom: rem(25);
+	&__wrap{
+		background-color: #e6e6e6;
+		@include media-breakpoint-up(sm){
+
+			margin-bottom: rem(55);
+		}
+		margin-bottom: rem(15);
+	}
+	h1{
+		@extend .h2;
+		@extend .mono;
+	}
+}

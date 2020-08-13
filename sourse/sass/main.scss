@@ -40,6 +40,12 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb {
+	.icon{
+		font-size: rem(20);
+	}
+	a{
+		color: #242424;
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;
@@ -94,16 +100,4 @@ $output-bourbon-deprecation-warnings: false;
 @import "media"; // Всегда в конце
 
 
-.row{
-	// --bs-gutter-x: 40px;
-}
-
-
-.block{
-	width: 50px;
-	height: 100px;
-	background: url(../img/svg/sprite.svg#check);
-	background-size: 100px 100px;
-	background-repeat: no-repeat;
-	// background-size: contain;
-}
+ 

@@ -7,13 +7,19 @@ include ../blocks/sContact/_sContact.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Главная'
+	- let  title= 'Гарантия и возврат'
 	title= title
 block pagecontent
 	+mob-mnu()
 	+header() 
 		+topLine()
 		//- +top-nav()
+	+b.pageHead
+		+e.wrap
+			.container
+				+breadcrumb('', title)
+		.container
+			h1= title 
 	+headerBlock()
 	+sForm()
 	+sContact()
