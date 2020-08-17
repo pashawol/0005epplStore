@@ -6,7 +6,7 @@
 	&__item-title {
 		// display: flex;
 		// flex-wrap: wrap;
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			font-size: 30px;
 			line-height: (58 / 30);
 			padding-left: 44px;
@@ -14,7 +14,6 @@
 		}
 		font-size: $em-base;
 		line-height: (18 / 15);
-		max-width: 634px;
 		margin-bottom: 36px;
 		padding: 19px 100px 23px 28px;
 		color: #fff;
@@ -33,16 +32,21 @@
 
 	.garant{
 		background-image: url(../img/@2x/02-garanty-1.jpg);
-		// background-size: 100%;
-		// background-position: center;
-		// background-repeat: no-repeat;
+		@include media-breakpoint-up(md) {
+			background-size: 100% 100%;
+		}
+		background-size: 171% 100%;
+		background-position: center;
+		
 	}
 
 	.oferta{
 		background-image: url(../img/@2x/02-garanty-2.jpg);
-		// background-size: 100%;
-		// background-position: center;
-		// background-repeat: no-repeat;
+		@include media-breakpoint-up(md) {
+			background-size: 100% 100%;
+		}
+		background-size: 173% 100%;
+		background-position: center;
 	}
 
 	p{
