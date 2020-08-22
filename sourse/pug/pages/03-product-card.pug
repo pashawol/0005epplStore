@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sProdDescr/_sProdDescr.pug
+include ../blocks/sBuyWith/_sBuyWith.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '03-product-card'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header() 
+		+topLine()
+	+b.pageHead
+		+e.wrap
+			.container
+				+breadcrumb('', 'iphone', 'iphone 11 PRO', 'Apple iphone 11 PRO Max 256 ГБ темно-зеленый')
+		.container
+			h1 Apple iPhone 11 PRO Max 256 ГБ темно-зеленый
+	+sProdCard()
+	+sProdDescr()
+	+sBuyWith()
+	+footer()
+
+
+	

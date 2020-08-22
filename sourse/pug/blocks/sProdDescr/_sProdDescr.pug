@@ -1,0 +1,245 @@
+mixin sProdDescr()
+	// start sProdDescr
+	+b.sProdDescr.section#sProdDescr&attributes(attributes)
+		+e.container.container
+			+b.tabs
+				+e.caption
+					+e.btn.prod-descr-tab-js Описание
+					+e.btn.prod-descr-tab-js Характеристики
+					+e.btn.prod-descr-tab-js.active Отзывы (7)
+					+e.btn.prod-descr-tab-js Рассрочка и кредит
+					+e.btn.prod-descr-tab-js Услуги
+				+e.wrap
+					+e.content
+						+descriptionTabContent()
+					+e.content
+						+prodCharTabContent()
+					+e.content.active
+						+FeedBackTabContent()
+					+e.content
+						| 4
+					+e.content
+						| 5
+	// end sProdDescr
+
+	//-tab 1 descr
+mixin descriptionTabContent()
+	+b.description-tab
+		+e.baner
+			+e.baner-left-bg
+				img.lazy(src="#" data-src="img/@2x/descr-baner-left-bg.png" alt="")
+			+e.baner-right-bg
+				img.lazy(src="#" data-src="img/@2x/descr-baner-right-bg.png" alt="")
+			+e.baner-txt
+				h2
+					| Камеры. Дисплей.
+					br
+					| Процессор. До предела.
+				p
+					| Революционная система трёх камер&nbsp;&mdash; гораздо больше возможностей
+					|
+					br
+					| и&nbsp;неизменная простота в&nbsp;использовании. Беспрецедентное увеличение
+					|
+					br
+					| ресурса аккумулятора. И&nbsp;потрясающий процессор с&nbsp;расши&shy;ренной поддержкой
+					|
+					br
+					| технологий машинного обучения, который открывает для iPhone большие новые перспективы.
+					|
+					br
+					| Представляем iPhone 11&nbsp;Pro. Он&nbsp;достоин своего имени.
+			+e.baner-img
+				img.lazy(src="#" data-src="img/@2x/phone-slices.png" alt="")
+		//detail
+		+e.det-block
+			+e.det-txt
+				h2 Феноменальное внимание к деталям.
+				p
+					| Четыре новых цвета. Фактурное матовое стекло на задней панели.
+					|
+					br
+					| Дисплей Super Retina XDR 5,8 или 6,5 дюйма.¹ И самое прочное стекло iPhone.
+			+e.det-slider
+				.swiper-container.det-slider-js
+					.swiper-wrapper
+						+detSlide(1)
+						+detSlide(2)
+						+detSlide(3)
+						+detSlide(5)
+						+detSlide(2)
+						+detSlide(3)
+						+detSlide(5)
+				.swiper-prev-frame.det-slider-prev
+					+icon('chevron-left')
+				.swiper-next-frame.det-slider-next
+					+icon('chevron-right')
+		+e.picture-block
+			+e.H2.pic-title Три камеры. Одно удовольствие.
+			+e.picture-cont
+				+pic('camera-picture.jpg')(class='description-tab__picture')
+			+e.pic-txt
+				ul
+					li
+						| Дисплей представляет собой прямоугольник с&nbsp;закруглёнными углами. Диагональ этого прямоугольника без учёта закруглений составляет
+						|
+						br
+						| 5,85 дюйма (для iPhone 11&nbsp;Pro), 6,46 дюйма (для iPhone 11&nbsp;Pro Max) или 6,06 дюйма (для iPhone 11). Фактическая область просмотра меньше.
+					li Время работы от&nbsp;аккумулятора зависит от&nbsp;настроек и&nbsp;характера использования устройства. Подробнее на&nbsp;странице apple.com/ru/batteries.
+					li По&nbsp;сравнению с&nbsp;предыдущим поколением.
+				p Некоторые функции могут быть доступны не&nbsp;во&nbsp;всех странах и&nbsp;регионах.
+				p Часть доходов от&nbsp;продажи каждого (PRODUCT)RED перечисляется в&nbsp;Глобальный фонд для борьбы со&nbsp;СПИДом в&nbsp;Африке.
+
+mixin detSlide(imgNum)
+	.swiper-slide
+		+e.A.det-img(href=`img/@2x/det-slide-${imgNum}.jpg` data-fancybox=`detailImg`)
+			+e.det-img-inner
+				img.swiper-lazy(src="#" data-src=`img/@2x/det-slide-${imgNum}.jpg` alt="")
+
+	//-end tab 1 descr
+
+	//-tab 2 chars
+
+mixin prodCharTabContent()
+	+b.prod-char-tab
+		+prodCharTabItem('Основные характеристики')
+			+e.table
+				+prodCharTabRow('Объем накопителя')
+					| 256 ГБ
+				+prodCharTabRow('Цвет')
+					| Темно-зеленый
+		+prodCharTabItem('Процессор')
+			+e.table
+				+prodCharTabRow('Процессор')
+					| A13 Bionic
+		+prodCharTabItem('Дисплей')
+			+e.table
+				+prodCharTabRow('Диагональ')
+					| 6,5"
+				+prodCharTabRow('Разрешение')
+					| 2688x1242
+				+prodCharTabRow('Яркость')
+					| 800 кд/м²
+				+prodCharTabRow('Контрастность')
+					| 2000000:1
+				+prodCharTabRow('Плотность пикселей на дюйм')
+					| 458 пикс/дюйм
+				+prodCharTabRow('Тип дисплея')
+					| OLED
+				+prodCharTabRow('Multi-Touch')
+					| Да
+				+prodCharTabRow('Технологии дисплея')
+					| True Tone
+		+prodCharTabItem('Камера')
+			+e.table
+				+prodCharTabRow('Разрешение камеры')
+					| 12 Мп
+				+prodCharTabRow('Тип объектива')
+					| широкоугольный    сверхширокоугольный    телефото
+				+prodCharTabRow('Диафрагма')
+					| широкоугольная: ƒ/1.8, сверхшироко­угольная: ƒ/2.4, телефото: ƒ/2.0
+				+prodCharTabRow('Стабилизация изображения')
+					| двойная оптическая
+				+prodCharTabRow('Зум (фото)')
+					| 10-кратный цифровой    двухкратный оптический    двухкратный оптический (на уменьшение)
+				+prodCharTabRow('Количество линз')
+					| шестилинзовый
+				+prodCharTabRow('Защита объектива')
+					| сапфировое стекло
+				+prodCharTabRow('Функции камеры')
+					| вспышка True Tone с функцией Slow Sync    режим «Портрет»    автоматическая стабилизация изображения
+					| автофокус    фокусировка касанием    распознавание лиц    распознавание лиц и фигур    контроль экспозиции
+					| функция Smart HDR    автокоррекция    ночной режим    панорамная съёмка    серийная съëмка    режим таймера
+					| привязка фотографий к месту съёмки    портретное освещение
+		+prodCharTabItem('Запись видео')
+			+e.table
+				+prodCharTabRow('Разрешение видео')
+					| 4K с частотой 24, 30 или 60 кадров/сек    Расширенный динамический диапазон при записи видео с частотой
+					| до 30 кадров/сек    HD-видео 1080p с частотой 30 или 60 кадров/сек    HD-видео 720p с частотой 30 кадров/сек
+				+prodCharTabRow('Разрешение замедленного видео')
+					| HD-видео 1080р c частотой 120 кадров/сек     или     240 кадров/сек
+				+prodCharTabRow('Зум (видео)')
+					| 6-кратный цифровой    оптический
+				+prodCharTabRow('Функции видео')
+					| вспышка True Tone Quad-LED    оптическая стабилизация изображения    следящий автофокус    возможность съёмки
+					| фотографий во время записи видео    запись стереозвука    кинемато­графическая стабилизация видео (1080p и 720p)
+					| функция QuickTake
+		+prodCharTabItem('Фронтальная камера')
+			+e.table
+				+prodCharTabRow('Разрешение фронт. камеры')
+					| 12 Мп
+				+prodCharTabRow('Диафрагма фронт. камеры')
+					| ƒ/2.2
+				+prodCharTabRow('Разрешение видео фронт. камеры')
+					| 4K
+				+prodCharTabRow('Функции фронт. камеры')
+					| вспышка Retina Flash    автоматическая стабилизация изображения    серийная съëмка    режим «Портрет»
+					| анимированные смайлики Animoji и Memoji
+
+mixin prodCharTabItem(headerTxt)
+	+e.item
+		+e.header=headerTxt
+		block
+
+mixin prodCharTabRow(title)
+	+e.row-item
+		+e.title=title
+		+e.description
+			block
+//-
+
+mixin FeedBackTabContent()
+	+b.feedback-tab
+		+e.header
+			+e.amount
+				p Отзывы
+				span 7
+			+e.A.feedb-btn.scroll-link(href="#feedbackForm") Оставить отзыв
+		+e.items
+			+feedBackItem('Софья Сергеевна Чобанян', 4)
+			+feedBackItem('Константин', 2)
+			+feedBackItem('Елизавета', 4)
+			+feedBackItem('Софья Сергеевна Чобанян', 4)
+			+feedBackItem('Георгий Новиков', 5)
+			+feedBackItem('Софья Сергеевна Чобанян', 1)
+			+feedBackItem('Степан', 4)
+		+e.form#feedbackForm
+			+form-wrap
+				+pic('leave-feedback-bg.jpg')(class="form-wrap__bg")
+				+e.inner-cont
+					+e.stars-cont
+						+e.stars-title Оставить отзыв
+						+e.stars
+							- for (let i=0; i < 5; i++)
+								+e.star.star-js
+									input(type='radio' name='star-mark')
+									+icon('star')
+					+e.inputs-block
+						+input('Ваше имя','text')
+						+input('Ваш e-mail','email')
+						+input('Отзыв','textarea', undefined, 'message')
+					+e.btn-cont
+						+e.BUTTON.btn(type='submit') Оставить отзыв
+						+e.after-btn Гарантируем конфидециальность ваших данных
+
+
+mixin feedBackItem(name, starsNum)
+	+e.item
+		+e.item-data
+			+e.name=name
+			+e.date
+				+icon('calendar')
+				span 24.07.20
+			+stars(starsNum)
+		+e.item-txt
+			p Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.
+
+mixin stars(num)
+	+e.stars-cont
+		- for (let i = 1; i <=5; i++)
+			if i <= num
+				+e.star.filled-star
+					+icon('star')
+			else
+				+e.star.empty-star
+					+icon('star')
