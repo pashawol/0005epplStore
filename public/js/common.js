@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '03-feedback-1920.png';
+	screenName = 'main-mob.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -271,6 +271,10 @@ function eventHandler() {
 		passive: true
 	});
 	whenResize();
+	$('.sDescr__showMore').click(function () {
+		$(this).slideToggle();
+		$(this).parent().find('.sDescr__row').addClass('active');
+	});
 	var defaultSl = (_defaultSl = {
 		spaceBetween: 0,
 		lazy: {
@@ -288,6 +292,39 @@ function eventHandler() {
 		// }
 
 	}), _defaultSl);
+	var bannerSleder = new Swiper('.bannerSleder-js', {
+		slidesPerView: 1,
+		loop: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		pagination: {
+			el: '.bannerSleder-js .swiper-pagination',
+			clickable: true
+		}
+	});
+	var sliderCategory = new Swiper('.sliderCategory-js', {
+		slidesPerView: 2,
+		loop: false,
+		// freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true,
+		spaceBetween: 3,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5
+		},
+		pagination: {
+			el: '.sliderCategory-js .swiper-pagination',
+			clickable: true
+		},
+		breakpoints: {
+			992: {
+				slidesPerView: 'auto'
+			}
+		}
+	});
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
@@ -296,7 +333,9 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
-	//luckyoneJs
+
+	var now = new Date();
+	$('.curentYear').text(now.getFullYear()); //luckyoneJs
 	//prod card slider
 
 	var prodCardThumb = new Swiper('.prod-card-thumb-js', {

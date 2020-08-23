@@ -15,13 +15,13 @@ block pagecontent
 	+header() 
 		+topLine()
 		//- +top-nav()
-	+b.pageHead(class="pageHead--03")
+	+b.pageHead
 		+e.wrap
 			.container
 				+breadcrumb('', title)
 		.container
 			.row
-				.col
+				.col-lg
 					h1= title
 				.col-auto
 					+e.A.btn.active(href="#") Все

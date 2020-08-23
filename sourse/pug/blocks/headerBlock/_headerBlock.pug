@@ -1,10 +1,48 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+b.bannerSleder
+			.swiper-container.bannerSleder-js
+				.swiper-wrapper
+					mixin bannerSled()
+						.swiper-slide
+							+e.slideWrap&attributes(attributes)
+								.container
+									.row
+										+e.picCol.col-lg-6.order-lg-last
+											picture
+												source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/banner.webp` type="image/webp")
+												img.swiper-lazy(src="#" data-src=`img/@2x/banner.png`, alt="")
+										+e.col.col-lg
+											picture
+												source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/iphoneSE.webp` type="image/webp")
+												img.swiper-lazy(src="#" data-src=`img/@2x/iphoneSE.png`, alt="")
+											+b.section-title
+												.h1 Все, как вы любите
+											+e.price от 39 990 р
+												+e.installmentPlan.d-none.d-lg-block Доступен в рассрочку
+											+e.btn(href="#") Купить
+					+bannerSled()(style="background-color: #e6e6e6")
+					+bannerSled()(style="background-color: #e6e6e6")
+					+bannerSled()(style="background-color: #e6e6e6")
+					+bannerSled()(style="background-color: #e6e6e6")
+				.swiper-pagination
+		+b.sliderCategory
+			.swiper-container.sliderCategory-js
+				.swiper-wrapper
+					mixin categorySlide(i,t,p)
+						.swiper-slide
+							+e.slideWrap(href='#')
+								picture
+									source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/headerCategory-${i}.webp` type="image/webp")
+									img.swiper-lazy(src="#" data-src=`img/@2x/headerCategory-${i}.png`, alt="")
+								+e.title= t
+								+e.price= p
+					+categorySlide('1','Смартфоны iphone','от 26 990 р ')
+					+categorySlide('2','Планшеты iPad','от 27 990 р ')
+					+categorySlide('3','Ноутбуки MacBook','от 66 990 р ')
+					+categorySlide('4','Часы Apple Watch','от 15 990 р ')
+					+categorySlide('5','Аксессуары','от 100 р ')
+				.swiper-pagination.d-lg-none
 
-			.row
-						
 	// end headerBlock
