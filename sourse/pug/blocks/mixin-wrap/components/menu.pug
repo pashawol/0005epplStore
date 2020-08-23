@@ -10,8 +10,47 @@ mixin mnu()
 			" Клиентам  ":"#",
 			" Наши работы   ":"#",
 			"Контакты ":"#sContact"
+			
 			}
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+//- /menu
+
+mixin mnu-footer()
+	-
+		var nav= {
+			"О компании":"/",
+			"Адреса магазинов  ":"#",
+			"Преимущества  ":"#",
+			"Акции и новости ":"#",
+			"Услуги":"#",
+			"Академия ":"#",
+			"Блог ":"#",
+			"Вакансии":"#",
+			"Контакты":"#",
+			"Обратная связь ":"#",
+			"Помощь ":"#",
+			"Доставка и оплата ":"#",
+			"Обмен и возврат":"#",
+			"Гарантии ":"#",
+			"Trade-in ":"#",
+			"Сервисные центры Apple ":"#",
+			"Сервисная программа ":"#",
+			"Бонусная программа ":"#",
+			"Подарочные сертификаты ":"#",
+			"Рассрочка и кредит ":"#",
+			"Мобильная версия сайта ":"#",
+			"Каталог ":"#",
+			"Mac ":"#",
+			"iPhone ":"#",
+			"Watch ":"#",
+			"iPad ":"#",
+			"Аксессуары ":"#",
+			"Гаджеты ":"#",
+			"Распродажа ":"#",
+			}
+	+b.UL.navMenu--footer(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu

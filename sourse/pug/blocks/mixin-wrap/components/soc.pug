@@ -11,7 +11,17 @@ mixin soc()
 			block
 		else
 			+item-sos('fb')
+			+item-sos('vk')
 			+item-sos('instagram')
-			+item-sos('telegram')
+			+item-sos('youtube')
 
+
+mixin messengers()
+	+b.messengers
+		+e.item(href="#")
+			+icon('whatsapp')
+		+e.item(href="#")
+			+icon('viber')
+		+e.item(href="#")
+			+icon('telegram')
 //- /social buttons 

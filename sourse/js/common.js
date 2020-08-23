@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '02.jpg';
+	screenName = 'main-mob.jpg';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -259,6 +259,11 @@ function eventHandler() {
 
 	whenResize();
 
+	$('.sDescr__showMore').click(function(){
+		$(this).slideToggle();
+		$(this).parent().find('.sDescr__row').addClass('active');
+	})
+
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -282,6 +287,41 @@ function eventHandler() {
 		},
 	}
 
+	const bannerSleder = new Swiper('.bannerSleder-js', {
+		slidesPerView: 1,
+		loop: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+		pagination: {
+			el: '.bannerSleder-js .swiper-pagination',
+			clickable: true,
+		},
+	});
+
+	const sliderCategory = new Swiper('.sliderCategory-js', {
+		slidesPerView: 2,
+		loop: false,
+		// freeMode: true,
+		freeModeMomentum: true,
+		watchOverflow: true,
+		spaceBetween: 3,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+		pagination: {
+			el: '.sliderCategory-js .swiper-pagination',
+			clickable: true,
+		},
+		breakpoints: { 
+			992: {
+				slidesPerView: 'auto',
+			},
+		},
+	});
+
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -294,7 +334,8 @@ function eventHandler() {
 
 	});
 	// modal window
-
+	let now = new Date();
+	$('.curentYear').text(now.getFullYear());
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

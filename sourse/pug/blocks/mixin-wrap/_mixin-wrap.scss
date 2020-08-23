@@ -1,14 +1,19 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
+	margin: 0 rem(-5) rem(50);
 	display: flex;
 	&__item{
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #c7c6c6;
 		text-decoration: none !important;
-		margin: 0 rem(5px);
-		vertical-align: middle;
+		margin: 0 rem(5);
 		@include mt;
-		display: block;
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .6 ;
@@ -16,7 +21,7 @@
 		
 	}
 	.icon{
-	font-size: rem(30);
+		font-size: rem(14);
 	}
 	 
 
@@ -31,6 +36,33 @@
 			content: counter(num);
 			counter-increment: num;
 		}
+	}
+}
+
+.messengers {
+	display: flex;
+	align-items: center;
+	margin-bottom: rem(26);
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		border: 1px solid #c7c6c6;
+		&:not(:last-child) {
+			margin-right: rem(9);
+		}
+
+		&:hover {
+			background-color: #6fd200;
+			border-color: #c7c6c6;
+		}
+	}
+	.icon {
+		font-size: rem(15);
+		color: #000;
 	}
 }
 

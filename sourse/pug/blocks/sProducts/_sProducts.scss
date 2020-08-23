@@ -1,0 +1,190 @@
+// start .sProducts
+.sProducts {
+	padding-top: calc(var(--sPT) / 1.4);
+	padding-bottom: calc(var(--sPB) / 1.5);
+
+	h2 {
+		@extend .mono;
+		letter-spacing: rem(-0.5);
+	}
+	.section-title {
+		padding-bottom: calc(var(--sTPB) / 1.3);
+	}
+	.tabs {
+		&__caption{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 25px;
+		}
+
+		&__btn {
+			@extend .btn;
+			width: 156px;
+			margin: 8px;
+
+			&:not(.active) {
+				@extend .btn-outline-dark;
+			}
+
+			&.active {
+				@extend .btn-success;
+				background-color: #6fd200;
+				border-color: #6fd200;
+				pointer-events: none;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sProducts
+
+.productItem {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: calc(100% - 31px);
+	margin-bottom: 31px;
+	position: relative;
+	padding: rem(12) rem(12) rem(36);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		position: absolute;
+		box-shadow: 0 3px 16px rgba(22, 32, 21, 0.13);
+		@include media-breakpoint-up(lg) {
+			height: 109%;
+			transform: scale(0);
+		}
+		@include mt;
+		z-index: -1;
+	}
+
+	&:hover {
+		&::before {
+			transform: scale(1);
+		}
+	}
+
+	&__heart {
+		cursor: pointer;
+		position: absolute;
+		right: 32px;
+		top: 32px;
+		@include media-breakpoint-up(lg) {
+			transform: scale(0);
+		}
+		@include mt;
+
+		.icon {
+			font-size: rem(16);
+			color: #adacac;
+			@include mt;
+		}
+
+		&:hover .icon {
+			color: $primary;
+		}
+
+		&:focus, &:active, .active {
+			.icon {
+				color: red;
+			}
+		}
+	}
+	&:hover &__heart {
+		transform: scale(1);
+	}
+
+	picture {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 220px;
+		margin-bottom: rem(15);
+	}
+
+	&__name {
+		text-align: center;
+		color: $body-color;
+		margin-bottom: 20px;
+		font-weight: 300;
+		max-width: rem(200);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__price {
+		color: $body-color;
+		margin-bottom: auto;
+		padding-bottom: 10px;
+		font-weight: 600;
+	}
+
+	&__delivery {
+		font-size: $small;
+		color: $secondary;
+		font-weight: 300;
+		margin-bottom: 15px;
+	}
+
+	&__btnBuy, &__btnPreOrder {
+		@extend .btn;
+		@extend .btn-outline-dark;
+		min-width: 93px;
+		@include media-breakpoint-up(sm) {
+			min-width: 127px;
+		}
+		margin-top: auto;
+	}
+
+	&__btnPreOrder {
+		background-color: $light;
+		border-color: $light;
+	}
+
+	&__oneClick {
+		text-align: center;
+		margin-top: rem(19);
+		color: $body-color;
+		font-weight: 300;
+		overflow: hidden;
+		font-size: 13px;
+		position: absolute;
+		bottom: rem(5);
+		// height: 0;
+		@include media-breakpoint-up(lg) {
+			font-size: 16px;
+			transform: scale(1, 0);
+			bottom: rem(-5);
+		}
+		@include mt;
+		transform-origin: center top;
+	}
+	&:hover &__oneClick{
+		transform: scale(1);
+	}
+}

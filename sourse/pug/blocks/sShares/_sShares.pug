@@ -1,0 +1,27 @@
+mixin sShares()
+	// start sShares
+	+b.SECTION.sShares.section#sShares&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Акції та новини
+				
+			.row
+				.col-lg-6
+					+e.item--left(href="#")
+						+pic('shares-bg','','lazy','')
+						+e.subtitle акция
+						+e.text
+							+e.title Акция!
+							.h5 Приятная скидка 10% на MacBook PRO
+				.col-lg-6
+					+e.item--right(href="#")
+						+pic('news-bg','','lazy','')
+						+e.subtitle новости
+						+e.text
+							+e.title-sm Присмотритесь.
+							+e.DIV.beveledText
+								+e.shaped
+								.h6 Два размера. Четыре отделки.&nbsp;Конструкция из нержавеющей стали и стекла.
+							+e.btn Подробнее
+				+e.seeAll(href="#") Больше новостей
+	// end sShares

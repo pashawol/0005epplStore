@@ -12,7 +12,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0;
+	background-position: center 40px;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -432,5 +432,13 @@ iframe {
 	h1{
 		@extend .h2;
 		@extend .mono;
+	}
+}
+
+.btn-outline-dark {
+	font-weight: 300;
+	&:hover {
+		background-color: #6fd200;
+		border-color: #6fd200;
 	}
 }

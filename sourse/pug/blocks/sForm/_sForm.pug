@@ -1,9 +1,15 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.sForm#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+			.row.align-items-center
+				.col-lg-3
+				+e.col.col-md-auto
+					+form-wrap
+						+input('Подписаться на новости','email')
+						+e.btn(type="submit")
+							+icon('subscribe')
+				+e.coll.col-md
+					p Подписываясь на&nbsp;рассылку, вы&nbsp;соглашаетесь с&nbsp;#[a(href="#") офертой]&nbsp;и&nbsp;#[a(href="#") условиями обработки персональных данных]
+
 	// end sForm

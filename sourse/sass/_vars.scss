@@ -13,7 +13,7 @@ $rfs-breakpoint: 1200px !default;
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-200: #e6e6e6 !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
@@ -70,7 +70,7 @@ $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: #f4f4f4 !default;
-$dark: #000 !default;
+$dark: #242424 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: ("primary": $primary,
@@ -227,7 +227,7 @@ $container-padding-x: $grid-gutter-width / 2 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: .25rem !default;
+$border-radius: rem(30px) !default;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: .3rem !default;
 
@@ -426,10 +426,10 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .375rem !default;
+$input-btn-padding-y: 0.7rem !default;
 $input-btn-padding-x: .75rem !default;
 $input-btn-font-family: null !default;
-$input-btn-font-size: $font-size-base !default;
+$input-btn-font-size: 17px !default;
 $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: .2rem !default;
@@ -508,10 +508,10 @@ $form-label-font-style: null !default;
 $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(15) !default;
+$input-padding-x: rem(23) !default;
 $input-font-family: $input-btn-font-family !default;
-$input-font-size: $input-btn-font-size !default;
+$input-font-size: $small !default;
 $input-font-weight: $font-weight-base !default;
 $input-line-height: $input-btn-line-height !default;
 

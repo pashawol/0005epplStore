@@ -1,0 +1,50 @@
+mixin productItem(img,name,price,pre)
+	+b.productItem&attributes(attributes)
+		+e.heart
+			+icon('heart')
+		a(href="#")
+			+pic(`popularCategory-${img}.png`,'','lazy','')
+		+e.name(href="#")= name
+		+e.price= price
+		if pre
+			+e.btnPreOrder(href="#") Предзаказ
+		else
+			+e.delivery Доставка
+			+e.btnBuy(href="#") Купить
+			+e.oneClick(href="#") Купить в 1 клик
+
+mixin sProducts()
+	// start sProducts
+	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Товари
+				
+			+b.tabs
+				+e.caption
+					+e.btn Новинки
+					+e.btn.active Популярные
+				+e.wrap
+					mixin content
+						+e.content&attributes(attributes)
+							.row
+								.col-6.col-lg-3
+									+productItem('1','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ')
+								.col-6.col-lg-3
+									+productItem('2','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ','pre')
+								.col-6.col-lg-3
+									+productItem('3','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ')
+								.col-6.col-lg-3
+									+productItem('4','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ','pre')
+								.col-6.col-lg-3
+									+productItem('4','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ')
+								.col-6.col-lg-3
+									+productItem('3','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ','pre')
+								.col-6.col-lg-3
+									+productItem('2','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ')
+								.col-6.col-lg-3
+									+productItem('5','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ','pre')
+					+content(class="active")
+					+content
+
+	// end sProducts

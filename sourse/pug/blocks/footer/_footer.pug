@@ -1,4 +1,55 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+e.topLine.d-lg-none
+					+e.logo
+						+pic('logo-descr.png','','lazy','')
+					+e.mnu
+						+e.text Меню
+						+b.toggle-menu-mobile--js
+							span
+				.col-lg-3
+					+messengers()
+					+e.tel(href="tel:88007001944") 8 800 700-19-44
+					+e.schedule c 9:00 до 22:00, без выходных
+					+soc()
+					+e.polite &copy;&nbsp;#[span.curentYear ] epplstore&nbsp;&mdash; магазин и&nbsp;сервисный центр техники Apple
+
+				.col-lg-3.d-none.d-lg-block
+					+e.title(href="#") О компании
+					+e.UL.nav
+						li: a(href="#") Адреса магазинов
+						li: a(href="#") Преимущества
+						li: a(href="#") Акции и новости
+						li: a(href="#") Услуги
+						li: a(href="#") Академия
+						li: a(href="#") Блог
+						li: a(href="#") Корпоративным клиентам
+						li: a(href="#") Вакансии
+						li: a(href="#") Контакты
+						li: a(href="#") Обратная связь
+
+				.col-lg-3.d-none.d-lg-block
+					+e.title(href="#") Помощь
+					+e.UL.nav
+						li: a(href="#") Доставка и оплата
+						li: a(href="#") Обмен и возврат
+						li: a(href="#") Гарантии
+						li: a(href="#") Trade-in
+						li: a(href="#") Сервисные центры Apple
+						li: a(href="#") Сервисная программа
+						li: a(href="#") Бонусная программа
+						li: a(href="#") Подарочные сертификаты
+						li: a(href="#") Рассрочка и кредит
+						li: a(href="#") Мобильная версия сайта
+				.col-lg-3.d-none.d-lg-block
+					+e.title(href="#") Каталог
+					+e.UL.nav
+						li: a(href="#") Mac
+						li: a(href="#") iPhone
+						li: a(href="#") Watch
+						li: a(href="#") iPad
+						li: a(href="#") Аксессуары
+						li: a(href="#") Гаджеты
+						li: a(href="#") Распродажа
