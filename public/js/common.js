@@ -1,5 +1,11 @@
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -248,6 +254,7 @@ function eventHandler() {
 	function whenResize() {
 		var topH = document.querySelector('header').scrollHeight;
 		var stickyElement = document.querySelector('.top-nav');
+		if (!stickyElement) return;
 
 		window.onscroll = function () {
 			if ($(window).scrollTop() > topH) {
@@ -328,7 +335,147 @@ function eventHandler() {
 	})); // modal window
 
 	var now = new Date();
-	$('.curentYear').text(now.getFullYear());
+	$('.curentYear').text(now.getFullYear()); //luckyoneJs
+	//prod card slider
+
+	var prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 5,
+		//breakpoints
+		breakpoints: {
+			10: {
+				direction: 'vertical'
+			},
+			576: {
+				direction: 'horizontal'
+			},
+			768: {},
+			992: {}
+		},
+		//nav
+		navigation: {
+			nextEl: '.prod-card-th-next',
+			prevEl: '.prod-card-th-prev'
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10
+		}
+	});
+	var prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+		thumbs: {
+			swiper: prodCardThumb
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		}
+	}); //.det-slider-js
+
+	var detSlider = new Swiper('.det-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+		//nav
+		navigation: {
+			nextEl: '.det-slider-next',
+			prevEl: '.det-slider-prev'
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
+		}
+	});
+	$('.prod-descr-tab-js').click(function () {
+		window.setTimeout(function () {
+			var detSwiperCont = document.querySelector('.det-slider-js');
+			if (!detSwiperCont) return;
+			detSwiperCont.swiper.update();
+		}, 300);
+	}); //.buy-with-slider-js
+
+	var buyWithSlider = new Swiper('.buy-with-slider-js', {
+		//loop: true,
+		slidesPerColumnFill: 'row',
+		breakpoints: {
+			1: {
+				spaceBetween: 15,
+				slidesPerView: 2,
+				slidesPerColumn: 2
+			},
+			575: {
+				slidesPerColumn: 2,
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerColumn: 1,
+				spaceBetween: 20
+			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerColumn: 1,
+				spaceBetween: 30
+			}
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.buy-with-pugin'),
+			clickable: true
+		},
+		//nav
+		navigation: {
+			nextEl: '.buy-with-next',
+			prevEl: '.buy-with-prev'
+		}
+	}); //stars js
+
+	$('.star-js').click(function () {
+		var thisIndex = $('.star-js').index(this);
+		var allThis = this.parentElement.children;
+
+		for (var i = 0; i <= thisIndex; i++) {
+			allThis[i].classList.add('active');
+		}
+
+		for (var _i = thisIndex + 1; _i <= allThis.length - 1; _i++) {
+			allThis[_i].classList.remove('active');
+		}
+	});
+	$('.star-js').mouseover(function () {
+		var thisIndex = $('.star-js').index(this);
+		var allThis = this.parentElement.children;
+
+		for (var i = 0; i <= thisIndex; i++) {
+			allThis[i].classList.add('hover-paint-js');
+		}
+
+		for (var _i2 = thisIndex + 1; _i2 <= allThis.length - 1; _i2++) {
+			allThis[_i2].classList.remove('hover-paint-js');
+		}
+	});
+	$('.star-js').mouseout(function () {
+		var allThis = this.parentElement.children;
+
+		var _iterator = _createForOfIteratorHelper(allThis),
+				_step;
+
+		try {
+			for (_iterator.s(); !(_step = _iterator.n()).done;) {
+				var star = _step.value;
+				star.classList.remove('hover-paint-js');
+			}
+		} catch (err) {
+			_iterator.e(err);
+		} finally {
+			_iterator.f();
+		}
+	}); //end luckyoneJs
 }
 
 ;

@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>03-product-card</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+						</li>
+					</ul>
+					<div class="text-right"></div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header"> 
+				<!-- start topLine-->
+				<div class="topLine">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-auto col"> <a class="topLine__logo" href="/"><img src="img/@2x/logo-top.png" alt=""/></a>
+							</div>
+							<div class="col d-none d-lg-block">
+								<ul>
+									<li><a href="#">Каталог</a></li>
+									<li><a href="#">Про нас</a></li>
+									<li><a href="#">Контакти</a></li>
+									<li><a href="#">Гарантія на повернення</a></li>
+									<li><a href="#">Оплата та доставка</a></li>
+									<li><a href="#">
+											<svg class="icon icon-user ">
+												<use xlink:href="img/svg/sprite.svg#user"></use>
+											</svg><span class="d-none d-xl-inline">Особистий кабінет</span></a></li>
+								</ul>
+							</div>
+							<div class="topLine__divider w-100 d-none d-lg-block">
+							</div>
+							<div class="col-auto d-none d-sm-block">
+								<ul>
+									<li><a href="#">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg></a></li>
+								</ul>
+							</div>
+							<div class="topLine__col col d-none d-lg-block">
+								<ul> 
+									<li><a href="#">Mac</a></li>
+									<li><a href="#">iPad</a></li>
+									<li><a href="#">iPhone</a></li>
+									<li><a href="#">Watch</a></li>
+									<li><a href="#">Аксесуари</a></li>
+									<li><a href="#">Гаджети</a></li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<ul>
+									<li><a href="#">
+											<svg class="icon icon-heart ">
+												<use xlink:href="img/svg/sprite.svg#heart"></use>
+											</svg></a></li>
+									<li>
+										<div class="basket-block">
+											<div class="basket-block__btn">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg>
+												<div class="basket-block__count">2
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="col-auto d-lg-none">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+			</header>
+			<!-- end header-->
+			<div class="pageHead">
+				<div class="pageHead__wrap">
+					<div class="container">
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">
+											<svg class="icon icon-home ">
+												<use xlink:href="img/svg/sprite.svg#home"></use>
+											</svg></span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">iphone</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">iphone 11 PRO</span>
+										<meta itemprop="position" content="3"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Apple iphone 11 PRO Max 256 ГБ темно-зеленый</span>
+										<meta itemprop="position" content="4"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<div class="container">
+					<h1>Apple iPhone 11 PRO Max 256 ГБ темно-зеленый</h1>
+				</div>
+			</div>
+			<!-- start sProdCard-->
+			<div class="sProdCard section" id="sProdCard">
+				<div class="sProdCard__container container">
+					<div class="sProdCard__row row">
+						<div class="col-lg-6">
+							<div class="sProdCard__sliders-cont">
+								<div class="sProdCard__slider">
+									<div class="swiper-container prod-card-slider-js">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-1.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-1.png" alt=""/></a>
+											</div>
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-2.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-2.png" alt=""/></a>
+											</div>
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-3.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-3.png" alt=""/></a>
+											</div>
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-2.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-2.png" alt=""/></a>
+											</div>
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-1.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-1.png" alt=""/></a>
+											</div>
+											<div class="swiper-slide"><a class="sProdCard__slide-img" href="img/@2x/prod-card-slide-3.png" data-fancybox="prod-card-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-3.png" alt=""/></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sProdCard__thumbs">
+									<div class="swiper-container prod-card-thumb-js">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-2.png" alt=""/>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-3.png" alt=""/>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-2.png" alt=""/>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-1.png" alt=""/>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="sProdCard__thumb-img"><img class="swiper-lazy" src="#" data-src="img/@2x/prod-card-slide-3.png" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-prev-frame prod-card-th-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-next-frame prod-card-th-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="prodCard-pills d-none d-lg-block">
+								<div class="prodCard-pills__row row">
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-1.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">Крупнейшая сеть Apple Premium Reseller в&nbsp;мире
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-2.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">
+												Возможность
+												<br/>росширения
+												<br/>гарантийного срока
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-3.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">
+												Возврат товара
+												<br/>в&nbsp;течении 14&nbsp;дней
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-4.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">Авторизированные сервисные центры Apple
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="prod-chars">
+								<div class="prod-chars__top-items">
+									<div class="prod-chars__item">
+										<div class="prod-chars__title">Артикул:
+										</div>
+										<div class="prod-chars__content">
+											<div class="prod-chars__article-txt">XR34760009854
+											</div>
+										</div>
+									</div>
+									<div class="prod-chars__item">
+										<div class="prod-chars__title">Цвет:
+										</div>
+										<div class="prod-chars__content">
+											<div class="prod-chars__color-list">
+												<div class="prod-chars__color-item">
+													<label>
+														<input type="radio" name="prod-color"/>
+														<div class="color-circle" style="color: #fb4f4f;"></div>
+													</label>
+												</div>
+												<div class="prod-chars__color-item">
+													<label>
+														<input type="radio" name="prod-color" checked="checked"/>
+														<div class="color-circle" style="color: #757e74;"></div>
+													</label>
+												</div>
+												<div class="prod-chars__color-item">
+													<label>
+														<input type="radio" name="prod-color"/>
+														<div class="color-circle" style="color: #000000;"></div>
+													</label>
+												</div>
+												<div class="prod-chars__color-item">
+													<label>
+														<input type="radio" name="prod-color"/>
+														<div class="color-circle white-circle" style="color: #ffffff;"></div>
+													</label>
+												</div>
+												<div class="prod-chars__color-item">
+													<label>
+														<input type="radio" name="prod-color"/>
+														<div class="color-circle" style="color: #e6cf72;"></div>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-chars__item">
+										<div class="prod-chars__title">Накопитель:
+										</div>
+										<div class="prod-chars__content">
+											<div class="prod-chars__memory-list">
+												<div class="prod-chars__memory-item">
+													<label>
+														<input type="radio" name="memory"/>
+														<div class="memory-item">64 ГБ</div>
+													</label>
+												</div>
+												<div class="prod-chars__memory-item">
+													<label>
+														<input type="radio" name="memory" checked="checked"/>
+														<div class="memory-item">128 ГБ</div>
+													</label>
+												</div>
+												<div class="prod-chars__memory-item">
+													<label>
+														<input type="radio" name="memory"/>
+														<div class="memory-item">256 ГБ</div>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="prod-chars__chb-items">
+									<div class="prod-chars__chb-item">
+										<label>
+											<input type="checkbox" name="glass"/>
+											<div class="checkbox-cont"></div>
+											<div class="chb-txt">1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)
+											</div>
+											<div class="price">249 грн</div>
+										</label>
+									</div>
+									<div class="prod-chars__chb-item">
+										<label>
+											<input type="checkbox" name="garanty"/>
+											<div class="checkbox-cont"></div>
+											<div class="chb-txt">1 х Гарантия от магазина на срок 12 месяцев для Iphone
+											</div>
+											<div class="price">999 грн</div>
+										</label>
+									</div>
+								</div>
+								<div class="prod-chars__buy-strip">
+									<div class="prod-chars__buy-strip-price">27 990 грн
+									</div><a class="prod-chars__to-bag-btn" href="#">
+									<svg class="icon icon-shopping-bag ">
+										<use xlink:href="img/svg/sprite.svg#shopping-bag"></use>
+									</svg><span>В корзину</span></a><a class="prod-chars__click-btn" href="#">Купить в 1 клик</a>
+								</div>
+								<div class="prod-chars__lower-pills">
+									<div class="prod-chars__lower-pill">
+										<div class="prod-chars__lower-pill-img">
+											<div class="prod-chars__inner-img-cont"><img class="lazy" src="#" data-src="img/svg/prod-card-lower-pill-1.svg" alt=""/>
+											</div>
+										</div>
+										<div class="prod-chars__pill-name">
+											<div class="prod-chars__pill-name-inner">Доставка
+											</div>
+										</div>
+										<div class="prod-chars__pill-txt">
+											<p>У&nbsp;відділення Нової Пошти вашого міста.</p>
+											<p>Адресна доставка кур&rsquo;єром Нової Пошти.</p>
+											<p>Адресна доставка кур&rsquo;єром по&nbsp;місту (вартість та&nbsp;умови<br/>доставки уточнюйте при оформленні замовлення)</p>
+										</div>
+									</div>
+									<div class="prod-chars__lower-pill">
+										<div class="prod-chars__lower-pill-img">
+											<div class="prod-chars__inner-img-cont"><img class="lazy" src="#" data-src="img/svg/prod-card-lower-pill-2.svg" alt=""/>
+											</div>
+										</div>
+										<div class="prod-chars__pill-name">
+											<div class="prod-chars__pill-name-inner">Оплата
+											</div>
+										</div>
+										<div class="prod-chars__pill-txt">
+											<p>Онлайн оплата банківською картою онлайн.</p>
+											<p>Накладеним платижем при доставці Нова Пошта.</p>
+											<p>Готівкою при отриманні.</p>
+										</div>
+									</div>
+									<div class="prod-chars__lower-pill">
+										<div class="prod-chars__lower-pill-img">
+											<div class="prod-chars__inner-img-cont"><img class="lazy" src="#" data-src="img/svg/prod-card-lower-pill-3.svg" alt=""/>
+											</div>
+										</div>
+										<div class="prod-chars__pill-name">
+											<div class="prod-chars__pill-name-inner">Гарантия
+											</div>
+										</div>
+										<div class="prod-chars__pill-txt">
+											<p>
+												Надаємо гарантійний термін 3 місяці від магазину (включно
+												<br/>12 місяців від виробника).
+											</p>
+											<p>
+												Гарантійне обслуговування виконується виключно
+												<br/>авторизованими сервісними центрами Apple.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="prodCard-pills d-lg-none">
+								<div class="prodCard-pills__row row">
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-1.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">Крупнейшая сеть Apple Premium Reseller в&nbsp;мире
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-2.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">
+												Возможность
+												<br/>росширения
+												<br/>гарантийного срока
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-3.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">
+												Возврат товара
+												<br/>в&nbsp;течении 14&nbsp;дней
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-6">
+										<div class="prodCard-pills__pill">
+											<div class="prodCard-pills__img"><img class="lazy" src="#" data-src="img/@2x/prod-card-pill-4.png" alt=""/>
+											</div>
+											<div class="prodCard-pills__txt">Авторизированные сервисные центры Apple
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sProdCard-->
+			<!-- start sProdDescr-->
+			<div class="sProdDescr section" id="sProdDescr">
+				<div class="sProdDescr__container container">
+					<div class="tabs">
+						<div class="tabs__caption">
+							<div class="tabs__btn prod-descr-tab-js">Описание
+							</div>
+							<div class="tabs__btn prod-descr-tab-js">Характеристики
+							</div>
+							<div class="tabs__btn prod-descr-tab-js active">Отзывы (7)
+							</div>
+							<div class="tabs__btn prod-descr-tab-js">Рассрочка и кредит
+							</div>
+							<div class="tabs__btn prod-descr-tab-js">Услуги
+							</div>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content">
+								<div class="description-tab">
+									<div class="description-tab__baner">
+										<div class="description-tab__baner-left-bg"><img class="lazy" src="#" data-src="img/@2x/descr-baner-left-bg.png" alt=""/>
+										</div>
+										<div class="description-tab__baner-right-bg"><img class="lazy" src="#" data-src="img/@2x/descr-baner-right-bg.png" alt=""/>
+										</div>
+										<div class="description-tab__baner-txt">
+											<h2>Камеры. Дисплей.<br/>Процессор. До предела.</h2>
+											<p>
+												Революционная система трёх камер&nbsp;&mdash; гораздо больше возможностей
+												<br/>и&nbsp;неизменная простота в&nbsp;использовании. Беспрецедентное увеличение
+												<br/>ресурса аккумулятора. И&nbsp;потрясающий процессор с&nbsp;расши&shy;ренной поддержкой
+												<br/>технологий машинного обучения, который открывает для iPhone большие новые перспективы.
+												<br/>Представляем iPhone 11&nbsp;Pro. Он&nbsp;достоин своего имени.
+											</p>
+										</div>
+										<div class="description-tab__baner-img"><img class="lazy" src="#" data-src="img/@2x/phone-slices.png" alt=""/>
+										</div>
+									</div>
+									<!--detail-->
+									<div class="description-tab__det-block">
+										<div class="description-tab__det-txt">
+											<h2>Феноменальное внимание к деталям.</h2>
+											<p>
+												Четыре новых цвета. Фактурное матовое стекло на задней панели.
+												<br/>Дисплей Super Retina XDR 5,8 или 6,5 дюйма.¹ И самое прочное стекло iPhone.
+											</p>
+										</div>
+										<div class="description-tab__det-slider">
+											<div class="swiper-container det-slider-js">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-1.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-1.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-2.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-2.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-3.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-3.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-5.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-5.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-2.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-2.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-3.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-3.jpg" alt=""/></span></a>
+													</div>
+													<div class="swiper-slide"><a class="description-tab__det-img" href="img/@2x/det-slide-5.jpg" data-fancybox="detailImg"><span class="description-tab__det-img-inner"><img class="swiper-lazy" src="#" data-src="img/@2x/det-slide-5.jpg" alt=""/></span></a>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-prev-frame det-slider-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-next-frame det-slider-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+									<div class="description-tab__picture-block">
+										<h2 class="description-tab__pic-title">Три камеры. Одно удовольствие.
+										</h2>
+										<div class="description-tab__picture-cont">
+											<!-- picture-->
+											<picture class="lazy description-tab__picture"> 
+												<source srcset="#" data-srcset="img/@2x/webp/camera-picture.webp" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="#" data-srcset="img/@1x/webp/camera-picture.webp" type="image/webp"/>
+												<source srcset="#" data-srcset="img/@2x/camera-picture.jpg" type="image/jpg" media="(min-width:576px)"/>
+												<source srcset="#" data-srcset="img/@1x/camera-picture.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/camera-picture.jpg" alt=""/>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="description-tab__pic-txt">
+											<ul>
+												<li>
+													Дисплей представляет собой прямоугольник с&nbsp;закруглёнными углами. Диагональ этого прямоугольника без учёта закруглений составляет
+													<br/>5,85 дюйма (для iPhone 11&nbsp;Pro), 6,46 дюйма (для iPhone 11&nbsp;Pro Max) или 6,06 дюйма (для iPhone 11). Фактическая область просмотра меньше.
+												</li>
+												<li>Время работы от&nbsp;аккумулятора зависит от&nbsp;настроек и&nbsp;характера использования устройства. Подробнее на&nbsp;странице apple.com/ru/batteries.</li>
+												<li>По&nbsp;сравнению с&nbsp;предыдущим поколением.</li>
+											</ul>
+											<p>Некоторые функции могут быть доступны не&nbsp;во&nbsp;всех странах и&nbsp;регионах.</p>
+											<p>Часть доходов от&nbsp;продажи каждого (PRODUCT)RED перечисляется в&nbsp;Глобальный фонд для борьбы со&nbsp;СПИДом в&nbsp;Африке.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="prod-char-tab">
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Основные характеристики
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Объем накопителя
+												</div>
+												<div class="prod-char-tab__description">256 ГБ
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Цвет
+												</div>
+												<div class="prod-char-tab__description">Темно-зеленый
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Процессор
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Процессор
+												</div>
+												<div class="prod-char-tab__description">A13 Bionic
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Дисплей
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Диагональ
+												</div>
+												<div class="prod-char-tab__description">6,5"
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение
+												</div>
+												<div class="prod-char-tab__description">2688x1242
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Яркость
+												</div>
+												<div class="prod-char-tab__description">800 кд/м²
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Контрастность
+												</div>
+												<div class="prod-char-tab__description">2000000:1
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Плотность пикселей на дюйм
+												</div>
+												<div class="prod-char-tab__description">458 пикс/дюйм
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Тип дисплея
+												</div>
+												<div class="prod-char-tab__description">OLED
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Multi-Touch
+												</div>
+												<div class="prod-char-tab__description">Да
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Технологии дисплея
+												</div>
+												<div class="prod-char-tab__description">True Tone
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Камера
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение камеры
+												</div>
+												<div class="prod-char-tab__description">12 Мп
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Тип объектива
+												</div>
+												<div class="prod-char-tab__description">широкоугольный    сверхширокоугольный    телефото
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Диафрагма
+												</div>
+												<div class="prod-char-tab__description">широкоугольная: ƒ/1.8, сверхшироко­угольная: ƒ/2.4, телефото: ƒ/2.0
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Стабилизация изображения
+												</div>
+												<div class="prod-char-tab__description">двойная оптическая
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Зум (фото)
+												</div>
+												<div class="prod-char-tab__description">10-кратный цифровой    двухкратный оптический    двухкратный оптический (на уменьшение)
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Количество линз
+												</div>
+												<div class="prod-char-tab__description">шестилинзовый
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Защита объектива
+												</div>
+												<div class="prod-char-tab__description">сапфировое стекло
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Функции камеры
+												</div>
+												<div class="prod-char-tab__description">
+													вспышка True Tone с функцией Slow Sync    режим «Портрет»    автоматическая стабилизация изображения
+													автофокус    фокусировка касанием    распознавание лиц    распознавание лиц и фигур    контроль экспозиции
+													функция Smart HDR    автокоррекция    ночной режим    панорамная съёмка    серийная съëмка    режим таймера
+													привязка фотографий к месту съёмки    портретное освещение
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Запись видео
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение видео
+												</div>
+												<div class="prod-char-tab__description">
+													4K с частотой 24, 30 или 60 кадров/сек    Расширенный динамический диапазон при записи видео с частотой
+													до 30 кадров/сек    HD-видео 1080p с частотой 30 или 60 кадров/сек    HD-видео 720p с частотой 30 кадров/сек
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение замедленного видео
+												</div>
+												<div class="prod-char-tab__description">HD-видео 1080р c частотой 120 кадров/сек     или     240 кадров/сек
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Зум (видео)
+												</div>
+												<div class="prod-char-tab__description">6-кратный цифровой    оптический
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Функции видео
+												</div>
+												<div class="prod-char-tab__description">
+													вспышка True Tone Quad-LED    оптическая стабилизация изображения    следящий автофокус    возможность съёмки
+													фотографий во время записи видео    запись стереозвука    кинемато­графическая стабилизация видео (1080p и 720p)
+													функция QuickTake
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="prod-char-tab__item">
+										<div class="prod-char-tab__header">Фронтальная камера
+										</div>
+										<div class="prod-char-tab__table">
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение фронт. камеры
+												</div>
+												<div class="prod-char-tab__description">12 Мп
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Диафрагма фронт. камеры
+												</div>
+												<div class="prod-char-tab__description">ƒ/2.2
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Разрешение видео фронт. камеры
+												</div>
+												<div class="prod-char-tab__description">4K
+												</div>
+											</div>
+											<div class="prod-char-tab__row-item">
+												<div class="prod-char-tab__title">Функции фронт. камеры
+												</div>
+												<div class="prod-char-tab__description">
+													вспышка Retina Flash    автоматическая стабилизация изображения    серийная съëмка    режим «Портрет»
+													анимированные смайлики Animoji и Memoji
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content active">
+								<div class="feedback-tab">
+									<div class="feedback-tab__header">
+										<div class="feedback-tab__amount">
+											<p>Отзывы</p><span>7</span>
+										</div><a class="feedback-tab__feedb-btn scroll-link" href="#feedbackForm">Оставить отзыв</a>
+									</div>
+									<div class="feedback-tab__items">
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Софья Сергеевна Чобанян
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Константин
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Елизавета
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Софья Сергеевна Чобанян
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Георгий Новиков
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Софья Сергеевна Чобанян
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+										<div class="feedback-tab__item">
+											<div class="feedback-tab__item-data">
+												<div class="feedback-tab__name">Степан
+												</div>
+												<div class="feedback-tab__date">
+													<svg class="icon icon-calendar ">
+														<use xlink:href="img/svg/sprite.svg#calendar"></use>
+													</svg><span>24.07.20</span>
+												</div>
+												<div class="feedback-tab__stars-cont">
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star filled-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="feedback-tab__star empty-star">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+												</div>
+											</div>
+											<div class="feedback-tab__item-txt">
+												<p>Купил жене 11 Pro Max 512 Гб. Честно говоря кроме огромной памяти и цены, у этого аппарата практически нет существенных отличий от версий 7; 8 и т.п. Может в процессе эксплуатации что прояснится, но пока - ничего существенного.</p>
+											</div>
+										</div>
+									</div>
+									<div class="feedback-tab__form" id="feedbackForm">
+										<div class="form-wrap">
+											<form>
+												<input type="hidden" name="example-input-field"/>
+												<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+												<input class="utm_source" type="hidden" name="utm_source"/>
+												<input class="utm_term" type="hidden" name="utm_term"/>
+												<input class="utm_medium" type="hidden" name="utm_medium"/>
+												<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+												<!-- picture-->
+												<picture class="lazy form-wrap__bg"> 
+													<source srcset="#" data-srcset="img/@2x/webp/leave-feedback-bg.webp" type="image/webp" media="(min-width:576px)"/>
+													<source srcset="#" data-srcset="img/@1x/webp/leave-feedback-bg.webp" type="image/webp"/>
+													<source srcset="#" data-srcset="img/@2x/leave-feedback-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+													<source srcset="#" data-srcset="img/@1x/leave-feedback-bg.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/leave-feedback-bg.jpg" alt=""/>
+												</picture>
+												<!-- /picture-->
+												<div class="form-wrap__inner-cont">
+													<div class="form-wrap__stars-cont">
+														<div class="form-wrap__stars-title">Оставить отзыв
+														</div>
+														<div class="form-wrap__stars">
+															<div class="form-wrap__star star-js">
+																<input type="radio" name="star-mark"/>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+															<div class="form-wrap__star star-js">
+																<input type="radio" name="star-mark"/>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+															<div class="form-wrap__star star-js">
+																<input type="radio" name="star-mark"/>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+															<div class="form-wrap__star star-js">
+																<input type="radio" name="star-mark"/>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+															<div class="form-wrap__star star-js">
+																<input type="radio" name="star-mark"/>
+																<svg class="icon icon-star ">
+																	<use xlink:href="img/svg/sprite.svg#star"></use>
+																</svg>
+															</div>
+														</div>
+													</div>
+													<div class="form-wrap__inputs-block">
+														<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email"/>
+														</div>
+														<!-- +e.input-wrap-->
+														<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Отзыв" name="message"></textarea>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="form-wrap__btn-cont">
+														<button class="form-wrap__btn" type="submit">Оставить отзыв
+														</button>
+														<div class="form-wrap__after-btn">Гарантируем конфидециальность ваших данных
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tabs__content">4
+							</div>
+							<div class="tabs__content">5
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sProdDescr-->
+			<!-- start sBuyWith-->
+			<section class="sBuyWith section" id="sBuyWith">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Вместе с этим товаром покупают</h2>
+					</div>
+					<div class="sBuyWith__slider">
+						<div class="swiper-container buy-with-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-1.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">iphone SE</span><span class="sBuyWith__price">от 39 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-2.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Apple AirPods Pro</span><span class="sBuyWith__price">от 39 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-3.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">MacBook Pro</span><span class="sBuyWith__price">от 66 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-4.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Apple Watch 4</span><span class="sBuyWith__price">от 31 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-5.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Itapok</span><span class="sBuyWith__price">от 1 331 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-6.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">ItapokS</span><span class="sBuyWith__price">от 1 331 990 р</span></span></a>
+								</div>
+								<!--+buyWithSlide(6, 'ItapokS Zaminirovan', 'от 9 331 990 р')-->
+								<!--+buyWithSlide(6, 'ItapokSE Zaminirovan', 'от 9 331 990 р')-->
+							</div>
+						</div>
+						<div class="swiper-prev-frame buy-with-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-next-frame buy-with-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+						<div class="swiper-pugin-frame buy-with-pugin d-md-none"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBuyWith-->
+			<footer class="footer block-with-lazy">
+				<div class="container">
+					<div class="row">
+						<div class="footer__topLine d-lg-none">
+							<div class="footer__logo">
+								<!-- picture-->
+								<picture class="lazy"> 
+									<source srcset="#" data-srcset="img/@2x/webp/logo-descr.webp" type="image/webp"/><img src="#" data-src="img/@2x/logo-descr.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="footer__mnu">
+								<div class="footer__text">Меню
+								</div>
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="messengers"><a class="messengers__item" href="#">
+								<svg class="icon icon-whatsapp ">
+									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+								</svg></a><a class="messengers__item" href="#">
+								<svg class="icon icon-viber ">
+									<use xlink:href="img/svg/sprite.svg#viber"></use>
+								</svg></a><a class="messengers__item" href="#">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg></a>
+							</div><a class="footer__tel" href="tel:88007001944">8 800 700-19-44</a>
+							<div class="footer__schedule">c 9:00 до 22:00, без выходных
+							</div>
+							<div class="soc"><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-fb ">
+									<use xlink:href="img/svg/sprite.svg#fb"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-vk ">
+									<use xlink:href="img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-instagram ">
+									<use xlink:href="img/svg/sprite.svg#instagram"></use>
+								</svg></a><a class="soc__item" href="#" target="_blank">
+								<svg class="icon icon-youtube ">
+									<use xlink:href="img/svg/sprite.svg#youtube"></use>
+								</svg></a>
+							</div>
+							<div class="footer__polite">&copy;&nbsp;<span class="curentYear"></span> epplstore&nbsp;&mdash; магазин и&nbsp;сервисный центр техники Apple
+							</div>
+						</div>
+						<div class="col-lg-3 d-none d-lg-block"><a class="footer__title" href="#">О компании</a>
+							<ul class="footer__nav">
+								<li><a href="#">Адреса магазинов</a></li>
+								<li><a href="#">Преимущества</a></li>
+								<li><a href="#">Акции и новости</a></li>
+								<li><a href="#">Услуги</a></li>
+								<li><a href="#">Академия</a></li>
+								<li><a href="#">Блог</a></li>
+								<li><a href="#">Корпоративным клиентам</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Контакты</a></li>
+								<li><a href="#">Обратная связь</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-3 d-none d-lg-block"><a class="footer__title" href="#">Помощь</a>
+							<ul class="footer__nav">
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Обмен и возврат</a></li>
+								<li><a href="#">Гарантии</a></li>
+								<li><a href="#">Trade-in</a></li>
+								<li><a href="#">Сервисные центры Apple</a></li>
+								<li><a href="#">Сервисная программа</a></li>
+								<li><a href="#">Бонусная программа</a></li>
+								<li><a href="#">Подарочные сертификаты</a></li>
+								<li><a href="#">Рассрочка и кредит</a></li>
+								<li><a href="#">Мобильная версия сайта</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-3 d-none d-lg-block"><a class="footer__title" href="#">Каталог</a>
+							<ul class="footer__nav">
+								<li><a href="#">Mac</a></li>
+								<li><a href="#">iPhone</a></li>
+								<li><a href="#">Watch</a></li>
+								<li><a href="#">iPad</a></li>
+								<li><a href="#">Аксессуары</a></li>
+								<li><a href="#">Гаджеты</a></li>
+								<li><a href="#">Распродажа</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="js/lazy.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
