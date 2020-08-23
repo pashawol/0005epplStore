@@ -1,0 +1,158 @@
+mixin sProdCard()
+	// start sProdCard
+	+b.sProdCard.section#sProdCard&attributes(attributes)
+		+e.container.container
+			+e.row.row
+				.col-lg-6
+					+e.sliders-cont
+						+e.slider
+							.swiper-container.prod-card-slider-js
+								.swiper-wrapper
+									+prodCardSlide(1)
+									+prodCardSlide(2)
+									+prodCardSlide(3)
+									+prodCardSlide(2)
+									+prodCardSlide(1)
+									+prodCardSlide(3)
+						+e.thumbs
+							.swiper-container.prod-card-thumb-js
+								.swiper-wrapper
+									+prodCardThumb(1)
+									+prodCardThumb(2)
+									+prodCardThumb(3)
+									+prodCardThumb(2)
+									+prodCardThumb(1)
+									+prodCardThumb(3)
+							.swiper-prev-frame.prod-card-th-prev
+								+icon('chevron-left')
+							.swiper-next-frame.prod-card-th-next
+								+icon('chevron-right')
+					+prodCardPills('d-none d-lg-block')
+				.col-lg-6
+					+b.prod-chars
+						+e.top-items
+							+charsItem('Артикул:')
+								+e.article-txt XR34760009854
+							+charsItem('Цвет:')
+								+e.color-list
+									+colorRadioItem('#fb4f4f')
+									+colorRadioItem('#757e74')(checked)
+									+colorRadioItem('#000000')
+									+colorRadioItem('#ffffff', 'white-circle')
+									+colorRadioItem('#e6cf72')
+							+charsItem('Накопитель:')
+								+e.memory-list
+									+memoryRadioItem('64 ГБ')
+									+memoryRadioItem('128 ГБ')(checked)
+									+memoryRadioItem('256 ГБ')
+						+e.chb-items
+							+charCheckboxItem('glass', '249 грн')
+								| 1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)
+							+charCheckboxItem('garanty', '999 грн')
+								| 1 х Гарантия от магазина на срок 12 месяцев для Iphone
+						+e.buy-strip
+							+e.buy-strip-price 27 990 грн
+							+e.A.to-bag-btn(href='#')
+								+icon('shopping-bag')
+								span В корзину
+							+e.A.click-btn(href='#') Купить в 1 клик
+						+e.lower-pills
+							+prodCharLowerItem(1, 'Доставка')
+								p У&nbsp;відділення Нової Пошти вашого міста.
+								p Адресна доставка кур&rsquo;єром Нової Пошти.
+								p
+									| Адресна доставка кур&rsquo;єром по&nbsp;місту (вартість та&nbsp;умови
+									br
+									| доставки уточнюйте при оформленні замовлення)
+							+prodCharLowerItem(2, 'Оплата')
+								p Онлайн оплата банківською картою онлайн.
+								p Накладеним платижем при доставці Нова Пошта.
+								p Готівкою при отриманні.
+							+prodCharLowerItem(3, 'Гарантия')
+								p
+									| Надаємо гарантійний термін 3 місяці від магазину (включно
+									|
+									br
+									| 12 місяців від виробника).
+								p
+									| Гарантійне обслуговування виконується виключно
+									|
+									br
+									| авторизованими сервісними центрами Apple.
+					+prodCardPills('d-lg-none')
+	// end sProdCard
+mixin prodCharLowerItem(imgNum, pillName)
+	+e.lower-pill
+		+e.lower-pill-img
+			+e.inner-img-cont
+				img.lazy(src="#" data-src=`img/svg/prod-card-lower-pill-${imgNum}.svg` alt="")
+		+e.pill-name
+			+e.pill-name-inner=pillName
+		+e.pill-txt
+			block
+mixin charCheckboxItem(name, price)
+	+e.chb-item
+		label
+			input(type='checkbox' name=name)
+			.checkbox-cont
+			.chb-txt
+				block
+			.price=price
+
+mixin colorRadioItem(itemColor,circleClasses)
+	+e.color-item
+		label
+			input(type="radio" name='prod-color')&attributes(attributes)
+			.color-circle(style=`color: ${itemColor};` class=circleClasses)
+
+mixin memoryRadioItem(txt)
+	+e.memory-item
+		label
+			input(type="radio" name='memory')&attributes(attributes)
+			.memory-item=txt
+
+mixin charsItem(title)
+	+e.item
+		+e.title=title
+		+e.content
+			block
+
+
+mixin prodCardPills(PillsClass)
+	+b.prodCard-pills(class=PillsClass)
+		+e.row.row
+			+prodCardPill(1)
+				| Крупнейшая сеть Apple Premium Reseller в&nbsp;мире
+			+prodCardPill(2)
+				| Возможность
+				|
+				br
+				| росширения
+				|
+				br
+				| гарантийного срока
+			+prodCardPill(3)
+				| Возврат товара
+				|
+				br
+				| в&nbsp;течении 14&nbsp;дней
+			+prodCardPill(4)
+				| Авторизированные сервисные центры Apple
+
+mixin prodCardPill(imgNum)
+	.col-xl-6
+		+e.pill
+			+e.img
+				img.lazy(src="#" data-src=`img/@2x/prod-card-pill-${imgNum}.png` alt="")
+			+e.txt
+				block
+
+mixin prodCardSlide(imgNum)
+	.swiper-slide
+		+e.A.slide-img(href=`img/@2x/prod-card-slide-${imgNum}.png` data-fancybox=`prod-card-img`)
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-slide-${imgNum}.png` alt="")
+
+mixin prodCardThumb(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img.swiper-lazy(src="#" data-src=`img/@2x/prod-card-slide-${imgNum}.png` alt="")

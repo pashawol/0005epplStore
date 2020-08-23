@@ -17,11 +17,13 @@
 	&__img-wrap{
 		display: block;
 		position: relative;
-		max-width: 280px;
-		flex: 0 0 280px;
 		@include media-breakpoint-up(sm) {
 			flex: 0 0 570px;
 			max-width: 570px;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
 		}
 	}
 
@@ -43,9 +45,10 @@
 	&__caption{
 		position: absolute;
 		color: #fff;
-		left: 253px;
+		right: 52px;
 		top: 50%;
 		transform: translateY(-50%);
+		max-width: 270px;
 	}
 
 
@@ -70,21 +73,27 @@
 	}
 
 	&__text-block{
-		padding-left: 68px;
+		@include media-breakpoint-up(xl) {
+			padding-left: 68px;
+		}
 		h5{
 			margin-bottom: 46px;
 		}
 	}
 
 	&__btn{
-		display: inline-block;
-		width: 100%;
-		border-radius: 30px;
-		padding: 15px 30px;
-		border: 1px solid #000000;
-		background-color: #fff;
-		color: #000;
 		margin-top: 52px;
+		@extend .btn;
+		border: 1px solid $black;
+		border-radius: rem(100);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: $black;
+		padding: 10px 19px;
+		@include media-breakpoint-up(sm){
+			padding: 11px 23px;
+		}
 		
 		&:hover {
 			cursor: pointer;

@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '02.jpg';
+	screenName = '03-feedback-1920.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -241,6 +241,7 @@ function eventHandler() {
 
 		const topH = document.querySelector('header').scrollHeight;
 		let stickyElement = document.querySelector('.top-nav')
+		if(!stickyElement) return
 		window.onscroll = () => {
 			if ($(window).scrollTop() > topH) {
 
@@ -294,6 +295,153 @@ function eventHandler() {
 
 	});
 	// modal window
+
+	//luckyoneJs
+
+	//prod card slider
+	let prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 5,
+		//breakpoints
+		breakpoints: {
+			10: {
+				direction: 'vertical',
+			},
+			576: {
+				direction: 'horizontal',
+			},
+			768: {
+
+			},
+			992: {
+
+			},
+		},
+		//nav
+		navigation: {
+			nextEl: '.prod-card-th-next',
+			prevEl: '.prod-card-th-prev',
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 10,
+		},
+	});
+
+	let prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
+
+	//.det-slider-js
+	let detSlider = new Swiper('.det-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+
+		//nav
+		navigation: {
+			nextEl: '.det-slider-next',
+			prevEl: '.det-slider-prev',
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4,
+		},
+	});
+
+	$('.prod-descr-tab-js').click(function () {
+		window.setTimeout(function () {
+			let detSwiperCont = document.querySelector('.det-slider-js');
+			if(!detSwiperCont) return
+			detSwiperCont.swiper.update();
+		}, 300);
+	})
+
+	//.buy-with-slider-js
+	let buyWithSlider = new Swiper('.buy-with-slider-js', {
+		//loop: true,
+
+		slidesPerColumnFill: 'row',
+
+		breakpoints: {
+			1: {
+				spaceBetween: 15,
+				slidesPerView: 2,
+				slidesPerColumn: 2,
+			},
+			575: {
+				slidesPerColumn: 2,
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 3,
+				slidesPerColumn: 1,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 4,
+				slidesPerColumn: 1,
+				spaceBetween: 30,
+			},
+		},
+
+		//pagination
+		pagination: {
+			el: $(this).find('.buy-with-pugin'),
+			clickable: true,
+		},
+		//nav
+		navigation: {
+			nextEl: '.buy-with-next',
+			prevEl: '.buy-with-prev',
+		},
+	});
+
+	//stars js
+	$('.star-js').click(function () {
+		let thisIndex = $('.star-js').index(this);
+		let allThis = this.parentElement.children;
+
+		for (let i = 0; i <= thisIndex; i++) {
+			allThis[i].classList.add('active');
+		}
+		for (let i = thisIndex + 1; i <= allThis.length - 1; i++) {
+			allThis[i].classList.remove('active');
+		}
+	});
+
+	$('.star-js').mouseover(function () {
+		let thisIndex = $('.star-js').index(this);
+		let allThis = this.parentElement.children;
+
+		for (let i = 0; i <= thisIndex; i++) {
+			allThis[i].classList.add('hover-paint-js');
+		}
+		for (let i = thisIndex + 1; i <= allThis.length - 1; i++) {
+			allThis[i].classList.remove('hover-paint-js');
+		}
+	});
+	$('.star-js').mouseout(function () {
+		let allThis = this.parentElement.children;
+		for (let star of allThis) {
+			star.classList.remove('hover-paint-js');
+		}
+	});
+
+	//end luckyoneJs
 
 };
 if (document.readyState !== 'loading') {

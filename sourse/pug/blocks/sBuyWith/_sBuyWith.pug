@@ -1,0 +1,33 @@
+mixin sBuyWith()
+	// start sBuyWith
+	+b.SECTION.sBuyWith.section#sBuyWith&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Вместе с этим товаром покупают
+			+e.slider
+				.swiper-container.buy-with-slider-js
+					.swiper-wrapper
+						+buyWithSlide(1, 'iphone SE', 'от 39 990 р')
+						+buyWithSlide(2, 'Apple AirPods Pro', 'от 39 990 р')
+						+buyWithSlide(3, 'MacBook Pro', 'от 66 990 р')
+						+buyWithSlide(4, 'Apple Watch 4', 'от 31 990 р')
+						+buyWithSlide(5, 'Itapok', 'от 1 331 990 р')
+						+buyWithSlide(6, 'ItapokS', 'от 1 331 990 р')
+						//+buyWithSlide(6, 'ItapokS Zaminirovan', 'от 9 331 990 р')
+						//+buyWithSlide(6, 'ItapokSE Zaminirovan', 'от 9 331 990 р')
+				.swiper-prev-frame.buy-with-prev
+					+icon('chevron-left')
+				.swiper-next-frame.buy-with-next
+					+icon('chevron-right')
+				.swiper-pugin-frame.buy-with-pugin.d-md-none
+	// end sBuyWith
+
+mixin buyWithSlide(imgNum, name, price)
+	.swiper-slide
+		+e.A.slide-cont(href='#')
+			+e.img
+				img(src=`img/@2x/buy-with-slide-${imgNum}.png` alt="")
+				//-.swiper-lazy(src="#" data-
+			+e.txt
+				+e.name=name
+				+e.price=price
