@@ -1,0 +1,117 @@
+// start .sStockAndNews
+.sStockAndNews {
+
+	padding-top: 0;
+
+	&__item{
+		.row{
+			align-items: center;
+		}
+		margin-bottom: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		// margin-right: auto;
+		// margin-left: auto;
+	}
+
+	&__img-wrap{
+		display: block;
+		position: relative;
+		max-width: 280px;
+		flex: 0 0 280px;
+		@include media-breakpoint-up(sm) {
+			flex: 0 0 570px;
+			max-width: 570px;
+		}
+	}
+
+	&__label{
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-transform: uppercase;
+		background-color: #5c5c5c;
+		// width: 61px;
+		color: #010101;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 3px 6px 1px 9px;
+		text-align: center;
+		font-family: $mono;
+	}
+
+	&__caption{
+		position: absolute;
+		color: #fff;
+		left: 253px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+
+	&__title{
+		font-family: $mono;
+		@include media-breakpoint-up(md) {
+			font-size: 35px;
+		}
+		font-size: 24px;
+		font-weight: 400;
+		line-height: (58 / 50);
+		margin-bottom: 30px;
+	}
+
+	&__text{
+		color: #ffffff;
+		@include media-breakpoint-up(md) {
+			font-size: 20px;
+		}
+		font-size: 13px;
+		line-height: (30 / 20);
+	}
+
+	&__text-block{
+		padding-left: 68px;
+		h5{
+			margin-bottom: 46px;
+		}
+	}
+
+	&__btn{
+		display: inline-block;
+		width: 100%;
+		border-radius: 30px;
+		padding: 15px 30px;
+		border: 1px solid #000000;
+		background-color: #fff;
+		color: #000;
+		margin-top: 52px;
+		
+		&:hover {
+			cursor: pointer;
+			background-color: red;
+		}
+	}
+			
+		
+@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {}
+
+//
+@include media-breakpoint-between(md, xl) { }
+
+
+//
+@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {}
+
+//
+@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(sm) {}
+
+} // end.sStockAndNews
