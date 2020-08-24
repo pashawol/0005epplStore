@@ -20,6 +20,7 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -1315,6 +1316,135 @@
 				</form>
 			</div>
 		</div>
+		<div class="modal-win" id="filter" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="filter">
+						<div class="filter__item">
+							<div class="filter__title">Серия 
+							</div>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 11 Pro Max</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 11 Pro</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 11</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone SE</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone XS Max</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone XS</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone XR</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 8 Plus</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 8</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 7 Plus</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 7</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 6s</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="series"/><span class="custom-input__lab"></span><span class="custom-input__text">iPhone 6</span>
+							</label>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Цвет
+							</div>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">серебристый</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">золотой</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">белый</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">желтый</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">зеленый</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">коралловый</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">синий</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">тёмно-зелёный</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">черный</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">«розовое золото»</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">«серый космос»</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="color"/><span class="custom-input__lab"></span><span class="custom-input__text">(PRODUCT)RED</span>
+							</label>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Диагональ
+							</div>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">4&quot;</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">4,7&quot;</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">5,5&quot;</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">5,8&quot;</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">6,1&quot;</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="diagonal"/><span class="custom-input__lab"></span><span class="custom-input__text">6,5&quot;</span>
+							</label>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Разъём
+							</div>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="connector"/><span class="custom-input__lab"></span><span class="custom-input__text">Lightning</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="connector"/><span class="custom-input__lab"></span><span class="custom-input__text">mini Jack (3,5 мм)</span>
+							</label>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Объем накопителя
+							</div>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">16 ГБ</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">32 ГБ</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">64 ГБ</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">128 ГБ</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">256 ГБ</span>
+							</label>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="memory"/><span class="custom-input__lab"></span><span class="custom-input__text">512 ГБ</span>
+							</label>
+						</div>
+						<div class="filter__item">
+							<div class="filter__title">Цена, руб.
+							</div>
+							<div class="range-wrap price_slider_amount">
+								<div class="row">
+									<div class="col-6"> 
+										<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+										</div>
+									</div>
+								</div>
+								<input class="range-slider slider-js" type="text" data-min="9970" data-max="500000"/>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="js/lazy.js"></script>
@@ -1324,6 +1454,7 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="js/common.js"></script>

@@ -61,19 +61,48 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	cursor: pointer;
+	&:hover {
+		border-color: transparent;
+	}
 }
 
 .pagination-wrapper li {
 	@extend .page-item;
+	span {
+		color: $body-color !important;
+	}
 
 	.current {
+		width: 41px;
+		height: 41px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: none;
 		z-index: 1;
-		// color: $pagination-active-color;
+		color: $pagination-active-color;
 		// background-color: $pagination-active-bg;
-		// border-color: $pagination-active-border-color;
+		border-color: $pagination-active-border-color;
+		border-radius: 50%;
 	}
 }
 
+.page-numbers {
+	padding-top: 7px;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 20px;
+	@include media-breakpoint-up(md) {
+		padding-bottom: 55px;
+	}
+}
+
+.page-link, .pagination-wrapper li .page-numbers {
+	@include media-breakpoint-down(sm) {
+		padding: .375rem 1rem;
+	}
+}
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";

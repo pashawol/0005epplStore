@@ -15,17 +15,27 @@
 	&__seeAll {
 		@extend .btn;
 		@extend .btn-outline-dark;
-		margin-top: rem(34);
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 187px;
+		max-width: 140px;
+		margin-top: rem(3);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(34);
+			max-width: 187px;
+		}
+		@include media-breakpoint-down(lg) {
+			font-size: 12px;
+		}
 	}
 
 	&__item {
 		position: relative;
 		overflow: hidden;
 		color: #ffffff !important;
-		min-height: 270px;
+		min-height: 190px;
+		@include media-breakpoint-up(sm) {
+			min-height: 270px;
+		}
 		@include media-breakpoint-up(xl) {
 			min-height: 340px;
 		}
@@ -41,14 +51,20 @@
 		}
 
 		&--left {
-			padding: 40px 30px;
+			padding: 55px 5px 20px 30px;
+			@include media-breakpoint-up(sm) {
+				padding: 73px 20px;
+			}
 			@include media-breakpoint-up(xl) {
 				padding: 73px 52px;
 			}
 		}
 
 		&--right {
-			padding: 20px 15px 20px;
+			padding: 24px 10px 20px 47px;
+			@include media-breakpoint-up(sm) {
+				padding: 50px 20px 40px 55px;
+			}
 			@include media-breakpoint-up(xl) {
 				padding: 50px 40px 40px;
 			}
@@ -56,18 +72,32 @@
 	}
 
 	&__title {
-		font-size: 50px;
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+		font-size: 30px;
+		margin-bottom: 18px;
+		@include media-breakpoint-up(lg) {
+			font-size: 50px;
+			margin-bottom: 25px;
+		}
 		letter-spacing: rem(-2);
-		margin-bottom: 25px;
 		display: block;
 
 		&-sm {
+			@include media-breakpoint-down(lg) {
+				text-align: center;
+			}
 			@extend .mono;
 			letter-spacing: rem(-1);
 			font-weight: 500;
 			display: block;
-			font-size: 37px;
-			margin-bottom: rem(10);
+			font-size: 24px;
+			margin-bottom: rem(4);
+			@include media-breakpoint-up(lg) {
+				margin-bottom: rem(10);
+				font-size: 37px;
+			}
 			@include media-breakpoint-up(xl) {
 				margin-bottom: 22px;
 			}
@@ -81,13 +111,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		max-width: 156px;
+		max-width: 106px;
+		@include media-breakpoint-up(lg) {
+			max-width: 156px;
+		}
+		@include media-breakpoint-down(lg) {
+			font-size: 13px;
+			margin-right: rem(13);
+		}
 	}
 
 	//Скошеный текст
 	&__beveledText {
 		max-width: 280px;
-		margin-bottom: rem(20);
+		margin-bottom: rem(11);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(20);
+		}
 		@include media-breakpoint-up(xl) {
 			margin-bottom: rem(40);
 		}
@@ -106,8 +146,15 @@
 		// float: right;
 		font-size: 16px;
 		font-weight: 300;
-		line-height: 1.8;
 		letter-spacing: rem(-0.5);
+		line-height: 1.5;
+		@include media-breakpoint-up(lg) {
+			line-height: 1.8;
+		}
+
+		@include media-breakpoint-down(lg) {
+			font-size: 13px;
+		}
 	}
 	//-//-//-//-//-//
 
@@ -116,6 +163,9 @@
 		font-weight: 300;
 		max-width: 210px;
 		line-height: 1.5;
+		@include media-breakpoint-down(lg) {
+			font-size: 16px;
+		}
 	}
 
 	&__text {
@@ -131,7 +181,11 @@
 		height: 100%;
 		img {
 			@include mt;
-			@include media-breakpoint-down(xl) {
+			@include media-breakpoint-between(md, xl) {
+				height: 100%;
+				max-width: none;
+			}
+			@media (max-width: 350px) {
 				height: 100%;
 				max-width: none;
 			}

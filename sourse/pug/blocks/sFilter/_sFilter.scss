@@ -1,0 +1,80 @@
+// start .sFilter
+.sFilter {
+	
+	&__filterMob {
+		font-size: 12px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 9px 18px 9px 22px;
+		border: 1px solid $body-color;
+		border-radius: 18px;
+		color: $body-color;
+		margin-bottom: 38px;
+
+		.icon {
+			font-size: rem(14);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sFilter
+
+.filter {
+	padding-bottom: rem(50);
+	.custom-input {
+		display: block;
+
+		&__lab {
+			background-color: $light;
+		}
+	}
+	.custom-input__input:checked + .custom-input__lab {
+		background-color: #6fd200;
+	}
+
+	&__title {
+		font-weight: 600;
+		margin-bottom: rem(13);
+	}
+
+	&__item {
+		padding-bottom: rem(27);
+	}
+
+	.irs--round .irs-bar {
+		background: #6fd200;
+	}
+	.irs--round .irs-handle {
+		width: $small;
+		height: $small;
+		border: none;
+		background: #6fd200;
+		top: 31px;
+		box-shadow: none;
+	}
+	.form-control {
+		background-color: $light;
+		text-align: center;
+		border: none;
+	}
+}

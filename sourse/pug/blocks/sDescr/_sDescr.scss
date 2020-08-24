@@ -23,25 +23,28 @@
 	p {
 		margin-bottom: 1.2rem;
 		color: $secondary;
+		@include media-breakpoint-down(md) {
+			// line-height: 1.25;
+			font-size: 13px;
+		}
 	}
 
 	&__row {
 		@include media-breakpoint-down(md) {
-			max-height: 155px;
+			max-height: 120px;
 			text-overflow: ellipsis;
 			overflow: hidden;
+			margin-bottom: 5px;
 		}
 		&.active {
 			max-height: none;
 		}
 	}
-	
-	// &__text {
-	// 	column-gap: 34px;
-	// 	@include media-breakpoint-up(lg) {
-	// 		column-count: 3;
-	// 	}
-	// }
+
+	&__showMore {
+		font-size: 13px;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

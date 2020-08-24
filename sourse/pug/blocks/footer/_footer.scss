@@ -21,7 +21,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-bottom: rem(40);
+		padding-bottom: rem(36);
 	}
 
 	.toggle-menu-mobile {
@@ -32,16 +32,22 @@
 	}
 
 	&__tel {
-		font-size: 18px;
+		font-size: 17px;
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+			margin-bottom: rem(6);
+		}
 		font-weight: 600;
 		color: $body-color;
 		display: block;
-		margin-bottom: rem(6);
 	}
 
 	&__schedule {
 		font-size: $small;
-		margin-bottom: rem(28);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(28);
+		}
 	}
 
 	&__title {
@@ -64,8 +70,14 @@
 	}
 
 	&__polite {
-		font-size: $small;
 		color: $secondary;
+		font-size: 13px;
+		@include media-breakpoint-up(md) {
+			font-size: $small;
+		}
+		@include media-breakpoint-down(md) {
+			max-width: 220px;
+		}
 	}
 // 
 @include media-breakpoint-up(xl) {}

@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sFilter/_sFilter.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sDescr/_sDescr.pug
+
+block variables
+	- let  mainPage= 'catalogPage'
+block title
+	- let  title= 'iphone'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header() 
+		+topLine()
+		//- +top-nav()
+	+b.pageHead
+		+e.wrap
+			.container
+				+breadcrumb('', title)
+		.container
+			+b.sliderCategory--catalog
+				.swiper-container.sliderCategory-js
+					.swiper-wrapper
+						+categorySlide('11pro','iphone 11 Pro')
+						+categorySlide('11','iphone 11')
+						+categorySlide('se','iphone SE')
+						+categorySlide('xr','iphone XR')
+						+categorySlide('access','Аксессуары')
+	.container
+		.row
+			.col-lg-3
+				+sFilter
+			.col
+				+sCatalog
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	//- +sContent()
+	+sDescr()
+	+sForm()
+	+footer()
+
+
+	

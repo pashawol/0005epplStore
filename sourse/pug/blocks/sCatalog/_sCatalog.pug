@@ -1,0 +1,163 @@
+mixin catalogItem(img,t,pr,price,preOrder,...items)
+	+b.catalogItem&attributes(attributes)
+		+e.imgWrap(href='#')
+			+pic(`catalogImg-${img}.png`,'','lazy','')
+			+e.DIV.colors
+				block
+		+e.title(href="#")= t
+		if items
+			+e.memoryWrap
+				each item in items
+					+e.memory(href="#")= item
+		+e.priceWrap
+			+e.price= pr
+			if price
+				+e.oldPrice= price
+		+e.buttonsWrap
+			if preOrder
+				.row.justify-content-center.align-items-center
+					.col-sm
+						+e.btn--preOrder(href="#") Предзаказ
+					.col-sm-2.order-sm-first
+						//- +e.busket(type='button')
+						//- 	+icon('basket')
+					.col-2
+						+e.like(type='button')
+							+icon('heart')
+			else
+				.row.justify-content-center.align-items-center
+					.col-sm
+						+e.btn(href="#") Купить в 1 клик
+					.col-2.order-sm-first.text-right
+						+e.busket(type='button')
+							+icon('basket')
+					.col-2
+						+e.like(type='button')
+							+icon('heart')
+			
+
+
+mixin sCatalog()
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		+b.section-title
+			h1 iPhone
+			+e.quantity 87
+		+e.sortWrap
+			p Сортировать по:
+			+e.sortType.active(href="#") популярности
+			+e.sortType(href="#") новизне
+			+e.sortType(href="#") цене
+
+		.row
+			.col-6.col-lg-4
+				+catalogItem('11pro','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','97 990 р ','500 990 р ','','64 ГБ','128 ГБ','256 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+			.col-6.col-lg-4
+				+catalogItem('11promax','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','130 990 р ','500 990 р ','','64 ГБ','128 ГБ','256 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+					+e.colorItem(style="border: 1px solid #dddcdc; background-color: #ffffff;")
+					+e.colorItem(style="background-color: #e6cf72;")
+			.col-6.col-lg-4
+				+catalogItem('8','Apple iPhone 8 128 ГБ Темно-зеленый','447 990 р ','','pr','64 ГБ','128 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+			.col-6.col-lg-4
+				+catalogItem('8','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','97 990 р ','500 990 р ','')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+			.col-6.col-lg-4
+				+catalogItem('11promax','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','130 990 р ','500 990 р ','','64 ГБ','128 ГБ','256 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+					+e.colorItem(style="border: 1px solid #dddcdc; background-color: #ffffff;")
+					+e.colorItem(style="background-color: #e6cf72;")
+			.col-6.col-lg-4
+				+catalogItem('11pro','Apple iPhone 8 128 ГБ Темно-зеленый','447 990 р ','500 990 р ','','64 ГБ','128 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+			.col-6.col-lg-4
+				+catalogItem('11pro','Apple iPhone 8 128 ГБ Темно-зеленый','97 990 р  ','','pr','64 ГБ','128 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+			.col-6.col-lg-4
+				+catalogItem('11promax','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','130 990 р ','500 990 р ','','64 ГБ','128 ГБ','256 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+					+e.colorItem(style="border: 1px solid #dddcdc; background-color: #ffffff;")
+					+e.colorItem(style="background-color: #e6cf72;")
+			.col-6.col-lg-4.d-none.d-lg-block
+				+catalogItem('8','Apple iPhone 11 PRO Max 256 ГБ Темно-зеленый','447 990 р ','500 990 р ','','64 ГБ','128 ГБ')
+					+e.colorItem(style="background-color: #fb4f4f;")
+					+e.colorItem(style="background-color: #a2a2a2;")
+					+e.colorItem(style="background-color: #000000;")
+		+pugin()
+		+e.tags
+			a(href="#") iPhone 11 Pro
+			a(href="#") iPhone 11
+			a(href="#") iPhone SE
+			a(href="#") iPhone XS
+			a(href="#") iPhone XR
+			a(href="#") iPhone X
+			a(href="#") iPhone 8
+			a(href="#") iPhone 7
+			a(href="#") iPhone 6s
+			a(href="#") iPhone 6
+			a(href="#") iPhone SE (1-го поколения)
+			a(href="#") iPhone 11 Pro Max
+			a(href="#") iPhone 11 Pro
+			a(href="#") iPhone 11
+			a(href="#") iPhone SE
+			a(href="#") iPhone XS Max
+			a(href="#") iPhone XS
+			a(href="#") iPhone XR
+			a(href="#") iPhone X
+			a(href="#") iPhone 8 Plus
+			a(href="#") iPhone 8
+			a(href="#") iPhone 7 Plus
+			a(href="#") iPhone 7
+			a(href="#") iPhone 6s
+			a(href="#") iPhone 6
+			a(href="#") серебристый
+			a(href="#") золотой
+			a(href="#") белый
+			a(href="#") желтый
+			a(href="#") зеленый
+			a(href="#") коралловый
+			a(href="#") синий
+			a(href="#") тёмно-зелёный
+			a(href="#") фиолетовый
+			a(href="#") черный
+			a(href="#") «розовое золото»
+			a(href="#") «серый космос»
+			a(href="#") (PRODUCT)RED
+			a(href="#") 4"
+			a(href="#") 4,7"
+			a(href="#") 5,5"
+			a(href="#") 5,8"
+			a(href="#") 6,1"
+			a(href="#") 6,5"
+			a(href="#") Lightning
+			a(href="#") mini Jack (3,5 мм)
+			a(href="#") 16 ГБ
+			a(href="#") 32 ГБ
+			a(href="#") 64 ГБ
+			a(href="#") 128 ГБ
+			a(href="#") 256 ГБ
+			a(href="#") 512 ГБ
+			a(href="#") Беспроводные наушники
+			a(href="#") iPhone X
+
+
+
+	// end sCatalog

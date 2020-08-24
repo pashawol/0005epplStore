@@ -16,6 +16,72 @@ mixin arrow()
 		+icon('chevron-right')
 //- /arrow for swiper-slider
 
+mixin range(c1, c2)
+	.range-wrap.price_slider_amount
+		.row
+			.col-6 
+				.form-group
+					+b.INPUT.input_from.form-control.form-control-sm(type="text" )  
+			.col-6
+				.form-group
+					+b.INPUT.input_to.form-control.form-control-sm(type="text" ) 
+		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
+
+mixin filter()
+	+b.filter&attributes(attributes)
+		+e.item
+			+e.title Серия 
+			+in-c('checkbox','iPhone 11 Pro Max','series')
+			+in-c('checkbox','iPhone 11 Pro','series')
+			+in-c('checkbox','iPhone 11','series')
+			+in-c('checkbox','iPhone SE','series')
+			+in-c('checkbox','iPhone XS Max','series')
+			+in-c('checkbox','iPhone XS','series')
+			+in-c('checkbox','iPhone XR','series')
+			+in-c('checkbox','iPhone 8 Plus','series')
+			+in-c('checkbox','iPhone 8','series')
+			+in-c('checkbox','iPhone 7 Plus','series')
+			+in-c('checkbox','iPhone 7','series')
+			+in-c('checkbox','iPhone 6s','series')
+			+in-c('checkbox','iPhone 6','series')
+		+e.item
+			+e.title Цвет
+			+in-c('checkbox','серебристый','color')
+			+in-c('checkbox','золотой','color')
+			+in-c('checkbox','белый','color')
+			+in-c('checkbox','желтый','color')
+			+in-c('checkbox','зеленый','color')
+			+in-c('checkbox','коралловый','color')
+			+in-c('checkbox','синий','color')
+			+in-c('checkbox','тёмно-зелёный','color')
+			+in-c('checkbox','черный','color')
+			+in-c('checkbox','«розовое золото»','color')
+			+in-c('checkbox','«серый космос»','color')
+			+in-c('checkbox','(PRODUCT)RED','color')
+		+e.item
+			+e.title Диагональ
+			+in-c('checkbox','4"','diagonal')
+			+in-c('checkbox','4,7"','diagonal')
+			+in-c('checkbox','5,5"','diagonal')
+			+in-c('checkbox','5,8"','diagonal')
+			+in-c('checkbox','6,1"','diagonal')
+			+in-c('checkbox','6,5"','diagonal')
+		+e.item
+			+e.title Разъём
+			+in-c('checkbox','Lightning','connector')
+			+in-c('checkbox','mini Jack (3,5 мм)','connector')
+		+e.item
+			+e.title Объем накопителя
+			+in-c('checkbox','16 ГБ','memory')
+			+in-c('checkbox','32 ГБ','memory')
+			+in-c('checkbox','64 ГБ','memory')
+			+in-c('checkbox','128 ГБ','memory')
+			+in-c('checkbox','256 ГБ','memory')
+			+in-c('checkbox','512 ГБ','memory')
+		+e.item
+			+e.title Цена, руб.
+			+range('9970','500000')
+
 mixin ie11()
 	//- modernizer and for ie11
 	 

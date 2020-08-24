@@ -1,7 +1,10 @@
  
 	  
 .soc{
-	margin: 0 rem(-5) rem(50);
+	margin: 0 rem(-5) rem(20);
+	@include media-breakpoint-up(md) {
+		margin: 0 rem(-5) rem(50);
+	}
 	display: flex;
 	&__item{
 		width: 48px;
@@ -42,7 +45,10 @@
 .messengers {
 	display: flex;
 	align-items: center;
-	margin-bottom: rem(26);
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(26);
+	}
+	margin-bottom: rem(20);
 	&__item {
 		display: flex;
 		align-items: center;

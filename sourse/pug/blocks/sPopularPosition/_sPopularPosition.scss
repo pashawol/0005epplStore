@@ -73,7 +73,7 @@
 .popularCategoryItem {
 	color: $body-color !important;
 	padding: rem(15) rem(7) rem(20);
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		padding: rem(12) rem(12) rem(36);
 	}
 	display: flex;

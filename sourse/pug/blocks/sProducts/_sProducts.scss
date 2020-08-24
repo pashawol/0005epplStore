@@ -1,6 +1,8 @@
 // start .sProducts
 .sProducts {
-	padding-top: calc(var(--sPT) / 1.4);
+	@include media-breakpoint-up(lg) {
+		padding-top: calc(var(--sPT) / 1.4);
+	}
 	padding-bottom: calc(var(--sPB) / 1.5);
 
 	h2 {
@@ -8,14 +10,20 @@
 		letter-spacing: rem(-0.5);
 	}
 	.section-title {
-		padding-bottom: calc(var(--sTPB) / 1.3);
+		padding-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: calc(var(--sTPB) / 1.3);
+		}
 	}
 	.tabs {
 		&__caption{
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-bottom: 25px;
+			margin-bottom: 14px;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 25px;
+			}
 		}
 
 		&__btn {
@@ -32,6 +40,10 @@
 				background-color: #6fd200;
 				border-color: #6fd200;
 				pointer-events: none;
+			}
+
+			@include media-breakpoint-down(md) {
+				font-size: 12px;
 			}
 		}
 	}
@@ -92,8 +104,12 @@
 	&__heart {
 		cursor: pointer;
 		position: absolute;
-		right: 32px;
-		top: 32px;
+		top: 5px;
+		right: 5px;
+		@include media-breakpoint-up(md) {
+			top: 32px;
+			right: 32px;
+		}
 		@include media-breakpoint-up(lg) {
 			transform: scale(0);
 		}
@@ -123,32 +139,59 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 220px;
+		min-height: 85px;
+		@include media-breakpoint-up(md) {
+			min-height: 220px;
+		}
 		margin-bottom: rem(15);
+		img {
+			@include media-breakpoint-down(md) {
+				max-width: 90px;
+				max-height: 90px;
+			}
+		}
 	}
 
 	&__name {
 		text-align: center;
 		color: $body-color;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 20px;
+		}
 		font-weight: 300;
 		max-width: rem(200);
 		margin-left: auto;
 		margin-right: auto;
+		@include media-breakpoint-down(md) {
+			font-size: 12px;
+		}
 	}
 
 	&__price {
 		color: $body-color;
 		margin-bottom: auto;
-		padding-bottom: 10px;
+		margin-bottom: 13px;
+		@include media-breakpoint-up(md) {
+			padding-bottom: 10px;
+		}
 		font-weight: 600;
+		@include media-breakpoint-down(md) {
+			font-size: 13px;
+		}
 	}
 
 	&__delivery {
 		font-size: $small;
 		color: $secondary;
 		font-weight: 300;
-		margin-bottom: 15px;
+		margin-bottom: 7px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 15px;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: 12px;
+		}
 	}
 
 	&__btnBuy, &__btnPreOrder {
@@ -159,6 +202,16 @@
 			min-width: 127px;
 		}
 		margin-top: auto;
+		@include media-breakpoint-down(md) {
+			font-size: 12px;
+		}
+	}
+	&__btnBuy {
+		@include media-breakpoint-down(md) {
+			background-color: #6fd200;
+			border-color: #6fd200;
+			color: #fff;
+		}
 	}
 
 	&__btnPreOrder {
@@ -172,9 +225,9 @@
 		color: $body-color;
 		font-weight: 300;
 		overflow: hidden;
-		font-size: 13px;
+		font-size: 12px;
 		position: absolute;
-		bottom: rem(5);
+		bottom: rem(14);
 		// height: 0;
 		@include media-breakpoint-up(lg) {
 			font-size: 16px;
