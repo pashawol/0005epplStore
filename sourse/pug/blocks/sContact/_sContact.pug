@@ -1,9 +1,30 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			.row.align-items-center
+				.col-md-5
+					+e.wrap
+						+e.item(href="tel:0681809050")
+							+e.iconWrap
+								+pic('phone.png','','lazy','')
+								//- +icon('phone')
+							+e.text (068) 180-90-50
+						+e.item(href="tel:0681809050")
+							+e.iconWrap
+								+pic('phone.png','','lazy','')
+								//- +icon('phone')
+							+e.text (093) 180-90-50
+						+e.item(href="mailto:eppl.storeinfo@gmail.com")
+							+e.iconWrap
+								+pic('mail.png','','lazy','')
+								//- +icon('mail')
+							+e.text eppl.storeinfo@gmail.com
+						+e.item
+							+e.iconWrap
+								+pic('location.png','','lazy','')
+								//- +icon('location')
+							+e.text Львів, Україна
+				.col
+					+pic('menedzher-po-prodazham','','lazy','')
 	// end sContact

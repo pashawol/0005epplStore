@@ -1,7 +1,42 @@
+// start .sContact
+.sContact {
+	padding-bottom: calc(var(--sPB) * 1.2);
+	@include media-breakpoint-up(md) {
+		padding-bottom: calc(var(--sPB));
+	}
 
-	// start .sContact
-	.sContact {
-		 
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(27);
+	}
+
+	&__wrap {
+		@include media-breakpoint-down(md) {
+			padding-bottom: 13px;
+		}
+	}
+	
+	&__text {
+		font-size: 18px;
+		@extend .mono;
+		font-weight: 600;
+		color: $body-color;
+	}
+
+	&__iconWrap {
+		flex-shrink: 0;
+		width: 30px;
+		.icon {
+			font-size: 20px;
+			color: #6fd200 !important;
+		}
+
+		// .icon-mail {
+		// 	font-size: ;
+		// }
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
