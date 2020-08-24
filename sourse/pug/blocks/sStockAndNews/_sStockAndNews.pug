@@ -1,0 +1,27 @@
+mixin sStockAndNews()
+	// start sStockAndNews
+	+b.sStockAndNews.section#sStockAndNews&attributes(attributes)
+		.container
+			mixin item(i,l,t,tx,h5,p1,p2)
+				+e.item
+					.row
+						.col-md-6
+							+e.img-wrap(href="#")
+								img.lazy(src="#" data-src=`img/@2x/03-sn-${i}.jpg`, alt="")
+								+e.DIV.label!= l
+								+e.DIV.caption
+									+e.DIV.title!= t
+									+e.DIV.text!= tx
+						.col-md-6
+							+e.text-block
+								h5!= h5
+								p!= p1
+								p.bold!= p2
+								+e.A.btn(href="#") Подробнее
+
+			+item(1, `акция`, `Акция!`, `Приятная скидка&nbsp;10%<br> на&nbsp;MacBook PRO`, `Акция при покупке чехлов moonfish`, `Акция до&nbsp;31&nbsp;июля`, `Второй аксессуар в&nbsp;подарок`)
+			+item(2, `акция`, `Присмотритесь.`, `Два размера. Четыре<br> отделки. Конструкция из<br> нержавеющей стали и&nbsp;стекла.`, `4&nbsp;месяца бесплатно 50&nbsp;ГБ в&nbsp;iCloud`, `Акция до&nbsp;30&nbsp;сентября`, `Увеличьте объем хранилища iCloud до&nbsp;50&nbsp;ГБ`)
+			+item(1, `акция`, `Акция!`, `Приятная скидка&nbsp;10%<br> на&nbsp;MacBook PRO`, `Акция при покупке чехлов moonfish`, `Акция до&nbsp;31&nbsp;июля`, `Второй аксессуар в&nbsp;подарок`)
+			+item(2, `акция`, `Присмотритесь.`, `Два размера. Четыре<br> отделки. Конструкция из<br> нержавеющей стали и&nbsp;стекла.`, `4&nbsp;месяца бесплатно 50&nbsp;ГБ в&nbsp;iCloud`, `Акция до&nbsp;30&nbsp;сентября`, `Увеличьте объем хранилища iCloud до&nbsp;50&nbsp;ГБ`)
+				
+	// end sStockAndNews
