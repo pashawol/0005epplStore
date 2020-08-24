@@ -314,7 +314,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = 'catalog-mob.jpg';
+	screenName = 'contact.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {

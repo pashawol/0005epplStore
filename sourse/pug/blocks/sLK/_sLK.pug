@@ -1,0 +1,50 @@
+mixin sLK()
+	// start sLK
+	+b.sLK#sLK&attributes(attributes)
+		.container
+			+b.tabs
+				.row
+					+e.col.col-lg-3
+						+e.caption
+							+e.btn.avtive Профиль
+							+e.btn Адрес доставки
+							+e.btn Бонусные балы
+							+e.btn Мои заказы
+							+e.btn Избранное / Возврат
+					.col
+						+e.wrap
+							+e.content.active
+								+b.section-title
+									.h1 Профиль
+									+e.text Обо мне
+								mixin row(t,pl,typ)
+									.row
+										.col-sm-3
+											+e.text= t
+										.col-sm-5
+											if block
+												block
+											else
+												+input(pl,typ)
+								+row('Имя:','Иван')
+								+row('Фамилия:','Иванович')
+								+row('Отчество:','Иванов')
+								+row('Пол:')
+									+e.gender
+										+in-c('radio','Мужской','gender')(checked)
+										+in-c('radio','Женский','gender')
+								+row('Телефон:','+38 (440) 325-67-22','tel')
+								+row('Мобильный телефон:','+38 (097) 325-67-22','tel')
+								+row('E-mail:','name@gmail.com','email')
+								+row('E-mail:')
+									+e.selectWrap
+										
+								
+
+							+e.content
+							+e.content
+							+e.content
+							+e.content
+				
+			.row
+	// end sLK
