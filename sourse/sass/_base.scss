@@ -514,6 +514,13 @@ iframe {
 			@extend .btn-outline-dark;
 		}
 	}
+
+	&--01{
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 40px;
+		}
+		padding-bottom: 20px;
+	}
 }
 
 //prev, next frane
