@@ -3,16 +3,16 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sStockAndNews/_sStockAndNews.pug
+include ../blocks/sAboutUs/_sAboutUs.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Акции и Новости'
+	- let  title= 'Про нас'
 	title= title
 block pagecontent
 	+mob-mnu()
-	+header() 
+	+header()
 		+topLine()
 		//- +top-nav()
 	+b.pageHead
@@ -20,21 +20,11 @@ block pagecontent
 			.container
 				+breadcrumb('', title)
 		.container
-			.row
-				.col-lg
-					h1= title
-				.col-auto
-					+e.A.btn.white(href="#") Все
-				.col-auto
-					+e.A.btn(href="#") Акции
-				.col-auto
-					+e.A.btn(href="#") Новости
-
+			h1= title 
 	//- +headerBlock()
 	//- +sForm()
 	//- +sContact()
-	//- +sContent()
-	+sStockAndNews()
+	+sAboutUs()
 	+footer()
 
 
