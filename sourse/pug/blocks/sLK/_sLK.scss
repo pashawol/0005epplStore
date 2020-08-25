@@ -308,12 +308,18 @@
 
 	//04 page
 	&__order {
-		overflow-x: auto;
-		min-width: 600px;
 	}
 
 	table {
 		width: 100%;
+	}
+
+	&__tableWrap, &__details {
+		overflow-x: auto;
+	}
+
+	&__prod, &__delivery, &__tableWrap table  {
+		min-width: 600px;
 	}
 
 	&__tableWrap {
