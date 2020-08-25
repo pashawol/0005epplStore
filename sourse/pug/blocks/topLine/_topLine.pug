@@ -13,9 +13,21 @@ mixin topLine()
 						li: a(href="#") Контакти
 						li: a(href="#") Гарантія на повернення
 						li: a(href="#") Оплата та доставка
-						li: a(href="#")
-							+icon('user')
-							span.d-none.d-xl-inline Особистий кабінет
+						li.dropdown: u.dropdown-toggle
+								+icon('user')
+								span.d-none.d-xl-inline Особистий кабінет
+								.dropdown-menu
+									+e.lk
+										ul
+											li: a(href="#") Профиль
+											li: a(href="#") Адреса доставки
+											li: a(href="#") Любимый магазин
+											li: a(href="#") Бонусная программа
+											li: a(href="#") Мои заказы
+											li: a(href="#") Избранное
+											li: a(href="#") Мои обращения
+											li: a(href="#") Мои коммуникации
+										+e.exit(type='submit') Выйти
 				+e.divider.w-100.d-none.d-lg-block
 				.col-auto.d-none.d-sm-block
 						ul

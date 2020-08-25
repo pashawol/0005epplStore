@@ -78,13 +78,13 @@
 	height: calc(100% - 31px);
 	margin-bottom: 31px;
 	position: relative;
-	padding: rem(12) rem(12) rem(36);
+	padding: rem(12) rem(12) rem(38);
 
 	&::before {
 		content: '';
 		width: 100%;
-		height: 100%;
-		top: 0;
+		height: 101%;
+		top: -1%;
 		position: absolute;
 		box-shadow: 0 3px 16px rgba(22, 32, 21, 0.13);
 		@include media-breakpoint-up(lg) {
@@ -107,8 +107,8 @@
 		top: 5px;
 		right: 5px;
 		@include media-breakpoint-up(md) {
-			top: 32px;
-			right: 32px;
+			top: 23px;
+			right: 33px;
 		}
 		@include media-breakpoint-up(lg) {
 			transform: scale(0);
@@ -143,7 +143,7 @@
 		@include media-breakpoint-up(md) {
 			min-height: 220px;
 		}
-		margin-bottom: rem(15);
+		margin-bottom: rem(13);
 		img {
 			@include media-breakpoint-down(md) {
 				max-width: 90px;
@@ -173,7 +173,7 @@
 		margin-bottom: auto;
 		margin-bottom: 13px;
 		@include media-breakpoint-up(md) {
-			padding-bottom: 10px;
+			margin-bottom: 10px;
 		}
 		font-weight: 600;
 		@include media-breakpoint-down(md) {
@@ -223,6 +223,7 @@
 		text-align: center;
 		margin-top: rem(19);
 		color: $body-color;
+		@extend .mono;
 		font-weight: 300;
 		overflow: hidden;
 		font-size: 12px;
@@ -232,7 +233,7 @@
 		@include media-breakpoint-up(lg) {
 			font-size: 16px;
 			transform: scale(1, 0);
-			bottom: rem(-5);
+			bottom: rem(-4);
 		}
 		@include mt;
 		transform-origin: center top;

@@ -106,9 +106,10 @@
 			@include media-breakpoint-down(md) {
 				font-size: 13px;
 			}
+			@include mt(.15);
+			transform-origin: center left;
 			&:hover {
-				transform: scale(1.25);
-				transform-origin: center left;
+				transform: scale(1.2);
 			}
 			&.active {
 				color: #fff;
@@ -283,9 +284,10 @@
 			width: 13px;
 			height: 8px;
 			@include a-cent(y);
-			right: 14%;
+			right: rem(15);
 			@include media-breakpoint-down(xl) {
-				right: 10%;
+				right: rem(8);
+				width: 12px;
 			}
 			background-image: url('../img/cevron-down.svg');
 			background-position: center;

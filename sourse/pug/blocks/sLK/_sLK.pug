@@ -4,7 +4,8 @@ mixin selectBlock(name,a,...items)
 			select.form-control(name= nname)
 				option(value="" selected)= a
 				each item in items
-					option(value= item)= item
+					option(value= item)
+						div= item
 
 mixin sLK()
 	// start sLK

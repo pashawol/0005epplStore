@@ -69,10 +69,29 @@
 									<li><a href="#">Контакти</a></li>
 									<li><a href="#">Гарантія на повернення</a></li>
 									<li><a href="#">Оплата та доставка</a></li>
-									<li><a href="#">
+									<li class="dropdown">
+										<u class="dropdown-toggle">
 											<svg class="icon icon-user ">
 												<use xlink:href="img/svg/sprite.svg#user"></use>
-											</svg><span class="d-none d-xl-inline">Особистий кабінет</span></a></li>
+											</svg><span class="d-none d-xl-inline">Особистий кабінет</span>
+											<div class="dropdown-menu">
+												<div class="topLine__lk">
+													<ul>
+														<li><a href="#">Профиль</a></li>
+														<li><a href="#">Адреса доставки</a></li>
+														<li><a href="#">Любимый магазин</a></li>
+														<li><a href="#">Бонусная программа</a></li>
+														<li><a href="#">Мои заказы</a></li>
+														<li><a href="#">Избранное</a></li>
+														<li><a href="#">Мои обращения</a></li>
+														<li><a href="#">Мои коммуникации</a></li>
+													</ul>
+													<button class="topLine__exit" type="submit">Выйти
+													</button>
+												</div>
+											</div>
+										</u>
+									</li>
 								</ul>
 							</div>
 							<div class="topLine__divider w-100 d-none d-lg-block">
@@ -172,12 +191,24 @@
 												<div class="select-wrap">
 													<select class="form-control">
 														<option value="" selected="selected">Домашний</option>
-														<option value="Рабочий">Рабочий</option>
-														<option value="какой-то">какой-то</option>
-														<option value="Бабушки">Бабушки</option>
-														<option value="Дедушки">Дедушки</option>
-														<option value="Кума">Кума</option>
-														<option value="я где-то в лесу">я где-то в лесу</option>
+														<option value="Рабочий">
+															<div>Рабочий</div>
+														</option>
+														<option value="какой-то">
+															<div>какой-то</div>
+														</option>
+														<option value="Бабушки">
+															<div>Бабушки</div>
+														</option>
+														<option value="Дедушки">
+															<div>Дедушки</div>
+														</option>
+														<option value="Кума">
+															<div>Кума</div>
+														</option>
+														<option value="я где-то в лесу">
+															<div>я где-то в лесу</div>
+														</option>
 													</select>
 												</div>
 											</div>

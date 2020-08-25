@@ -54,7 +54,7 @@
 				@include roww(rem(30));
 			// margin-left: rem(-10px);
 			// margin-right: rem(-10px);
-			a{
+			a, u{
 				color: #ffffff;
 				display: inline-block;
 				text-align: center;
@@ -66,6 +66,9 @@
 				&:hover{
 					color: $primary;
 				}
+			}
+			u {
+				text-decoration: none !important;
 			}
 			}
 
@@ -79,6 +82,37 @@
 					margin-right: 40px;
 				}
 			}
+	
+	//dropdown
+	.dropdown {
+		position: relative;
+		cursor: pointer;
+		.dropdown-menu {
+			z-index: 10;
+			position: absolute;
+			top: 73%;
+			right: 0;
+			transform: scale(1,0);
+			transform-origin: top center;
+			@include mt;
+		}
+		&:hover, &:focus {
+			.dropdown-menu {
+				transform: scale(1);
+			}
+		}
+	}
+
+	&__lk {
+		background-color: #fff;
+		ul {
+			display: block;
+			column-count: 2;
+		}
+		a {
+			color: $body-color !important;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
