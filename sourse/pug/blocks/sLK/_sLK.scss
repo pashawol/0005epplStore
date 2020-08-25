@@ -318,7 +318,7 @@
 		overflow-x: auto;
 	}
 
-	&__prod, &__delivery, &__tableWrap table  {
+	&__prod, &__delivery, &__tableWrap table {
 		min-width: 600px;
 	}
 
@@ -356,6 +356,17 @@
 		@extend .mono;
 		display: inline-block;
 		margin-bottom: 40px;
+		.open {
+			display: none;
+		}
+		&.active {
+			.open {
+				display: block;
+			}
+			.hide {
+				display: none;
+			}
+		}
 	}
 
 	&__prod {
