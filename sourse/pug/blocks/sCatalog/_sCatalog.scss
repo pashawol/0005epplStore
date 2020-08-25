@@ -231,6 +231,7 @@
 
 	&__colors {
 		position: absolute;
+		z-index: 2;
 		top: rem(9);
 		right: rem(4);
 		@include media-breakpoint-up(md) {

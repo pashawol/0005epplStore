@@ -5,6 +5,7 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sLK/_sLK.pug
+include ../blocks/sProducts/_sProducts.pug
 
 block variables
 	- let  mainPage= 'catalogPage'
@@ -19,9 +20,9 @@ block pagecontent
 	+b.pageHead
 		+e.wrap
 			.container
-				+breadcrumb('', title,'Мои заказы')
+				+breadcrumb('', title,'Адрес доставки')
 
-	+sLK
+	+sLK-5
 	+sDescr()
 	+sForm()
 	+footer()

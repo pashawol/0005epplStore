@@ -314,7 +314,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = 'contact.jpg';
+	screenName = 'lk-4.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -398,8 +398,15 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true
-	})); // modal window
-
+	}));
+	$('.accardion-js').click(function () {
+		$(this).toggleClass('active');
+		$(this).parent().find('.accardion-toggle-js').slideToggle();
+		$(this).html('Показать подробности');
+		$(this).click(function () {
+			$(this).html('Скрыть подробности');
+		});
+	});
 	var now = new Date();
 	$('.curentYear').text(now.getFullYear()); //luckyoneJs
 	//prod card slider

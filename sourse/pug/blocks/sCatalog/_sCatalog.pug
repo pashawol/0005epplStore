@@ -1,7 +1,8 @@
 mixin catalogItem(img,t,pr,price,preOrder,...items)
 	+b.catalogItem&attributes(attributes)
-		+e.imgWrap(href='#')
-			+pic(`catalogImg-${img}.png`,'','lazy','')
+		+e.imgWrap
+			a(href='#')
+				+pic(`catalogImg-${img}.png`,'','lazy','')
 			+e.DIV.colors
 				block
 		+e.title(href="#")= t

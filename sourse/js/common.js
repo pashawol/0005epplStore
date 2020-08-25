@@ -299,7 +299,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = 'contact.jpg';
+	screenName = 'lk-4.jpg';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -403,7 +403,15 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	// modal window
+
+	$('.accardion-js').click(function(){
+		$(this).toggleClass('active');
+		$(this).parent().find('.accardion-toggle-js').slideToggle();
+		$(this).html('Показать подробности');
+		$(this).click(function(){
+			$(this).html('Скрыть подробности');
+		})
+	})
 	let now = new Date();
 	$('.curentYear').text(now.getFullYear());
 
