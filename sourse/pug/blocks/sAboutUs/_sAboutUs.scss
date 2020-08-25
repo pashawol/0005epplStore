@@ -1,0 +1,135 @@
+	// start .sAboutUs
+.sAboutUs {
+	@include media-breakpoint-up(lg) {
+		padding-top: 3px;
+	}
+	padding-top: 0;
+
+
+	&__item-title {
+		@include media-breakpoint-up(md) {
+			font-size: 30px;
+			line-height: (58 / 30);
+			padding-left: 44px;
+		}
+		font-size: $em-base;
+		line-height: (18 / 15);
+		margin-bottom: 36px;
+		padding: 19px 100px 23px 28px;
+		color: #fff;
+		font-weight: 400;
+		font-family: $mono;
+		position: relative;
+	}
+
+	.gadgets{
+		background-image: url(../img/@2x/08-1.jpg);
+		@include media-breakpoint-up(md) {
+			background-size: 100% 100%;
+		}
+		background-size: 171% 100%;
+		background-position: center;
+	}
+
+	.pay-delivery{
+		background-image: url(../img/@2x/08-2.jpg);
+		@include media-breakpoint-up(md) {
+			background-size: 100% 100%;
+		}
+		background-size: 173% 100%;
+		background-position: center;
+		@include media-breakpoint-up(lg) {
+			margin-top: 75px;
+		}
+		margin-top: 63px;
+	}
+
+	.bold{
+		font-size: 20px;
+		font-weight: 600;
+		line-height: (22 / 20);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 33px;
+		}
+		margin-bottom: 19px;
+		margin-top: 5px;
+	}
+
+	&__item-options{
+		display: flex;
+		margin-bottom: 26px;
+	}
+
+	&__img-wrap{
+		display: block;
+		width: 60px;
+		flex: 0 0 60px;
+		margin-right: 22px;
+		
+		}
+
+	&__title{
+		font-weight: 600;
+	}
+
+	&__text{
+		color: $secondary;
+	}
+		
+	&__imp{
+		background-color: $gray-200;
+		@include media-breakpoint-up(sm) {
+			padding: 31px 15px 15px 31px;
+		}
+		padding: 29px 15px 15px 19px;
+		line-height: (20 / 15);
+		margin-top: 13px;
+		margin-bottom: 7px;
+		.h5 {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 20px;
+			}
+			@include media-breakpoint-up(sm) {
+				font-size: 20px;
+				line-height: (22 / 20);
+			}
+			font-size: 13px;
+			line-height: (18 / 13);
+			
+			font-weight: 600;
+		}
+		p{
+			@include media-breakpoint-up(sm) {
+				font-size: $em-base;
+				line-height: (22 / 20);
+			}
+			font-size: 13px;
+			line-height: (18 / 13);
+		}
+	}
+	
+
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sAboutUs

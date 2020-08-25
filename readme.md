@@ -4,9 +4,11 @@
 1. <https://pashawol.github.io/0005epplStore/public/03-product-card.html>
 1. <https://pashawol.github.io/0005epplStore/public/03-stock-news.html>
 1. <https://pashawol.github.io/0005epplStore/public/04-catalog.html>
+1. <https://pashawol.github.io/0005epplStore/public/05-news.html>
 1. <https://pashawol.github.io/0005epplStore/public/06-contact.html>
 1. <https://pashawol.github.io/0005epplStore/public/07-lk.html> Профиль
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-2.html> адрес доставки
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-3.html> Бонусные балы
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-4.html> Мои заказы
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-5.html> Избранное
+1. <https://pashawol.github.io/0005epplStore/public/08-about-us.html>
