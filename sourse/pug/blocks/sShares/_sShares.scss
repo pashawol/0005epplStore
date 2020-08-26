@@ -123,6 +123,7 @@
 
 	//Скошеный текст
 	&__beveledText {
+		display: block;
 		max-width: 280px;
 		margin-bottom: rem(11);
 		@include media-breakpoint-up(lg) {
@@ -143,6 +144,7 @@
 		shape-margin: 0px;
 	}
 	.h6 {
+		display: block;
 		// float: right;
 		font-size: 16px;
 		font-weight: 300;
@@ -159,6 +161,7 @@
 	//-//-//-//-//-//
 
 	.h5 {
+		display: block;
 		font-size: 20px;
 		font-weight: 300;
 		max-width: 210px;
