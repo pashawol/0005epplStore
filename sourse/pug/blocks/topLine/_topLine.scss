@@ -97,6 +97,7 @@
 			}
 		}
 		.dropdown-menu {
+			box-shadow: 0 3px 3px 1px $light;
 			display: block;
 			min-width: 100vw;
 			@include media-breakpoint-up(sm) {
