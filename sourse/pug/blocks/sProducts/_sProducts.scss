@@ -37,8 +37,6 @@
 
 			&.active {
 				@extend .btn-success;
-				background-color: #6fd200;
-				border-color: #6fd200;
 				pointer-events: none;
 			}
 

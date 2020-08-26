@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sGaranty/_sGaranty.pug
+include ../blocks/sDescr/_sDescr.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Гарантия и возврат'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header()
+		+topLine()
+		//- +top-nav()
+	.container.pt-4.pb-4
+		.pt-2.pb-2
+			a.link-modal.btn.btn.btn-outline-dark(href="#modal-congratulations") Вы зарегистрировались на сайте epplstore
+		.pb-2
+			a.link-modal.btn.btn.btn-outline-dark(href="#modal-reg") регистрация / вход
+		.pb-2
+			a.link-modal.btn.btn.btn-outline-dark(href="#modal-entrance") вход (ниже 768px)
+		.pb-2
+			a.link-modal.btn.btn.btn-outline-dark.modalBasket-js(href="#modal-basket") Добавлено в корзину
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	//- +sGaranty()
+	+sDescr()
+	+sForm()
+	+footer()
+
+
+	

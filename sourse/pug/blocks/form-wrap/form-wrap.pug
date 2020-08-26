@@ -71,6 +71,6 @@ mixin add-file(n)
 		+e.SPAN.filename 
 
 mixin polite()
-	+e.polite
+	+e.polite&attributes(attributes)
 		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SMALL.text Нажимая на кнопку «Войти» или «Зарегистрироваться» вы соглашаетесь с #[a(href="#") условиями оферты] и #[a(href="#") политикой конфидециальности]

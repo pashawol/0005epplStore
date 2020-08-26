@@ -362,6 +362,7 @@ function eventHandler() {
 	
 	let now = new Date();
 	$('.curentYear').text(now.getFullYear());
+	
 
 	//luckyoneJs
 
@@ -476,6 +477,11 @@ function eventHandler() {
 			prevEl: '.buy-with-prev',
 		},
 	});
+
+	$('.modalBasket-js').click(function(){
+		buyWithSlider.update();
+	})
+
 
 	//stars js
 	$('.star-js').click(function () {

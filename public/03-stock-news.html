@@ -31,23 +31,23 @@
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Каталог</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Mac</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">iPad</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">iPhone</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Watch</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Аксесуари</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Про нас</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Контакти</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Гарантія на повернення</a>
 						</li>
 					</ul>
 					<div class="text-right"></div>
@@ -69,7 +69,10 @@
 									<li><a href="#">Контакти</a></li>
 									<li><a href="#">Гарантія на повернення</a></li>
 									<li><a href="#">Оплата та доставка</a></li>
-									<li class="dropdown" tabindex="0">
+									<li class="dropdown" tabindex="0"><a class="link-modal d-none" href="#modal-entrance">
+											<svg class="icon icon-user ">
+												<use xlink:href="img/svg/sprite.svg#user"></use>
+											</svg></a>
 										<div class="dropdown-toggle">
 											<svg class="icon icon-user ">
 												<use xlink:href="img/svg/sprite.svg#user"></use>
@@ -96,7 +99,7 @@
 							</div>
 							<div class="topLine__divider w-100 d-none d-lg-block">
 							</div>
-							<div class="col-auto d-none d-sm-block">
+							<div class="col-auto">
 								<ul>
 									<li class="dropdown dropdown--search" tabindex="0">
 										<div class="dropdown-toggle">
@@ -124,9 +127,9 @@
 														<!-- +e.input-wrap-->
 													</form>
 												</div>
-												<div class="topLine__hints"><a class="topLine__btn" href="#">iphone X</a><a class="topLine__btn" href="#">наушники</a><a class="topLine__btn" href="#">iphone 7</a><a class="topLine__btn" href="#">airpods</a><a class="topLine__btn" href="#">iphone 8</a><a class="topLine__btn" href="#">кабель</a><a class="topLine__btn" href="#">iphone XS</a>
+												<div class="topLine__hints"><a class="topLine__btn" href="#">iphone X</a><a class="topLine__btn" href="#">наушники</a><a class="topLine__btn" href="#">iphone 7</a><a class="topLine__btn" href="#">airpods</a><a class="topLine__btn" href="#">iphone 8</a><a class="topLine__btn" href="#">кабель</a><a class="topLine__btn d-none d-sm-inline-block" href="#">iphone XS</a>
 												</div>
-												<div class="popularProd">
+												<div class="popularProd d-none d-lg-block">
 													<div class="row">
 														<div class="popularProd__col col"><a class="popularCategoryItem" href="#">
 															<!-- picture-->
@@ -196,17 +199,69 @@
 							</div>
 							<div class="col-auto">
 								<ul>
-									<li><a href="#">
+									<li class="d-none d-sm-block"><a href="#">
 											<svg class="icon icon-heart ">
 												<use xlink:href="img/svg/sprite.svg#heart"></use>
 											</svg></a></li>
-									<li>
-										<div class="basket-block">
-											<div class="basket-block__btn">
-												<svg class="icon icon-basket ">
-													<use xlink:href="img/svg/sprite.svg#basket"></use>
-												</svg>
-												<div class="basket-block__count">2
+									<li class="dropdown" tabindex="0"><a class="basket-block dropdown-toggle" href="#"><span class="basket-block__btn">
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg><span class="basket-block__count">2</span></span></a>
+										<div class="dropdown-menu dropdown-menu--basket">
+											<div class="topLine__basket">
+												<table>
+													<tr>
+														<td><a class="topLine__imgWrap" href="#">
+															<!-- picture-->
+															<picture class="lazy"> 
+																<source srcset="#" data-srcset="img/@2x/webp/headerCategory-11pro.webp" type="image/webp"/><img src="#" data-src="img/@2x/headerCategory-11pro.png" alt=""/>
+															</picture>
+															<!-- /picture--></a>
+														</td>
+														<td> 
+															<div class="topLine__name">Apple iPhone 11, 64 ГБ, черный
+															</div>
+														</td>
+														<td> 
+															<div class="topLine__price">27 990 грн
+															</div>
+														</td>
+														<td>
+															<button class="topLine__btnCancel" type="submit">
+																<svg class="icon icon-cancel ">
+																	<use xlink:href="img/svg/sprite.svg#cancel"></use>
+																</svg>
+															</button>
+														</td>
+													</tr>
+													<tr>
+														<td><a class="topLine__imgWrap" href="#">
+															<!-- picture-->
+															<picture class="lazy"> 
+																<source srcset="#" data-srcset="img/@2x/webp/popularCategory-3.webp" type="image/webp"/><img src="#" data-src="img/@2x/popularCategory-3.png" alt=""/>
+															</picture>
+															<!-- /picture--></a>
+														</td>
+														<td>
+															<div class="topLine__name">Apple MacBook Pro 16" 8 Core i9 2,4 ГГц, 64 ГБ, 8 ТБ SSD Lorem ipsum dolor sit amet consectetur adipisicing elit. At totam, reprehenderit quis voluptatibus dolore quisquam facilis numquam odio fugit explicabo eligendi asperiores quaerat quae? Molestiae quidem rem id provident facere.
+															</div>
+														</td>
+														<td> 
+															<div class="topLine__price">69 990 грн
+															</div>
+														</td>
+														<td>
+															<button class="topLine__btnCancel" type="submit">
+																<svg class="icon icon-cancel ">
+																	<use xlink:href="img/svg/sprite.svg#cancel"></use>
+																</svg>
+															</button>
+														</td>
+													</tr>
+												</table>
+												<div class="topLine__basketFoot"><a class="topLine__basketBTN" href="#">Оформить заказ</a>
+													<div class="topLine__totalPrice"> <span>итого:</span>97 980 грн
+													</div>
 												</div>
 											</div>
 										</div>
@@ -343,6 +398,72 @@
 				</div>
 			</div>
 			<!-- end sStockAndNews-->
+			<!-- start sDescr-->
+			<div class="sDescr" id="sDescr">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 d-none d-lg-block"><a class="sDescr__logo" href="#">
+							<!-- picture-->
+							<picture class="lazy"> 
+								<source srcset="#" data-srcset="img/@2x/webp/logo-descr.webp" type="image/webp"/><img src="#" data-src="img/@2x/logo-descr.png" alt=""/>
+							</picture>
+							<!-- /picture--></a>
+						</div>
+						<div class="sDescr__col col">
+							<div class="sDescr__title d-none d-lg-block">Техника Apple и аксессуары
+							</div>
+							<div class="sDescr__row row">
+								<div class="col-md-4">
+									<p>Epplstore&nbsp;&mdash; официальный партнер компании Apple в&nbsp;России и&nbsp;Европе, имеющий статус премиум-реселлера Apple Premium Reseller.</p>
+									<p>re:Store&nbsp;&mdash; это не&nbsp;просто магазин, но&nbsp;и&nbsp;центр обслуживания, место, куда вы&nbsp;можете прийти, чтобы посоветоваться, выбрать подходящее устройство, где вас научат пользоваться&nbsp;им, дадут советы по&nbsp;эксплуатации и&nbsp;покажут возможности того, что вы&nbsp;приобрели.</p>
+								</div>
+								<div class="col-md-4">
+									<p>Мы&nbsp;продаем только официальные версии с&nbsp;легальной русской прошивкой, что избавляет клиентов от&nbsp;множества проблем</p>
+									<p>Наши продавцы&nbsp;&mdash; это специалисты в&nbsp;своей области. А&nbsp;качественная, удобная, простая в&nbsp;использовании техника от&nbsp;Apple доставляет удовольствие своим пользователям и&nbsp;редко требует какой-либо технической поддержки.</p>
+								</div>
+								<div class="col-md-4">
+									<p>Мы&nbsp;продаем компьютеры, клавиатуры, мышки, мониторы, плееры, телефоны и&nbsp;многое другое. Мы&nbsp;работаем, чтобы вам было удобно. Центры продаж техники Apple расположены по&nbsp;всей России. Вы&nbsp;можете прийти, чтобы лично ознакомиться с&nbsp;тем или иным устройством. У&nbsp;нас предусмотрена и&nbsp;возможность заказа через интернет. Как покупать&nbsp;&mdash; выбор за&nbsp;вами!</p>
+								</div>
+							</div>
+							<div class="sDescr__showMore d-md-none">Подробнее
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sDescr-->
+			<!-- start sForm-->
+			<div class="sForm" id="sForm">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-3"></div>
+						<div class="sForm__col col-md-auto">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Подписаться на новости" name="email"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="submit">
+										<svg class="icon icon-subscribe ">
+											<use xlink:href="img/svg/sprite.svg#subscribe"></use>
+										</svg>
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="sForm__coll col-md">
+							<p>Подписываясь на&nbsp;рассылку, вы&nbsp;соглашаетесь с&nbsp;<a href="#">офертой</a>&nbsp;и&nbsp;<a href="#">условиями обработки персональных данных</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sForm-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">
@@ -456,12 +577,13 @@
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
 					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Нажимая на кнопку «Войти» или «Зарегистрироваться» вы соглашаетесь с <a href="#">условиями оферты</a> и <a href="#">политикой конфидециальности</a></small>
 						</label>
 					</div>
 				</form>
 			</div>
 		</div>
+		<!-- #modal-call-->
 		<div class="modal-win" id="filter" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -591,7 +713,205 @@
 				</form>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<div class="modal-win" id="modal-congratulations" style="display: none">
+			<div class="modal-win__body">
+				<div class="modal-win__title">Поздравляем!
+				</div>
+				<div class="modal-win__subtitle">Вы зарегистрировались на сайте epplstore
+				</div><a class="modal-win__btn" href="#">Перейти в каталог</a>
+			</div>
+			<!-- picture-->
+			<picture class="lazy picture-congratulations"> 
+				<source srcset="#" data-srcset="img/@2x/webp/congratulations.webp" type="image/webp"/><img src="#" data-src="img/@2x/congratulations.png" alt=""/>
+			</picture>
+			<!-- /picture-->
+		</div>
+		<div class="modal-win" id="modal-reg" style="display: none">
+			<div class="modal-win__row row">
+				<div class="modal-win__col col-md-6 d-none d-md-block">
+					<div class="form-wrap">
+						<form>
+							<input type="hidden" name="example-input-field"/>
+							<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+							<input class="utm_source" type="hidden" name="utm_source"/>
+							<input class="utm_term" type="hidden" name="utm_term"/>
+							<input class="utm_medium" type="hidden" name="utm_medium"/>
+							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+							<div class="form-wrap__title form-data">У меня уже есть аккаунт<a class="form-wrap__link d-md-none" href="#">Забыли пароль?</a>
+							</div>
+							<div class="row align-items-center">
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email" required="required"/> 
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password" required="required"/> 
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="form-wrap__col col-sm-6">
+									<button class="form-wrap__btn btn btn-success" type="submit">Войти
+									</button>
+								</div>
+								<div class="form-wrap__col col-sm-6"><a class="form-wrap__link d-none d-md-block" href="#">Забыли пароль?</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-wrap">
+						<form>
+							<input type="hidden" name="example-input-field"/>
+							<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+							<input class="utm_source" type="hidden" name="utm_source"/>
+							<input class="utm_term" type="hidden" name="utm_term"/>
+							<input class="utm_medium" type="hidden" name="utm_medium"/>
+							<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+							<div class="form-wrap__title form-data">Регистрация<a class="form-wrap__link link-modal d-md-none" href="#modal-entrance">У меня уже есть аккаунт</a>
+							</div>
+							<div class="row align-items-center">
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email" required="required"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-9 col-sm-6">
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password" required="required"/>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-sm-12">
+									<div class="form-wrap__polite d-md-none">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Нажимая на кнопку «Войти» или «Зарегистрироваться» вы соглашаетесь с <a href="#">условиями оферты</a> и <a href="#">политикой конфидециальности</a></small>
+										</label>
+									</div>
+								</div>
+								<div class="form-wrap__col col-sm-6">
+									<button class="form-wrap__btn btn btn-success" type="submit">Зарегистрироваться
+									</button>
+								</div>
+								<div class="form-wrap__col col-sm-6"><a class="form-wrap__link d-none d-md-block" href="#">Юридическим лицам</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-win__polite d-none d-md-block">
+				<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Нажимая на кнопку «Войти» или «Зарегистрироваться» вы соглашаетесь с <a href="#">условиями оферты</a> и <a href="#">политикой конфидециальности</a></small>
+				</label>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-entrance" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="form-wrap__title form-data">Вход<a class="form-wrap__link link-modal d-md-none" href="#modal-reg">Регистрация</a>
+					</div>
+					<div class="row align-items-center">
+						<div class="col-9 col-sm-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email" required="required"/> 
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-9 col-sm-6">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password" required="required"/> 
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="form-wrap__col col-sm-6">
+							<button class="form-wrap__btn btn btn-success" type="submit">Войти
+							</button>
+						</div>
+						<div class="form-wrap__col col-sm-6"><a class="form-wrap__link" href="#">Забыли пароль?</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-basket" style="display: none">
+			<div class="modal-win__title text-center">Добавлено в корзину
+			</div>
+			<div class="modal-win__youOrder">
+				<div class="row">
+					<div class="col-6"><a class="popularCategoryItem" href="#">
+						<!-- picture-->
+						<picture class="lazy"> 
+							<source srcset="#" data-srcset="img/@2x/webp/popularCategory-3.webp" type="image/webp"/><img src="#" data-src="img/@2x/popularCategory-3.png" alt=""/>
+						</picture>
+						<!-- /picture--><span class="popularCategoryItem__title">MacBook Pro</span><span class="popularCategoryItem__price">от 66 990 р </span></a>
+					</div>
+					<div class="col-6"><a class="popularCategoryItem" href="#">
+						<!-- picture-->
+						<picture class="lazy"> 
+							<source srcset="#" data-srcset="img/@2x/webp/popularCategory-4.webp" type="image/webp"/><img src="#" data-src="img/@2x/popularCategory-4.png" alt=""/>
+						</picture>
+						<!-- /picture--><span class="popularCategoryItem__title">Apple Watch 4</span><span class="popularCategoryItem__price">от 31 990 р </span></a>
+					</div>
+				</div>
+			</div>
+			<div class="modal-win__links">
+				<button class="modal-win__proceed" type="button" data-fancybox-close="" title="Закрыть">Продолжить покупки
+				</button><a class="modal-win__toBasket" href="#">Перейти в корзину</a>
+			</div>
+			<!-- start sBuyWith-->
+			<section class="sBuyWith section d-none d-lg-block" id="sBuyWith">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>Вместе с этим товаром покупают</h2>
+					</div>
+					<div class="sBuyWith__slider">
+						<div class="swiper-container buy-with-slider-js">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-1.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">iphone SE</span><span class="sBuyWith__price">от 39 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-2.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Apple AirPods Pro</span><span class="sBuyWith__price">от 39 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-3.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">MacBook Pro</span><span class="sBuyWith__price">от 66 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-4.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Apple Watch 4</span><span class="sBuyWith__price">от 31 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-5.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">Itapok</span><span class="sBuyWith__price">от 1 331 990 р</span></span></a>
+								</div>
+								<div class="swiper-slide"><a class="sBuyWith__slide-cont" href="#"><span class="sBuyWith__img"><img src="img/@2x/buy-with-slide-6.png" alt=""/></span><span class="sBuyWith__txt"><span class="sBuyWith__name">ItapokS</span><span class="sBuyWith__price">от 1 331 990 р</span></span></a>
+								</div>
+								<!--+buyWithSlide(6, 'ItapokS Zaminirovan', 'от 9 331 990 р')-->
+								<!--+buyWithSlide(6, 'ItapokSE Zaminirovan', 'от 9 331 990 р')-->
+							</div>
+						</div>
+						<div class="swiper-prev-frame buy-with-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-next-frame buy-with-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+						<div class="swiper-pugin-frame buy-with-pugin d-md-none"></div>
+					</div>
+				</div>
+			</section>
+			<!-- end sBuyWith-->
+		</div>
 		<!-- end modals-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>

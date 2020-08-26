@@ -451,6 +451,9 @@ function eventHandler() {
 			nextEl: '.buy-with-next',
 			prevEl: '.buy-with-prev'
 		}
+	});
+	$('.modalBasket-js').click(function () {
+		buyWithSlider.update();
 	}); //stars js
 
 	$('.star-js').click(function () {

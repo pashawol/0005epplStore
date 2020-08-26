@@ -10,11 +10,81 @@ mixin modal()
 			+input("Ваше Имя")(required)  
 			+e.BUTTON.btn.btn(type="submit"  ) 
 			+polite()
-
+	// #modal-call
 
 	+b.modal-win(id="filter" class=" " style="display: none" )
 		+form-wrap
 			+filter
-	// #modal-call
-	
+
+	+b.modal-win(id="modal-congratulations" class=" " style="display: none" )
+		+e.body
+			+e.title Поздравляем!
+			+e.subtitle Вы зарегистрировались на сайте epplstore
+			+e.btn(href="#") Перейти в каталог
+		+pic('congratulations.png','','lazy','')(class="picture-congratulations")
+
+	+b.modal-win(id="modal-reg" class=" " style="display: none" )
+		+e.row.row
+			+e.col.col-md-6.d-none.d-md-block
+				+form-wrap
+					+e.title.form-data У меня уже есть аккаунт
+						+e.link.d-md-none(href="#") Забыли пароль?
+					.row.align-items-center
+						.col-9.col-sm-6
+							+input("Ваш e-mail","email")(required)  
+						.col-9.col-sm-6
+							+input("Пароль","password")(required)  
+						+e.col.col-sm-6
+							+e.BUTTON.btn.btn.btn-success(type="submit") Войти
+						+e.col.col-sm-6
+							+e.link.d-none.d-md-block(href="#") Забыли пароль?
+			.col-md-6
+				+form-wrap
+					+e.title.form-data Регистрация
+						+e.link.link-modal.d-md-none(href="#modal-entrance") У меня уже есть аккаунт
+					.row.align-items-center
+						.col-9.col-sm-6
+							+input('Имя')
+						.col-9.col-sm-6
+							+input('Телефон','tel')
+						.col-9.col-sm-6
+							+input("Ваш e-mail","email")(required)
+						.col-9.col-sm-6
+							+input("Пароль","password")(required)
+						.col-sm-12
+							+polite()(class="d-md-none")
+						+e.col.col-sm-6
+							+e.BUTTON.btn.btn.btn-success(type="submit") Зарегистрироваться
+						+e.col.col-sm-6
+							+e.link.d-none.d-md-block(href="#") Юридическим лицам
+		+polite()(class="d-none d-md-block")
+
+	+b.modal-win(id="modal-entrance" class=" " style="display: none" )
+		+form-wrap
+			+e.title.form-data Вход
+				+e.link.link-modal.d-md-none(href="#modal-reg") Регистрация
+			.row.align-items-center
+				.col-9.col-sm-6
+					+input("Ваш e-mail","email")(required)  
+				.col-9.col-sm-6
+					+input("Пароль","password")(required)  
+				+e.col.col-sm-6
+					+e.BUTTON.btn.btn.btn-success(type="submit") Войти
+				+e.col.col-sm-6
+					+e.link(href="#") Забыли пароль?
+
+	+b.modal-win(id="modal-basket" class=" " style="display: none" )
+		+e.title.text-center Добавлено в корзину
+		+e.youOrder
+			.row
+				.col-6
+					+popularCategoryItem('3','MacBook Pro','от 66 990 р ')
+				.col-6
+					+popularCategoryItem('4','Apple Watch 4','от 31 990 р ')
+		+e.links
+			+e.BUTTON.proceed(type="button" data-fancybox-close="" title="Закрыть") Продолжить покупки
+			+e.toBasket(href="#") Перейти в корзину
+		+sBuyWith(class="d-none d-lg-block")
+		
+
 	// end modals

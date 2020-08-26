@@ -14,6 +14,9 @@ mixin topLine()
 						li: a(href="#") Гарантія на повернення
 						li: a(href="#") Оплата та доставка
 						li.dropdown(tabindex="0")
+							a.link-modal.d-none(href="#modal-entrance")
+								+icon('user')
+									span.d-none.d-xl-inline Особистий кабінет
 							.dropdown-toggle
 								+icon('user')
 								span.d-none.d-xl-inline Особистий кабінет
@@ -30,7 +33,7 @@ mixin topLine()
 										li: a(href="#") Мои коммуникации
 									+e.exit(type='submit') Выйти
 				+e.divider.w-100.d-none.d-lg-block
-				.col-auto.d-none.d-sm-block
+				.col-auto
 					ul
 						li.dropdown.dropdown--search(tabindex="0")
 							.dropdown-toggle
@@ -48,8 +51,8 @@ mixin topLine()
 										+e.btn(href="#") airpods
 										+e.btn(href="#") iphone 8
 										+e.btn(href="#") кабель
-										+e.btn(href="#") iphone XS
-									+b.popularProd
+										+e.btn.d-none.d-sm-inline-block(href="#") iphone XS
+									+b.popularProd.d-none.d-lg-block
 										.row
 											+e.col.col
 												+popularCategoryItem('1','Наушники AirPods (2019) в зарядном футляре')
@@ -84,13 +87,43 @@ mixin topLine()
 						li: a(href="#") Гаджети
 				.col-auto
 					ul
-						li: a(href="#")
+						li.d-none.d-sm-block: a(href="#")
 							+icon('heart')
-						li
-							+b.basket-block
+						li.dropdown(tabindex="0")
+							+b.basket-block.dropdown-toggle(href="#")
 								+e.btn
 									+icon('basket')
 									+e.count 2
+							.dropdown-menu.dropdown-menu--basket
+								+e.basket
+									table
+										tr
+											td
+												+e.imgWrap(href="#")
+													+pic('headerCategory-11pro.png','','lazy','')
+											td 
+												+e.name Apple iPhone 11, 64 ГБ, черный
+											td 
+												+e.price 27 990 грн
+											td
+												+e.btnCancel(type="submit")
+													+icon('cancel')
+										tr
+											td
+												+e.imgWrap(href="#")
+													+pic('popularCategory-3.png','','lazy','')
+											td
+												+e.name Apple MacBook Pro 16" 8 Core i9 2,4 ГГц, 64 ГБ, 8 ТБ SSD Lorem ipsum dolor sit amet consectetur adipisicing elit. At totam, reprehenderit quis voluptatibus dolore quisquam facilis numquam odio fugit explicabo eligendi asperiores quaerat quae? Molestiae quidem rem id provident facere.
+											td 
+												+e.price 69 990 грн
+											td
+												+e.btnCancel(type="submit")
+													+icon('cancel')
+									+e.basketFoot
+										+e.basketBTN(href="#") Оформить заказ
+										+e.totalPrice 
+											span итого:
+											|97 980 грн
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js
 						span

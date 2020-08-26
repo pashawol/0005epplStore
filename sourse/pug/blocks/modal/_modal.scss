@@ -2,7 +2,7 @@
 	// display: block;
 	width: 100%;
 	position: relative;
-
+	max-width: 1170px;
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -13,10 +13,233 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	&__body {
+		// padding: ;
+		position: relative;
+		padding: 45px 80px 219px 19px;
+		@include media-breakpoint-up(md) {
+			padding: 86px 102px 246px;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 24px;
+		@include media-breakpoint-up(md) {
+			font-size: 38px;
+		}
+		margin-bottom: 30px;
+		@extend .mono;
+	}
+
+	&__subtitle {
+		font-size: 17px;
+		margin-bottom: 39px;
+		@include media-breakpoint-up(md) {
+			font-size: 20px;
+			margin-bottom: 84px;
+		}
+		font-weight: 300;
+	}
+
+	&__btn {
+		@extend .btn;
+		background-color: #6fd200;
+		min-width: 135px;
+		@include media-breakpoint-up(sm) {
+			min-width: 192px;
+		}
+		color: #fff;
+		border: solid 1px #6fd200;
+		&:hover {
+			background-color: #fff;
+			border-color: $body-color;
+			color: $body-color;
+		}
+		@include media-breakpoint-down(md) {
+			font-size: 13px;
+		}
+	}
+
+	&__polite {
+		margin-top: 47px;
+		color: $body-color;
+
+		a {
+			color: $body-color;
+			text-decoration: underline;
+		}
+	}
+
+	.custom-input__lab {
+		background-color: #6fd200 !important;
+	}
+
+	&__row {
+		@include media-breakpoint-up(lg) {
+			@include roww(86px);
+		}
+	}
+
+	&__col {
+		border-right: solid 1px rgba($color: $body-color, $alpha: 0.24);
+	}
+
+	.form-wrap {
+		.row {
+			@include roww(12px);
+		}
+
+		&__input {
+			border-radius: 4px;
+		}
+		&__input-wrap {
+			padding-bottom: 12px;
+		}
+		&__btn {
+			@include media-breakpoint-only(md) {
+				min-width: 140px;
+			}
+			min-width: 161px;
+			@extend .mono;
+			font-weight: 400;
+			@include media-breakpoint-down(lg) {
+				font-size: 13px;
+			}
+		}
+
+		&__col {
+			padding-top: 13px;
+		}
+
+		&__link {
+			@extend .mono;
+			// letter-spacing: 0.07px;
+			color: $body-color;
+			font-weight: 400;
+			@include media-breakpoint-up(md) {
+				color: #6fd200;
+				font-weight: 600;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-left: 19px;
+			}
+			@include media-breakpoint-down(lg) {
+				font-size: 11px;
+			}
+			@include media-breakpoint-down(md) {
+				text-decoration: underline;
+			}
+		}
+
+		&__title {
+			@extend .mono;
+			margin-bottom: 25px;
+			@include media-breakpoint-up(sm) {
+				margin-bottom: 35px;
+			}
+			font-size: 24px;
+			font-weight: 400;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__polite {
+			padding-top: 15px;
+			font-size: 13px;
+			a {
+				color: $body-color;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__youOrder {
+		max-width: 560px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 20px;
+		}
+	}
+
+	&__proceed, &__toBasket {
+		@extend .btn;
+		min-width: 130px;
+		@include media-breakpoint-down(md) {
+			font-size: 12px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+	&__proceed {
+		@extend .btn-outline-dark;
+		margin-right: 5px;
+		@include media-breakpoint-up(md) {
+			min-width: 216px;
+			margin-right: 15px;
+		}
+	}
+	&__toBasket {
+		@extend .btn-success;
+		@include media-breakpoint-up(md) {
+			min-width: 192px;
+		}
+	}
+
+	.sBuyWith {
+		padding-bottom: 0;
+	}
+}
+.fancybox-content {
+	@include media-breakpoint-down(sm) {
+		padding: 35px 20px 40px 15px;
+	}
+}
+
+#modal-congratulations {
+	max-width: 772px;
+	overflow: hidden;
+	padding: 0;
+	picture {
+		margin-top: rem(-200);
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(-250);
+		}
+		@include media-breakpoint-up(md) {
+			margin-top: rem(-390);
+		}
+	}
 }
 
 a {
 	outline: 0 !important;
+}
+
+.fancybox-close-small {
+	padding: 0 !important;
+	width: 21px;
+	height: 21px;
+	margin: 10px;
+	@include media-breakpoint-up(sm) {
+		margin: 20px;
+	}
+	svg {
+		background-color: $primary;
+		border-radius: 50%;
+		path {
+			fill: #fff;
+		}
+	}
 }
 
 .modal-form {
