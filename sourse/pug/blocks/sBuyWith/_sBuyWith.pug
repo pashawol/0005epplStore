@@ -26,7 +26,9 @@ mixin buyWithSlide(imgNum, name, price)
 	.swiper-slide
 		+e.A.slide-cont(href='#')
 			+e.img
-				img(src=`img/@2x/buy-with-slide-${imgNum}.png` alt="")
+				picture
+					source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/buy-with-slide-${imgNum}.webp` type="image/webp")
+					img.swiper-lazy(src="#" data-src=`img/@2x/buy-with-slide-${imgNum}.png` alt="")
 				//-.swiper-lazy(src="#" data-
 			+e.txt
 				+e.name=name

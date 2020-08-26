@@ -452,6 +452,10 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.buy-with-next',
 			prevEl: '.buy-with-prev'
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
 		}
 	});
 	$('.modalBasket-js').click(function () {
