@@ -351,6 +351,10 @@ function eventHandler() {
 
 	});
 
+	$('.productItem__heart').click(function(){
+		$(this).toggleClass('active');
+	})
+
 	$('.accardion-js').click(function(){
 		$(this).toggleClass('active');
 		$(this).parent().find('.accardion-toggle-js').slideToggle();

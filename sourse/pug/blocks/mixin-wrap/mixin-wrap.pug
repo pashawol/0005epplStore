@@ -27,6 +27,13 @@ mixin range(c1, c2)
 					+b.INPUT.input_to.form-control.form-control-sm(type="text" ) 
 		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
 
+mixin popularCategoryItem(img,title,price)
+	+b.popularCategoryItem(href="#")
+		+pic(`popularCategory-${img}.png`,'','lazy','')
+		+e.title= title
+		if price
+			+e.price= price
+
 mixin filter()
 	+b.filter&attributes(attributes)
 		+e.item

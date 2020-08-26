@@ -1,6 +1,6 @@
 mixin productItem(img,name,price,pre)
 	+b.productItem&attributes(attributes)
-		+e.heart
+		+e.heart(tabindex="0")
 			+icon('heart')
 		a(href="#")
 			+pic(`popularCategory-${img}.png`,'','lazy','')

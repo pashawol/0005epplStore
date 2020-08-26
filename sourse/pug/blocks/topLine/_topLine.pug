@@ -13,31 +13,72 @@ mixin topLine()
 						li: a(href="#") Контакти
 						li: a(href="#") Гарантія на повернення
 						li: a(href="#") Оплата та доставка
-						li.dropdown: u.dropdown-toggle
+						li.dropdown(tabindex="0")
+							.dropdown-toggle
 								+icon('user')
 								span.d-none.d-xl-inline Особистий кабінет
-								.dropdown-menu
-									+e.lk
-										ul
-											li: a(href="#") Профиль
-											li: a(href="#") Адреса доставки
-											li: a(href="#") Любимый магазин
-											li: a(href="#") Бонусная программа
-											li: a(href="#") Мои заказы
-											li: a(href="#") Избранное
-											li: a(href="#") Мои обращения
-											li: a(href="#") Мои коммуникации
-										+e.exit(type='submit') Выйти
+							.dropdown-menu
+								+e.lk
+									ul
+										li: a(href="#") Профиль
+										li: a(href="#") Адреса доставки
+										li: a(href="#") Любимый магазин
+										li: a(href="#") Бонусная программа
+										li: a(href="#") Мои заказы
+										li: a(href="#") Избранное
+										li: a(href="#") Мои обращения
+										li: a(href="#") Мои коммуникации
+									+e.exit(type='submit') Выйти
 				+e.divider.w-100.d-none.d-lg-block
 				.col-auto.d-none.d-sm-block
-						ul
-							li: a(href="#")
+					ul
+						li.dropdown.dropdown--search(tabindex="0")
+							.dropdown-toggle
 								+icon('search')
+							.dropdown-menu
+								.container
+									+form-wrap
+										+e.btn(type='submit')
+											+icon('search')
+										+input('Что вы ищите','search')
+									+e.hints
+										+e.btn(href="#") iphone X
+										+e.btn(href="#") наушники
+										+e.btn(href="#") iphone 7
+										+e.btn(href="#") airpods
+										+e.btn(href="#") iphone 8
+										+e.btn(href="#") кабель
+										+e.btn(href="#") iphone XS
+									+b.popularProd
+										.row
+											+e.col.col
+												+popularCategoryItem('1','Наушники AirPods (2019) в зарядном футляре')
+											+e.col.col
+												+popularCategoryItem('2','Наушники AirPods (2019) в зарядном футляре')
+											+e.col.col
+												+popularCategoryItem('3','Наушники AirPods (2019) в зарядном футляре')
+											+e.col.col
+												+popularCategoryItem('4','Наушники AirPods (2019) в зарядном футляре')
+											+e.col.col
+												+popularCategoryItem('5','Наушники AirPods (2019) в зарядном футляре')
+
 				+e.col.col.d-none.d-lg-block
 					ul 
 						li: a(href="#") Mac
 						li: a(href="#") iPad
-						li: a(href="#") iPhone
+						li.dropdown(tabindex="0")
+							a.dropdown-toggle(href="#") iPhone
+							.dropdown-menu.dropdown-menu--mnu
+								+e.dropMNU
+									ul
+										li: a(href="#") iPhone 11 Pro
+										li: a(href="#") iPhone 11
+										li: a(href="#") iPhone SE
+										li: a(href="#") iPhone XR
+										li: a(href="#") AirPods
+										li: a(href="#") Аксессуары
+										li: a(href="#") Программы и сервисы
+									+e.singleLink(href="#") Какой iPhone выбрать?
 						li: a(href="#") Watch
 						li: a(href="#") Аксесуари
 						li: a(href="#") Гаджети
