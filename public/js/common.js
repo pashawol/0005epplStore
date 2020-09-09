@@ -248,7 +248,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
+	var _defaultSl, _Swiper;
 
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -318,27 +318,20 @@ function eventHandler() {
 			clickable: true
 		}
 	});
-	var sliderCategory = new Swiper('.sliderCategory-js', {
+	var sliderCategory = new Swiper('.sliderCategory-js', (_Swiper = {
 		slidesPerView: 2,
 		loop: false,
 		// freeMode: true,
 		freeModeMomentum: true,
 		watchOverflow: true,
-		spaceBetween: 3,
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 5
-		},
-		pagination: {
-			el: '.sliderCategory-js .swiper-pagination',
-			clickable: true
-		},
-		breakpoints: {
-			992: {
-				slidesPerView: 'auto'
-			}
-		}
-	});
+		spaceBetween: 3
+	}, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "lazy", {
+		loadPrevNext: true,
+		loadPrevNextAmount: 5
+	}), _defineProperty(_Swiper, "pagination", {
+		el: '.sliderCategory-js .swiper-pagination',
+		clickable: true
+	}), _Swiper));
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,

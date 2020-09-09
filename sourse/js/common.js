@@ -324,6 +324,7 @@ function eventHandler() {
 		freeModeMomentum: true,
 		watchOverflow: true,
 		spaceBetween: 3,
+		slidesPerView: 'auto',
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 5,
@@ -331,11 +332,6 @@ function eventHandler() {
 		pagination: {
 			el: '.sliderCategory-js .swiper-pagination',
 			clickable: true,
-		},
-		breakpoints: { 
-			992: {
-				slidesPerView: 'auto',
-			},
 		},
 	});
 
