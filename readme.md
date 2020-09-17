@@ -12,4 +12,5 @@
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-3.html> Бонусные балы
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-4.html> Мои заказы
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-5.html> Избранное
-1. <https://pashawol.github.io/0005epplStore/public/08-about-us.html>
+1. <https://pashawol.github.io/0005epplStore/public/09-basket.html>
+1. <https://pashawol.github.io/0005epplStore/public/10-simplecheckout.html>
