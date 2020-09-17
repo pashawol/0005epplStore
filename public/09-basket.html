@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет</title>
+		<title>Кошик для покупок</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body class="catalogPage"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -56,7 +56,7 @@
 			</div>
 			<!--  мобильное меню-->
 			<!-- start header-->
-			<header class="header" id="header">
+			<header class="header" id="header"> 
 				<!-- start topLine-->
 				<div class="topLine">
 					<div class="container">
@@ -289,353 +289,208 @@
 												<use xlink:href="img/svg/sprite.svg#home"></use>
 											</svg></span>
 										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Кошик для покупок</span>
 										<meta itemprop="position" content="2"/></a></li>
-								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мои заказы</span>
-										<meta itemprop="position" content="3"/></a></li>
 							</ol>
 						</nav>
 					</div>
 				</div>
-			</div>
-			<!-- start sLK-->
-			<section class="sLK section" id="sLK">
-				<div class="container">
-					<div class="row">
-						<div class="sLK__col col-lg-3">
-							<div class="section-title d-lg-none">
-								<h1>Профиль</h1>
-							</div>
-							<div class="caption"><a class="caption__btn active" href="#">Профиль</a><a class="caption__btn" href="#">Адрес доставки</a><a class="caption__btn" href="#">Бонусные балы</a><a class="caption__btn" href="#">Мои заказы</a><a class="caption__btn" href="#">Избранное / Возврат</a>
-							</div>
+				<!-- start sBasket-->
+				<div class="sBasket" id="checkout-cart">
+					<div class="container">
+						<div class="section-title">
+							<h1>Кошик для покупок</h1>
 						</div>
-						<div class="col">
-							<div class="sLK__wrap">
-								<div class="section-title d-none d-lg-flex">
-									<h1>Профиль</h1>
-									<div class="section-title__text">Обо мне
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Имя:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иван" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Фамилия:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иванович" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Отчество:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иванов" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Пол:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__gender">
-											<label class="custom-input"><input class="custom-input__input" type="radio" name="gender" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Мужской</span>
-											</label>
-											<label class="custom-input"><input class="custom-input__input" type="radio" name="gender"/><span class="custom-input__lab"></span><span class="custom-input__text">Женский</span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Телефон:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="tel" placeholder="+38 (440) 325-67-22" name="tel"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Мобильный телефон:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="tel" placeholder="+38 (097) 325-67-22" name="tel"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">E-mail:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="email" placeholder="name@gmail.com" name="email"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Дата рождения:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__selectWrap">
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">День</option>
-														<option value="1"></option>
-														<option value="2"></option>
-														<option value="3"></option>
-														<option value="4"></option>
-														<option value="5"></option>
-														<option value="6"></option>
-														<option value="7"></option>
-														<option value="8"></option>
-														<option value="9"></option>
-														<option value="10"></option>
-														<option value="11"></option>
-														<option value="12"></option>
-														<option value="13"></option>
-														<option value="14"></option>
-														<option value="15"></option>
-														<option value="16"></option>
-														<option value="17"></option>
-														<option value="18"></option>
-														<option value="19"></option>
-														<option value="20"></option>
-														<option value="21"></option>
-														<option value="22"></option>
-														<option value="23"></option>
-														<option value="24"></option>
-														<option value="25"></option>
-														<option value="26"></option>
-														<option value="27"></option>
-														<option value="28"></option>
-														<option value="29"></option>
-														<option value="30"></option>
-														<option value="31"></option>
-													</select>
+						<form method="post" enctype="multipart/form-data">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<td></td>
+											<td>Наименование</td>
+											<td>Цена</td>
+											<td>Колличество</td>
+											<td>Стоимость</td>
+											<td></td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td rowspan="2"><a class="sBasket__imgWrap" href="#">
+												<!-- picture-->
+												<picture> 
+													<source srcset="img/@2x/webp/Apple-watch.webp" type="image/webp" media="(min-width:576px)"/>
+													<source srcset="img/@1x/webp/Apple-watch.webp" type="image/webp"/>
+													<source srcset="img/@2x/Apple-watch.png" type="image/png" media="(min-width:576px)"/>
+													<source srcset="img/@1x/Apple-watch.png" type="image/png"/><img src="img/@2x/Apple-watch.png" alt=""/>
+												</picture>
+												<!-- /picture--></a>
+											</td>
+											<td><a class="sBasket__name" href="#">Apple Watch Nike Series&nbsp;5, 44&nbsp;мм, корпус из&nbsp;алюминия серебристого цвета, спортивный ремешок Nike &laquo;чистая платина/чёрный&raquo;</a>
+											</td>
+											<td> 
+												<div class="sBasket__price">12 990 грн
 												</div>
+											</td>
+											<td> 
+												<div class="sBasket__quantity">
+													<button class="sBasket__minus" type="submit" data-toggle="tooltip" title="" data-original-title="Видалити">
+													</button>
+													<div class="sBasket__input-wrap form-group"><input class="sBasket__input form-control" type="numb" placeholder="1" name="numb"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<button class="sBasket__plus" type="button" data-toggle="tooltip" title="" onclick="cart.remove('22');" data-original-title="Оновити">
+													</button>
+												</div>
+											</td>
+											<td> 
+												<div class="sBasket__totalPrice">12 990 грн
+												</div>
+											</td>
+											<td> 
+												<button class="sBasket__btnCancel" type="submit">
+													<svg class="icon icon-cancel ">
+														<use xlink:href="img/svg/sprite.svg#cancel"></use>
+													</svg>
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="sBasket__data"><span>MX3V2RU/A</span><span>Цвет: «чистая платина/чёрный»</span>
+												</div>
+											</td>
+											<td colspan="2"><a class="sBasket__accessories" href="#">Выбор аксессуаров</a>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td colspan="2">
+												<div class="sBasket__recomend">Рекомендую до покупки
+												</div>
+												<div class="sBasket__checkboxWrap">
+													<label class="custom-input"><input class="custom-input__input" type="checkbox" name="glass"/><span class="custom-input__lab"></span><span class="custom-input__text">1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)</span>
+													</label>
+													<div class="sBasket__accessoryPrice">249 грн
+													</div>
+												</div>
+												<div class="sBasket__checkboxWrap">
+													<label class="custom-input"><input class="custom-input__input" type="checkbox" name="guarantee"/><span class="custom-input__lab"></span><span class="custom-input__text">1 х Гарантия от магазина на срок 12 месяцев для Iphone </span>
+													</label>
+													<div class="sBasket__accessoryPrice">999 грн
+													</div>
+												</div>
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr>
+											<td rowspan="2"><a class="sBasket__imgWrap" href="#">
+												<!-- picture-->
+												<picture> 
+													<source srcset="img/@2x/webp/catalogImg-11promax.webp" type="image/webp" media="(min-width:576px)"/>
+													<source srcset="img/@1x/webp/catalogImg-11promax.webp" type="image/webp"/>
+													<source srcset="img/@2x/catalogImg-11promax.png" type="image/png" media="(min-width:576px)"/>
+													<source srcset="img/@1x/catalogImg-11promax.png" type="image/png"/><img src="img/@2x/catalogImg-11promax.png" alt=""/>
+												</picture>
+												<!-- /picture--></a>
+											</td>
+											<td><a class="sBasket__name" href="#">Apple Watch Nike Series&nbsp;5, 44&nbsp;мм, корпус из&nbsp;алюминия серебристого цвета, спортивный ремешок Nike &laquo;чистая платина/чёрный&raquo;</a>
+											</td>
+											<td> 
+												<div class="sBasket__price">12 990 грн
+												</div>
+											</td>
+											<td> 
+												<div class="sBasket__quantity">
+													<button class="sBasket__minus" type="submit" data-toggle="tooltip" title="" data-original-title="Видалити">
+													</button>
+													<div class="sBasket__input-wrap form-group"><input class="sBasket__input form-control" type="numb" placeholder="1" name="numb"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<button class="sBasket__plus" type="button" data-toggle="tooltip" title="" onclick="cart.remove('22');" data-original-title="Оновити">
+													</button>
+												</div>
+											</td>
+											<td> 
+												<div class="sBasket__totalPrice">12 990 грн
+												</div>
+											</td>
+											<td> 
+												<button class="sBasket__btnCancel" type="submit">
+													<svg class="icon icon-cancel ">
+														<use xlink:href="img/svg/sprite.svg#cancel"></use>
+													</svg>
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="sBasket__data"><span>MX3V2RU/A</span><span>Цвет: «чистая платина/чёрный»</span>
+												</div>
+											</td>
+											<td colspan="2"><a class="sBasket__accessories" href="#">Выбор аксессуаров</a>
+											</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td colspan="2">
+												<div class="sBasket__recomend">Рекомендую до покупки
+												</div>
+												<div class="sBasket__checkboxWrap">
+													<label class="custom-input"><input class="custom-input__input" type="checkbox" name="glass"/><span class="custom-input__lab"></span><span class="custom-input__text">1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)</span>
+													</label>
+													<div class="sBasket__accessoryPrice">249 грн
+													</div>
+												</div>
+												<div class="sBasket__checkboxWrap">
+													<label class="custom-input"><input class="custom-input__input" type="checkbox" name="guarantee"/><span class="custom-input__lab"></span><span class="custom-input__text">1 х Гарантия от магазина на срок 12 месяцев для Iphone </span>
+													</label>
+													<div class="sBasket__accessoryPrice">999 грн
+													</div>
+												</div>
+											</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="row">
+								<div class="col-lg-9 align-self-start">
+									<div class="sBasket__promoCode">
+										<div class="row align-items-start">
+											<div class="col-md-auto">
+												<p><strong>У вас есть промокод?</strong> Введите промокод и получите скидку на заказ</p>
 											</div>
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">Месяц</option>
-														<option value="Январь"></option>
-														<option value="Февраль"></option>
-														<option value="Март"></option>
-														<option value="Апрель"></option>
-														<option value="Май"></option>
-														<option value="Июнь"></option>
-														<option value="Июль"></option>
-														<option value="Август"></option>
-														<option value="Сентябрь"></option>
-														<option value="Октябрь"></option>
-														<option value="Ноябрь"></option>
-														<option value="Декабрь"></option>
-													</select>
+											<div class="col-md">
+												<div class="sBasket__input-wrap form-group"><input class="sBasket__input form-control" type="text" placeholder="Ввести промокод" name="text"/>
 												</div>
+												<!-- +e.input-wrap-->
 											</div>
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">Год</option>
-														<option value="2010"></option>
-														<option value="2009"></option>
-														<option value="2008"></option>
-														<option value="2007"></option>
-														<option value="2006"></option>
-														<option value="2005"></option>
-														<option value="2004"></option>
-														<option value="2003"></option>
-														<option value="2002"></option>
-														<option value="2001"></option>
-														<option value="2000"></option>
-														<option value="1999"></option>
-														<option value="1998"></option>
-														<option value="1997"></option>
-														<option value="1996"></option>
-														<option value="1995"></option>
-														<option value="1994"></option>
-														<option value="1993"></option>
-														<option value="1992"></option>
-														<option value="1991"></option>
-														<option value="1990"></option>
-														<option value="1989"></option>
-														<option value="1988"></option>
-														<option value="1987"></option>
-														<option value="1986"></option>
-														<option value="1985"></option>
-														<option value="1984"></option>
-														<option value="1983"></option>
-														<option value="1982"></option>
-														<option value="1981"></option>
-														<option value="1980"></option>
-														<option value="1979"></option>
-														<option value="1979"></option>
-														<option value="1978"></option>
-														<option value="1977"></option>
-														<option value="1976"></option>
-														<option value="1975"></option>
-														<option value="1974"></option>
-														<option value="1973"></option>
-														<option value="1972"></option>
-														<option value="1971"></option>
-														<option value="1970"></option>
-														<option value="1969"></option>
-														<option value="1968"></option>
-														<option value="1967"></option>
-														<option value="1966"></option>
-														<option value="1965"></option>
-														<option value="1964"></option>
-														<option value="1963"></option>
-														<option value="1962"></option>
-														<option value="1961"></option>
-														<option value="1960"></option>
-														<option value="1959"></option>
-														<option value="1958"></option>
-														<option value="1957"></option>
-														<option value="1956"></option>
-														<option value="1955"></option>
-														<option value="1954"></option>
-														<option value="1953"></option>
-														<option value="1952"></option>
-														<option value="1951"></option>
-														<option value="1950"></option>
-														<option value="1949"></option>
-														<option value="1948"></option>
-														<option value="1947"></option>
-														<option value="1946"></option>
-														<option value="1945"></option>
-														<option value="1944"></option>
-														<option value="1943"></option>
-														<option value="1942"></option>
-														<option value="1941"></option>
-														<option value="1940"></option>
-														<option value="1939"></option>
-														<option value="1938"></option>
-														<option value="1937"></option>
-														<option value="1936"></option>
-														<option value="1935"></option>
-														<option value="1934"></option>
-														<option value="1933"></option>
-														<option value="1932"></option>
-														<option value="1931"></option>
-														<option value="1930"></option>
-														<option value="1929"></option>
-														<option value="1928"></option>
-														<option value="1927"></option>
-														<option value="1926"></option>
-														<option value="1925"></option>
-														<option value="1924"></option>
-														<option value="1923"></option>
-														<option value="1922"></option>
-														<option value="1921"></option>
-														<option value="1920"></option>
-														<option value="1919"></option>
-														<option value="1918"></option>
-														<option value="1917"></option>
-														<option value="1916"></option>
-														<option value="1915"></option>
-														<option value="1914"></option>
-														<option value="1915"></option>
-														<option value="1914"></option>
-														<option value="1913"></option>
-														<option value="1912"></option>
-														<option value="1911"></option>
-														<option value="1910"></option>
-													</select>
-												</div>
+											<div class="col-md-auto">
+												<button class="sBasket__btn" type="submit">Получить
+												</button>
 											</div>
 										</div>
 									</div>
-									<div class="col-md">
-										<p>Укажите дату рождения и&nbsp;получайте двойные бонусы за&nbsp;неделю до&nbsp;дня рождения и&nbsp;ещё неделю после</p>
-									</div>
 								</div>
-								<div class="row">
-									<div class="sLK__coll col-sm-auto">
-									</div>
-									<div class="col-sm">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="subscription_sms" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Подписка по СМС</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="subscription_e-mail"/><span class="custom-input__lab"></span><span class="custom-input__text">Подписка по E-mail</span>
-										</label>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Текущий пароль:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Новый пароль:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-md d-none d-md-block">
-										<p>Пароль должен состоять не&nbsp;менее чем из&nbsp;6&nbsp;символов</p>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Еще раз пароль:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row">
-									<div class="sLK__coll col-sm-auto">
-									</div>
-									<div class="col">
-										<button class="sLK__btn" type="submit">Сохранить
-										</button>
+								<div class="col-lg">
+									<div class="sBasket__total">
+										<div class="row justify-content-between">
+											<div class="col-auto"><span>Товары:</span><span>Итого:</span></div>
+											<div class="col-auto"><b>12 990 грн</b><b>25 980 грн</b></div>
+										</div><a class="sBasket__btn" href="#">Оформить заказ</a>
 									</div>
 								</div>
 							</div>
-						</div>
+						</form>
 					</div>
 				</div>
-			</section>
+				<!-- end sBasket-->
+			</div>
 			<!-- start sDescr-->
 			<div class="sDescr" id="sDescr">
 				<div class="container">

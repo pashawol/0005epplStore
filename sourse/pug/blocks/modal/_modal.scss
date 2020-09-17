@@ -199,10 +199,35 @@
 	.sBuyWith {
 		padding-bottom: 0;
 	}
+
+	.text-center {
+		font-size: 25px;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+
 }
 .fancybox-content {
 	@include media-breakpoint-down(sm) {
 		padding: 35px 20px 40px 15px;
+	}
+}
+
+#one-click {
+	.form-group {
+		margin-bottom: 20px;
+		label {
+			padding-left: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	
+	button {
+		@extend .btn;
+		@extend .btn-outline-dark;
+		display: block;
+		width: 100%;
 	}
 }
 

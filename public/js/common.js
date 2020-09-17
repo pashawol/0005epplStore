@@ -258,12 +258,10 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// let screenName;
-	// screenName = 'main.jpg';
-	// screenName
-	// 	? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
-	// 	: '';
-	// /добавляет подложку для pixel perfect
+
+	var screenName;
+	screenName = 'basket.png';
+	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
 		var topH = document.querySelector('header').scrollHeight;

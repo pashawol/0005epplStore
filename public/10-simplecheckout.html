@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Личный кабинет</title>
+		<title>Кошик для покупок</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body class="catalogPage"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -56,7 +56,7 @@
 			</div>
 			<!--  мобильное меню-->
 			<!-- start header-->
-			<header class="header" id="header">
+			<header class="header" id="header"> 
 				<!-- start topLine-->
 				<div class="topLine">
 					<div class="container">
@@ -289,353 +289,599 @@
 												<use xlink:href="img/svg/sprite.svg#home"></use>
 											</svg></span>
 										<meta itemprop="position" content="1"/></a></li>
-								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Личный кабинет</span>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Кошик для покупок</span>
 										<meta itemprop="position" content="2"/></a></li>
-								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Мои заказы</span>
-										<meta itemprop="position" content="3"/></a></li>
 							</ol>
 						</nav>
 					</div>
 				</div>
-			</div>
-			<!-- start sLK-->
-			<section class="sLK section" id="sLK">
 				<div class="container">
+					<ul class="breadcrumb">
+						<li><a href="http://eppl.alekslv.in.net/index.php?route=common/home">
+								<svg class="icon icon-home">
+									<use xlink:href="/catalog/view/theme/eppl/img/svg/sprite.svg#home"></use>
+								</svg></a></li>
+						<li><a href="http://eppl.alekslv.in.net/index.php?route=checkout/cart">&Kcy;&ocy;&shcy;&icy;&kcy;</a></li>
+						<li><a href="http://eppl.alekslv.in.net/index.php?route=checkout/simplecheckout">&Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;</a></li>
+					</ul>
 					<div class="row">
-						<div class="sLK__col col-lg-3">
-							<div class="section-title d-lg-none">
-								<h1>Профиль</h1>
-							</div>
-							<div class="caption"><a class="caption__btn active" href="#">Профиль</a><a class="caption__btn" href="#">Адрес доставки</a><a class="caption__btn" href="#">Бонусные балы</a><a class="caption__btn" href="#">Мои заказы</a><a class="caption__btn" href="#">Избранное / Возврат</a>
-							</div>
-						</div>
-						<div class="col">
-							<div class="sLK__wrap">
-								<div class="section-title d-none d-lg-flex">
-									<h1>Профиль</h1>
-									<div class="section-title__text">Обо мне
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Имя:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иван" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Фамилия:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иванович" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Отчество:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="text" placeholder="Иванов" name="text"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Пол:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__gender">
-											<label class="custom-input"><input class="custom-input__input" type="radio" name="gender" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Мужской</span>
-											</label>
-											<label class="custom-input"><input class="custom-input__input" type="radio" name="gender"/><span class="custom-input__lab"></span><span class="custom-input__text">Женский</span>
-											</label>
-										</div>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Телефон:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="tel" placeholder="+38 (440) 325-67-22" name="tel"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Мобильный телефон:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="tel" placeholder="+38 (097) 325-67-22" name="tel"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">E-mail:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="email" placeholder="name@gmail.com" name="email"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Дата рождения:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__selectWrap">
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">День</option>
-														<option value="1"></option>
-														<option value="2"></option>
-														<option value="3"></option>
-														<option value="4"></option>
-														<option value="5"></option>
-														<option value="6"></option>
-														<option value="7"></option>
-														<option value="8"></option>
-														<option value="9"></option>
-														<option value="10"></option>
-														<option value="11"></option>
-														<option value="12"></option>
-														<option value="13"></option>
-														<option value="14"></option>
-														<option value="15"></option>
-														<option value="16"></option>
-														<option value="17"></option>
-														<option value="18"></option>
-														<option value="19"></option>
-														<option value="20"></option>
-														<option value="21"></option>
-														<option value="22"></option>
-														<option value="23"></option>
-														<option value="24"></option>
-														<option value="25"></option>
-														<option value="26"></option>
-														<option value="27"></option>
-														<option value="28"></option>
-														<option value="29"></option>
-														<option value="30"></option>
-														<option value="31"></option>
-													</select>
+						<div class="col-sm-12" id="content">
+							<h1>&Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;</h1>
+							<style></style>
+							<div class="simple-content">
+								<script type="text/javascript">
+									var startSimpleInterval_0 = window.setInterval(function(){
+									if (typeof jQuery !== 'undefined' && typeof Simplecheckout === "function" && jQuery.isReady) {
+									window.clearInterval(startSimpleInterval_0);
+									var simplecheckout_0 = new Simplecheckout({
+									mainRoute: "checkout/simplecheckout",
+									additionalParams: "",
+									additionalPath: "",
+									mainUrl: "index.php?route=checkout/simplecheckout&group=0",
+									mainContainer: "#simplecheckout_form_0",
+									currentTheme: "",
+									loginBoxBefore: "",
+									displayProceedText: 1,
+									scrollToError: 1,
+									scrollToPaymentForm: 1,
+									notificationDefault: 1,
+									notificationToasts: 0,
+									notificationCheckForm: 0,
+									notificationCheckFormText: "",
+									useAutocomplete: 0,
+									useGoogleApi: 0,
+									useStorage: 0,
+									popup: 0,
+									agreementCheckboxStep: '0',
+									enableAutoReloaingOfPaymentFrom: 0,
+									javascriptCallback: function() {try{ $('#cart > ul').load('index.php?route=common/cart/info ul li');
+									/*$('nav#top').load('index.php?route=common/simple_connector/header #top > div');*/ } catch (e) {console.log(e)}},
+									stepButtons: {"1":"\\u041e\u0444\u043e\u0440\u043c\u0438\u0442\u0438 \u0437\u0430\u043c\u043e\u0432\u043b\u0435\u043d\u043d\u044f"},
+									menuType: 1,
+									languageCode: "uk-ua"
+									});
+									if (typeof toastr !== 'undefined') {
+									toastr.options.positionClass = "toast-top-right";
+									toastr.options.timeOut = "5000";
+									toastr.options.progressBar = true;
+									}
+									$(document).ajaxComplete(function(e, xhr, settings) {
+									if (settings.url.indexOf("route=module/cart&remove") > 0 || (settings.url.indexOf("route=module/cart") > 0 && settings.type == "POST") || settings.url.indexOf("route=checkout/cart/add") > 0 || settings.url.indexOf("route=checkout/cart/remove") > 0) {
+									window.resetSimpleQuantity = true;
+									simplecheckout_0.reloadAll();
+									}
+									});
+									$(document).ajaxSend(function(e, xhr, settings) {
+									if (settings.url.indexOf("checkout/simplecheckout&group") > 0 && typeof window.resetSimpleQuantity !== "undefined" && window.resetSimpleQuantity) {
+									settings.data = settings.data.replace(/quantity.+?&/g,"");
+									window.resetSimpleQuantity = false;
+									}
+									});
+									simplecheckout_0.init();
+									}
+									},0);
+								</script>
+								<div id="simplecheckout_form_0">
+									<div class="simplecheckout">
+										<div class="simplecheckout-step">
+											<div class="simplecheckout-left-column">
+												<div class="simplecheckout-block" id="simplecheckout_customer">
+													<div class="checkout-heading panel-heading"><span>&Pcy;&ocy;&kcy;&ucy;&pcy;&iecy;&tscy;&softcy;</span><span class="checkout-heading-button"><a href="javascript:void(0)" data-onclick="openLoginBox">&YAcy; &zcy;&acy;&rcy;&iecy;&jukcy;&scy;&tcy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&jcy;</a></span></div>
+													<div class="simplecheckout-block-content">
+														<fieldset class="form-horizontal">
+															<div class="form-group row-customer_register">
+																<label class="control-label col-sm-4" for="customer_register">&Zcy;&acy;&rcy;&iecy;&jukcy;&scy;&tcy;&rcy;&ucy;&vcy;&acy;&tcy;&icy;&scy;&softcy;</label>
+																<div class="col-sm-8">
+																	<div>
+																		<div class="radio">
+																			<label>
+																				<input id="customer_register_1" type="radio" name="customer[register]" value="1" data-onchange="reloadAll"/>&Tcy;&acy;&kcy;
+																			</label>
+																		</div>
+																		<div class="radio">
+																			<label>
+																				<input id="customer_register_0" type="radio" name="customer[register]" value="0" checked="checked" data-onchange="reloadAll"/>&Ncy;&iukcy;
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group row-customer_lastname">
+																<label class="control-label col-sm-4" for="customer_lastname">&Fcy;&Iukcy;&Ocy;</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="customer_lastname" type="text" name="customer[lastname]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="customer_lastname">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="customer_lastname" data-rule="byLength" data-length-min="1" data-length-max="32">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-customer_telephone">
+																<label class="control-label col-sm-4" for="customer_telephone">&Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="customer_telephone" type="tel" name="customer[telephone]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="customer_telephone">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="customer_telephone" data-rule="byLength" data-length-min="3" data-length-max="32" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group row-customer_email">
+																<label class="control-label col-sm-4" for="customer_email">&Vcy;&acy;&shcy; e-mail</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="customer_email" type="email" name="customer[email]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="customer_email">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="customer_email" data-rule="api" data-method="checkEmailForUniqueness" data-filter="customer_register" data-filter-type="radio" data-filter-value="0">api error</div>
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="customer_email" data-rule="regexp" data-regexp=".+@.+">regexp error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group row-customer_field20">
+																<label class="control-label col-sm-4" for="customer_field20">&Pcy;&iecy;&rcy;&iecy;&dcy;&zcy;&vcy;&ocy;&ncy;&iukcy;&tcy;&softcy; &mcy;&iecy;&ncy;&iukcy; &dcy;&lcy;&yacy; &pcy;&iukcy;&dcy;&tcy;&vcy;&iecy;&rcy;&dcy;&zhcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;</label>
+																<div class="col-sm-8">
+																	<div>
+																		<div class="radio">
+																			<label>
+																				<input type="radio" name="customer[field20]" id="customer_field20_Так" value="Так" checked="checked" data-reload-payment-form="true"/>&Tcy;&acy;&kcy;
+																			</label>
+																		</div>
+																		<div class="radio">
+																			<label>
+																				<input type="radio" name="customer[field20]" id="customer_field20_Ні" value="Ні" data-reload-payment-form="true"/>&Ncy;&iukcy;
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+												<div class="simplecheckout-block" id="simplecheckout_shipping">
+													<div class="checkout-heading panel-heading">&Scy;&pcy;&ocy;&scy;&iukcy;&bcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;</div>
+													<div class="alert alert-danger simplecheckout-warning-block" style="display:none">&Vcy;&icy; &mcy;&acy;&jukcy;&tcy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&tcy;&icy; &scy;&pcy;&ocy;&scy;&iukcy;&bcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;</div>
+													<div class="simplecheckout-block-content">
+														<p><b>&Pcy;&rcy;&ocy;&dcy;&acy;&mcy;</b></p>
+														<div class="radio">
+															<label for="pickup.pickup">
+																<input type="radio" data-onchange="reloadAll" name="shipping_method" value="pickup.pickup" id="pickup.pickup" checked="checked"/>                                                                        &Scy;&acy;&mcy;&ocy;&vcy;&icy;&vcy;&iukcy;&zcy; &iukcy;&zcy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ucy; - 0 &gcy;&rcy;&ncy;
+															</label>
+														</div>
+														<input type="hidden" name="shipping_method_current" value="pickup.pickup"/>
+														<input type="hidden" name="shipping_method_checked" value="pickup.pickup"/>
+													</div>
+												</div>
+												<div class="simplecheckout-block" id="simplecheckout_shipping_address">
+													<div class="checkout-heading panel-heading">&Acy;&dcy;&rcy;&iecy;&scy;&acy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;</div>
+													<div class="simplecheckout-block-content">
+														<fieldset class="form-horizontal">
+															<div class="form-group required row-shipping_address_firstname">
+																<label class="control-label col-sm-4" for="shipping_address_firstname">firstname</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="shipping_address_firstname" type="text" name="shipping_address[firstname]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_firstname">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_firstname" data-rule="byLength" data-length-min="1" data-length-max="32" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_lastname">
+																<label class="control-label col-sm-4" for="shipping_address_lastname">&Fcy;&Iukcy;&Ocy;</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="shipping_address_lastname" type="text" name="shipping_address[lastname]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_lastname">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_lastname" data-rule="byLength" data-length-min="1" data-length-max="32" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_country_id">
+																<label class="control-label col-sm-4" for="shipping_address_country_id">country_id</label>
+																<div class="col-sm-8">
+																	<select class="form-control" id="shipping_address_country_id" name="shipping_address[country_id]" data-theme="bootstrap" data-onchange="reloadAll">
+																		<option value="" selected="selected"> --- &Vcy;&icy;&bcy;&iecy;&rcy;&iukcy;&tcy;&softcy; --- </option>
+																		<option value="244">Aaland Islands</option>
+																		<option value="1">Afghanistan</option>
+																		<option value="2">Albania</option>
+																		<option value="3">Algeria</option>
+																		<option value="4">American Samoa</option>
+																		<option value="5">Andorra</option>
+																		<option value="6">Angola</option>
+																		<option value="7">Anguilla</option>
+																		<option value="8">Antarctica</option>
+																		<option value="9">Antigua and Barbuda</option>
+																		<option value="10">Argentina</option>
+																		<option value="11">Armenia</option>
+																		<option value="12">Aruba</option>
+																		<option value="252">Ascension Island (British)</option>
+																		<option value="13">Australia</option>
+																		<option value="14">Austria</option>
+																		<option value="15">Azerbaijan</option>
+																		<option value="16">Bahamas</option>
+																		<option value="17">Bahrain</option>
+																		<option value="18">Bangladesh</option>
+																		<option value="19">Barbados</option>
+																		<option value="20">Belarus</option>
+																		<option value="21">Belgium</option>
+																		<option value="22">Belize</option>
+																		<option value="23">Benin</option>
+																		<option value="24">Bermuda</option>
+																		<option value="25">Bhutan</option>
+																		<option value="26">Bolivia</option>
+																		<option value="245">Bonaire, Sint Eustatius and Saba</option>
+																		<option value="27">Bosnia and Herzegovina</option>
+																		<option value="28">Botswana</option>
+																		<option value="29">Bouvet Island</option>
+																		<option value="30">Brazil</option>
+																		<option value="31">British Indian Ocean Territory</option>
+																		<option value="32">Brunei Darussalam</option>
+																		<option value="33">Bulgaria</option>
+																		<option value="34">Burkina Faso</option>
+																		<option value="35">Burundi</option>
+																		<option value="36">Cambodia</option>
+																		<option value="37">Cameroon</option>
+																		<option value="38">Canada</option>
+																		<option value="251">Canary Islands</option>
+																		<option value="39">Cape Verde</option>
+																		<option value="40">Cayman Islands</option>
+																		<option value="41">Central African Republic</option>
+																		<option value="42">Chad</option>
+																		<option value="43">Chile</option>
+																		<option value="44">China</option>
+																		<option value="45">Christmas Island</option>
+																		<option value="46">Cocos (Keeling) Islands</option>
+																		<option value="47">Colombia</option>
+																		<option value="48">Comoros</option>
+																		<option value="49">Congo</option>
+																		<option value="50">Cook Islands</option>
+																		<option value="51">Costa Rica</option>
+																		<option value="52">Cote D&apos;Ivoire</option>
+																		<option value="53">Croatia</option>
+																		<option value="54">Cuba</option>
+																		<option value="246">Curacao</option>
+																		<option value="55">Cyprus</option>
+																		<option value="56">Czech Republic</option>
+																		<option value="237">Democratic Republic of Congo</option>
+																		<option value="57">Denmark</option>
+																		<option value="58">Djibouti</option>
+																		<option value="59">Dominica</option>
+																		<option value="60">Dominican Republic</option>
+																		<option value="61">East Timor</option>
+																		<option value="62">Ecuador</option>
+																		<option value="63">Egypt</option>
+																		<option value="64">El Salvador</option>
+																		<option value="65">Equatorial Guinea</option>
+																		<option value="66">Eritrea</option>
+																		<option value="67">Estonia</option>
+																		<option value="68">Ethiopia</option>
+																		<option value="69">Falkland Islands (Malvinas)</option>
+																		<option value="70">Faroe Islands</option>
+																		<option value="71">Fiji</option>
+																		<option value="72">Finland</option>
+																		<option value="74">France, Metropolitan</option>
+																		<option value="75">French Guiana</option>
+																		<option value="76">French Polynesia</option>
+																		<option value="77">French Southern Territories</option>
+																		<option value="126">FYROM</option>
+																		<option value="78">Gabon</option>
+																		<option value="79">Gambia</option>
+																		<option value="80">Georgia</option>
+																		<option value="81">Germany</option>
+																		<option value="82">Ghana</option>
+																		<option value="83">Gibraltar</option>
+																		<option value="84">Greece</option>
+																		<option value="85">Greenland</option>
+																		<option value="86">Grenada</option>
+																		<option value="87">Guadeloupe</option>
+																		<option value="88">Guam</option>
+																		<option value="89">Guatemala</option>
+																		<option value="256">Guernsey</option>
+																		<option value="90">Guinea</option>
+																		<option value="91">Guinea-Bissau</option>
+																		<option value="92">Guyana</option>
+																		<option value="93">Haiti</option>
+																		<option value="94">Heard and Mc Donald Islands</option>
+																		<option value="95">Honduras</option>
+																		<option value="96">Hong Kong</option>
+																		<option value="97">Hungary</option>
+																		<option value="98">Iceland</option>
+																		<option value="99">India</option>
+																		<option value="100">Indonesia</option>
+																		<option value="101">Iran (Islamic Republic of)</option>
+																		<option value="102">Iraq</option>
+																		<option value="103">Ireland</option>
+																		<option value="254">Isle of Man</option>
+																		<option value="104">Israel</option>
+																		<option value="105">Italy</option>
+																		<option value="106">Jamaica</option>
+																		<option value="107">Japan</option>
+																		<option value="257">Jersey</option>
+																		<option value="108">Jordan</option>
+																		<option value="109">Kazakhstan</option>
+																		<option value="110">Kenya</option>
+																		<option value="111">Kiribati</option>
+																		<option value="253">Kosovo, Republic of</option>
+																		<option value="114">Kuwait</option>
+																		<option value="115">Kyrgyzstan</option>
+																		<option value="116">Lao People&apos;s Democratic Republic</option>
+																		<option value="117">Latvia</option>
+																		<option value="118">Lebanon</option>
+																		<option value="119">Lesotho</option>
+																		<option value="120">Liberia</option>
+																		<option value="121">Libyan Arab Jamahiriya</option>
+																		<option value="122">Liechtenstein</option>
+																		<option value="123">Lithuania</option>
+																		<option value="124">Luxembourg</option>
+																		<option value="125">Macau</option>
+																		<option value="127">Madagascar</option>
+																		<option value="128">Malawi</option>
+																		<option value="129">Malaysia</option>
+																		<option value="130">Maldives</option>
+																		<option value="131">Mali</option>
+																		<option value="132">Malta</option>
+																		<option value="133">Marshall Islands</option>
+																		<option value="134">Martinique</option>
+																		<option value="135">Mauritania</option>
+																		<option value="136">Mauritius</option>
+																		<option value="137">Mayotte</option>
+																		<option value="138">Mexico</option>
+																		<option value="139">Micronesia, Federated States of</option>
+																		<option value="140">Moldova, Republic of</option>
+																		<option value="141">Monaco</option>
+																		<option value="142">Mongolia</option>
+																		<option value="242">Montenegro</option>
+																		<option value="143">Montserrat</option>
+																		<option value="144">Morocco</option>
+																		<option value="145">Mozambique</option>
+																		<option value="146">Myanmar</option>
+																		<option value="147">Namibia</option>
+																		<option value="148">Nauru</option>
+																		<option value="149">Nepal</option>
+																		<option value="150">Netherlands</option>
+																		<option value="151">Netherlands Antilles</option>
+																		<option value="152">New Caledonia</option>
+																		<option value="153">New Zealand</option>
+																		<option value="154">Nicaragua</option>
+																		<option value="155">Niger</option>
+																		<option value="156">Nigeria</option>
+																		<option value="157">Niue</option>
+																		<option value="158">Norfolk Island</option>
+																		<option value="112">North Korea</option>
+																		<option value="159">Northern Mariana Islands</option>
+																		<option value="160">Norway</option>
+																		<option value="161">Oman</option>
+																		<option value="162">Pakistan</option>
+																		<option value="163">Palau</option>
+																		<option value="247">Palestinian Territory, Occupied</option>
+																		<option value="164">Panama</option>
+																		<option value="165">Papua New Guinea</option>
+																		<option value="166">Paraguay</option>
+																		<option value="167">Peru</option>
+																		<option value="168">Philippines</option>
+																		<option value="169">Pitcairn</option>
+																		<option value="170">Poland</option>
+																		<option value="171">Portugal</option>
+																		<option value="172">Puerto Rico</option>
+																		<option value="173">Qatar</option>
+																		<option value="174">Reunion</option>
+																		<option value="175">Romania</option>
+																		<option value="176">Russian Federation</option>
+																		<option value="177">Rwanda</option>
+																		<option value="178">Saint Kitts and Nevis</option>
+																		<option value="179">Saint Lucia</option>
+																		<option value="180">Saint Vincent and the Grenadines</option>
+																		<option value="181">Samoa</option>
+																		<option value="182">San Marino</option>
+																		<option value="183">Sao Tome and Principe</option>
+																		<option value="184">Saudi Arabia</option>
+																		<option value="185">Senegal</option>
+																		<option value="243">Serbia</option>
+																		<option value="186">Seychelles</option>
+																		<option value="187">Sierra Leone</option>
+																		<option value="188">Singapore</option>
+																		<option value="189">Slovak Republic</option>
+																		<option value="190">Slovenia</option>
+																		<option value="191">Solomon Islands</option>
+																		<option value="192">Somalia</option>
+																		<option value="193">South Africa</option>
+																		<option value="194">South Georgia &amp; South Sandwich Islands</option>
+																		<option value="113">South Korea</option>
+																		<option value="248">South Sudan</option>
+																		<option value="195">Spain</option>
+																		<option value="196">Sri Lanka</option>
+																		<option value="249">St. Barthelemy</option>
+																		<option value="197">St. Helena</option>
+																		<option value="250">St. Martin (French part)</option>
+																		<option value="198">St. Pierre and Miquelon</option>
+																		<option value="199">Sudan</option>
+																		<option value="200">Suriname</option>
+																		<option value="201">Svalbard and Jan Mayen Islands</option>
+																		<option value="202">Swaziland</option>
+																		<option value="203">Sweden</option>
+																		<option value="204">Switzerland</option>
+																		<option value="205">Syrian Arab Republic</option>
+																		<option value="206">Taiwan</option>
+																		<option value="207">Tajikistan</option>
+																		<option value="208">Tanzania, United Republic of</option>
+																		<option value="209">Thailand</option>
+																		<option value="210">Togo</option>
+																		<option value="211">Tokelau</option>
+																		<option value="212">Tonga</option>
+																		<option value="213">Trinidad and Tobago</option>
+																		<option value="255">Tristan da Cunha</option>
+																		<option value="214">Tunisia</option>
+																		<option value="215">Turkey</option>
+																		<option value="216">Turkmenistan</option>
+																		<option value="217">Turks and Caicos Islands</option>
+																		<option value="218">Tuvalu</option>
+																		<option value="219">Uganda</option>
+																		<option value="220">Ukraine</option>
+																		<option value="221">United Arab Emirates</option>
+																		<option value="222">United Kingdom</option>
+																		<option value="223">United States</option>
+																		<option value="224">United States Minor Outlying Islands</option>
+																		<option value="225">Uruguay</option>
+																		<option value="226">Uzbekistan</option>
+																		<option value="227">Vanuatu</option>
+																		<option value="228">Vatican City State (Holy See)</option>
+																		<option value="229">Venezuela</option>
+																		<option value="230">Viet Nam</option>
+																		<option value="231">Virgin Islands (British)</option>
+																		<option value="232">Virgin Islands (U.S.)</option>
+																		<option value="233">Wallis and Futuna Islands</option>
+																		<option value="234">Western Sahara</option>
+																		<option value="235">Yemen</option>
+																		<option value="238">Zambia</option>
+																		<option value="239">Zimbabwe</option>
+																	</select>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_country_id">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_country_id" data-rule="notEmpty" data-not-empty="1" data-required="true">notEmpty error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_zone_id">
+																<label class="control-label col-sm-4" for="shipping_address_zone_id">zone_id</label>
+																<div class="col-sm-8">
+																	<select class="form-control" id="shipping_address_zone_id" name="shipping_address[zone_id]" data-theme="bootstrap" data-onchange="reloadAll">
+																		<option value="" selected="selected"> --- &Vcy;&icy;&bcy;&iecy;&rcy;&iukcy;&tcy;&softcy; --- </option>
+																		<option value="0" selected="selected"> --- &Ncy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&ncy;&ocy; --- </option>
+																	</select>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_zone_id">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_zone_id" data-rule="notEmpty" data-not-empty="1" data-required="true">notEmpty error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_city">
+																<label class="control-label col-sm-4" for="shipping_address_city">city</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="shipping_address_city" type="text" name="shipping_address[city]" value="" placeholder="" data-onchange="reloadAll"/>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_city">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_city" data-rule="byLength" data-length-min="2" data-length-max="128" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_postcode">
+																<label class="control-label col-sm-4" for="shipping_address_postcode">postcode</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="shipping_address_postcode" type="text" name="shipping_address[postcode]" value="" placeholder="" data-onchange="reloadAll"/>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_postcode">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_postcode" data-rule="byLength" data-length-min="2" data-length-max="10" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group required row-shipping_address_address_1">
+																<label class="control-label col-sm-4" for="shipping_address_address_1">address_1</label>
+																<div class="col-sm-8">
+																	<input class="form-control" id="shipping_address_address_1" type="text" name="shipping_address[address_1]" value="" placeholder="" data-reload-payment-form="true"/>
+																	<div class="simplecheckout-rule-group" data-for="shipping_address_address_1">
+																		<div class="simplecheckout-error-text simplecheckout-rule" style="display:none;" data-for="shipping_address_address_1" data-rule="byLength" data-length-min="3" data-length-max="128" data-required="true">byLength error</div>
+																	</div>
+																</div>
+															</div>
+														</fieldset>
+														<input id="shipping_address_current_address_id" type="hidden" name="shipping_address[current_address_id]" value="0"/>
+													</div>
+												</div>
+												<div class="simplecheckout-block" id="simplecheckout_payment">
+													<div class="checkout-heading panel-heading">&Scy;&pcy;&ocy;&scy;&iukcy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;</div>
+													<div class="alert alert-danger simplecheckout-warning-block" style="display:none">&Vcy;&icy; &mcy;&acy;&jukcy;&tcy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&tcy;&icy; &scy;&pcy;&ocy;&scy;&iukcy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;</div>
+													<div class="simplecheckout-block-content">
+														<div class="radio">
+															<label for="cheque">
+																<input id="cheque" type="radio" data-onchange="reloadAll" name="payment_method" value="cheque" checked="checked"/>                            &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &gcy;&ocy;&tcy;&iukcy;&vcy;&kcy;&ocy;&yucy;
+															</label>
+														</div>
+														<div class="radio">
+															<label for="cod">
+																<input id="cod" type="radio" data-onchange="reloadAll" name="payment_method" value="cod"/>                            &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &pcy;&rcy;&icy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&tscy;&iukcy;
+															</label>
+														</div>
+														<input type="hidden" name="payment_method_current" value="cheque"/>
+														<input type="hidden" name="payment_method_checked" value="cheque"/>
+													</div>
+												</div>
+												<div class="simplecheckout-block" id="simplecheckout_payment_form" style="margin: 0px; padding: 0px;"></div>
+												<div class="simplecheckout-block" id="simplecheckout_comment">
+													<div class="checkout-heading panel-heading">&Kcy;&ocy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;</div>
+													<div class="simplecheckout-block-content">
+														<textarea class="form-control" id="comment" name="comment" placeholder="" data-reload-payment-form="true"></textarea>
+													</div>
 												</div>
 											</div>
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">Месяц</option>
-														<option value="Январь"></option>
-														<option value="Февраль"></option>
-														<option value="Март"></option>
-														<option value="Апрель"></option>
-														<option value="Май"></option>
-														<option value="Июнь"></option>
-														<option value="Июль"></option>
-														<option value="Август"></option>
-														<option value="Сентябрь"></option>
-														<option value="Октябрь"></option>
-														<option value="Ноябрь"></option>
-														<option value="Декабрь"></option>
-													</select>
+											<div class="simplecheckout-right-column">
+												<div class="simplecheckout-block" id="simplecheckout_cart">
+													<div class="table-responsive">
+														<table class="simplecheckout-cart">
+															<colgroup>
+																<col class="image"/>
+																<col class="name"/>
+																<col class="model"/>
+																<col class="quantity"/>
+																<col class="price"/>
+																<col class="total"/>
+																<col class="remove"/>
+															</colgroup>
+															<thead>
+																<tr>
+																	<th class="image">&Fcy;&ocy;&tcy;&ocy;</th>
+																	<th class="name">&Ncy;&acy;&jcy;&mcy;&iecy;&ncy;&ucy;&vcy;&acy;&ncy;&ncy;&yacy; &tcy;&ocy;&vcy;&acy;&rcy;&ucy;</th>
+																	<th class="model">&Mcy;&ocy;&dcy;&iecy;&lcy;&softcy;</th>
+																	<th class="quantity"><span title="Кількість">&Kcy;&iukcy;&lcy;&softcy;&kcy;.</span></th>
+																	<th class="price">&TScy;&iukcy;&ncy;&acy;</th>
+																	<th class="total">&Rcy;&acy;&zcy;&ocy;&mcy;</th>
+																	<th class="remove"></th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="image"><a href="http://eppl.alekslv.in.net/index.php?route=product/product&amp;product_id=40"><img src="http://eppl.alekslv.in.net/image/cache/catalog/8DC6BA5B-9B63-43C8-8A41-AE3B7CEBA5F7-250x200.jpeg" alt="iPhone 11 128Gb Black (MWLE2)" title="iPhone 11 128Gb Black (MWLE2)"/></a></td>
+																	<td class="name">
+																		<div class="image"><a href="http://eppl.alekslv.in.net/index.php?route=product/product&amp;product_id=40"><img src="http://eppl.alekslv.in.net/image/cache/catalog/8DC6BA5B-9B63-43C8-8A41-AE3B7CEBA5F7-250x200.jpeg" alt="iPhone 11 128Gb Black (MWLE2)" title="iPhone 11 128Gb Black (MWLE2)"/></a></div><a href="http://eppl.alekslv.in.net/index.php?route=product/product&amp;product_id=40">iPhone 11 128Gb Black (MWLE2)</a>
+																		<div class="options"></div>
+																	</td>
+																	<td class="model">MWLE2</td>
+																	<td class="quantity">
+																		<div class="input-group btn-block" style="max-width: 200px;"><span class="input-group-btn">
+																				<button class="btn btn-primary" data-onclick="decreaseProductQuantity" data-toggle="tooltip" type="submit" data-original-title="" title=""><i class="fa fa-minus"></i></button></span>
+																			<input class="form-control" type="text" data-onchange="changeProductQuantity" name="quantity[61]" value="1" size="1"/><span class="input-group-btn">
+																				<button class="btn btn-primary" data-onclick="increaseProductQuantity" data-toggle="tooltip" type="submit" data-original-title="" title=""><i class="fa fa-plus"></i></button>
+																				<button class="btn btn-danger" data-onclick="removeProduct" data-product-key="61" data-toggle="tooltip" type="button" data-original-title="" title=""><i class="fa fa-times-circle"></i></button></span>
+																		</div>
+																	</td>
+																	<td class="price">
+																		<div>24600 &gcy;&rcy;&ncy;</div>
+																	</td>
+																	<td class="total">24600 &gcy;&rcy;&ncy;</td>
+																	<td class="remove"></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="simplecheckout-cart-total" id="total_sub_total"><span><b>&Scy;&ucy;&mcy;&acy;:</b></span><span class="simplecheckout-cart-total-value">24600 &gcy;&rcy;&ncy;</span><span class="simplecheckout-cart-total-remove"></span></div>
+													<div class="simplecheckout-cart-total" id="total_shipping"><span><b>&Scy;&acy;&mcy;&ocy;&vcy;&icy;&vcy;&iukcy;&zcy; &iukcy;&zcy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ucy;:</b></span><span class="simplecheckout-cart-total-value">0 &gcy;&rcy;&ncy;</span><span class="simplecheckout-cart-total-remove"></span></div>
+													<div class="simplecheckout-cart-total" id="total_total"><span><b>&Rcy;&acy;&zcy;&ocy;&mcy;:</b></span><span class="simplecheckout-cart-total-value">24600 &gcy;&rcy;&ncy;</span><span class="simplecheckout-cart-total-remove"></span></div>
+													<div class="simplecheckout-cart-total"><span class="inputs">&Kcy;&ucy;&pcy;&ocy;&ncy;:&nbsp;
+															<input class="form-control" type="text" data-onchange="reloadAll" name="coupon" value=""/></span></div>
+													<div class="simplecheckout-cart-total"><span class="inputs">&Pcy;&ocy;&dcy;&acy;&rcy;&ucy;&ncy;&kcy;&ocy;&vcy;&icy;&jcy; &scy;&iecy;&rcy;&tcy;&icy;&fcy;&iukcy;&kcy;&acy;&tcy;:&nbsp;
+															<input class="form-control" type="text" name="voucher" data-onchange="reloadAll" value=""/></span></div>
+													<div class="simplecheckout-cart-total simplecheckout-cart-buttons"><span class="inputs buttons"><a class="button btn-primary button_oc btn" id="simplecheckout_button_cart" data-onclick="reloadAll"><span>&Ocy;&ncy;&ocy;&vcy;&icy;&tcy;&icy;</span></a></span></div>
+													<input id="simplecheckout_remove" type="hidden" name="remove" value=""/>
+													<div id="simplecheckout_cart_total" style="display:none;">1 &tcy;&ocy;&vcy;&acy;&rcy;(&iukcy;&vcy;) - 24600 &gcy;&rcy;&ncy;</div>
 												</div>
 											</div>
-											<div class="select-group">
-												<div class="select-wrap">
-													<select class="form-control">
-														<option value="" selected="selected">Год</option>
-														<option value="2010"></option>
-														<option value="2009"></option>
-														<option value="2008"></option>
-														<option value="2007"></option>
-														<option value="2006"></option>
-														<option value="2005"></option>
-														<option value="2004"></option>
-														<option value="2003"></option>
-														<option value="2002"></option>
-														<option value="2001"></option>
-														<option value="2000"></option>
-														<option value="1999"></option>
-														<option value="1998"></option>
-														<option value="1997"></option>
-														<option value="1996"></option>
-														<option value="1995"></option>
-														<option value="1994"></option>
-														<option value="1993"></option>
-														<option value="1992"></option>
-														<option value="1991"></option>
-														<option value="1990"></option>
-														<option value="1989"></option>
-														<option value="1988"></option>
-														<option value="1987"></option>
-														<option value="1986"></option>
-														<option value="1985"></option>
-														<option value="1984"></option>
-														<option value="1983"></option>
-														<option value="1982"></option>
-														<option value="1981"></option>
-														<option value="1980"></option>
-														<option value="1979"></option>
-														<option value="1979"></option>
-														<option value="1978"></option>
-														<option value="1977"></option>
-														<option value="1976"></option>
-														<option value="1975"></option>
-														<option value="1974"></option>
-														<option value="1973"></option>
-														<option value="1972"></option>
-														<option value="1971"></option>
-														<option value="1970"></option>
-														<option value="1969"></option>
-														<option value="1968"></option>
-														<option value="1967"></option>
-														<option value="1966"></option>
-														<option value="1965"></option>
-														<option value="1964"></option>
-														<option value="1963"></option>
-														<option value="1962"></option>
-														<option value="1961"></option>
-														<option value="1960"></option>
-														<option value="1959"></option>
-														<option value="1958"></option>
-														<option value="1957"></option>
-														<option value="1956"></option>
-														<option value="1955"></option>
-														<option value="1954"></option>
-														<option value="1953"></option>
-														<option value="1952"></option>
-														<option value="1951"></option>
-														<option value="1950"></option>
-														<option value="1949"></option>
-														<option value="1948"></option>
-														<option value="1947"></option>
-														<option value="1946"></option>
-														<option value="1945"></option>
-														<option value="1944"></option>
-														<option value="1943"></option>
-														<option value="1942"></option>
-														<option value="1941"></option>
-														<option value="1940"></option>
-														<option value="1939"></option>
-														<option value="1938"></option>
-														<option value="1937"></option>
-														<option value="1936"></option>
-														<option value="1935"></option>
-														<option value="1934"></option>
-														<option value="1933"></option>
-														<option value="1932"></option>
-														<option value="1931"></option>
-														<option value="1930"></option>
-														<option value="1929"></option>
-														<option value="1928"></option>
-														<option value="1927"></option>
-														<option value="1926"></option>
-														<option value="1925"></option>
-														<option value="1924"></option>
-														<option value="1923"></option>
-														<option value="1922"></option>
-														<option value="1921"></option>
-														<option value="1920"></option>
-														<option value="1919"></option>
-														<option value="1918"></option>
-														<option value="1917"></option>
-														<option value="1916"></option>
-														<option value="1915"></option>
-														<option value="1914"></option>
-														<option value="1915"></option>
-														<option value="1914"></option>
-														<option value="1913"></option>
-														<option value="1912"></option>
-														<option value="1911"></option>
-														<option value="1910"></option>
-													</select>
-												</div>
+											<div class="simplecheckout-block" id="simplecheckout_summary" data-hide="true" style="display: none;">
+												<div class="checkout-heading panel-heading">&Zcy;&acy;&gcy;&acy;&lcy;&softcy;&ncy;&acy; &iukcy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&iukcy;&yacy; &pcy;&ocy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yucy;</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-md">
-										<p>Укажите дату рождения и&nbsp;получайте двойные бонусы за&nbsp;неделю до&nbsp;дня рождения и&nbsp;ещё неделю после</p>
-									</div>
-								</div>
-								<div class="row">
-									<div class="sLK__coll col-sm-auto">
-									</div>
-									<div class="col-sm">
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="subscription_sms" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Подписка по СМС</span>
-										</label>
-										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="subscription_e-mail"/><span class="custom-input__lab"></span><span class="custom-input__text">Подписка по E-mail</span>
-										</label>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Текущий пароль:
+										<div id="simplecheckout_bottom" style="width:100%;height:1px;clear:both;"></div>
+										<div class="simplecheckout-proceed-payment" id="simplecheckout_proceed_payment" style="display:none;">&Zcy;&acy;&chcy;&iecy;&kcy;&acy;&jcy;&tcy;&iecy; ... &Vcy;&iukcy;&dcy;&bcy;&ucy;&vcy;&acy;&jukcy;&tcy;&softcy;&scy;&yacy; &pcy;&iecy;&rcy;&iecy;&khcy;&iukcy;&dcy; &dcy;&ocy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;</div>
+										<div class="simplecheckout-button-block buttons" id="buttons">
+											<div class="simplecheckout-button-right"><a class="button btn-primary button_oc btn" id="simplecheckout_button_confirm" data-onclick="createOrder"><span>&Ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&icy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;</span></a></div>
+											<div class="simplecheckout-button-left"></div>
 										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Новый пароль:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-									<div class="col-md d-none d-md-block">
-										<p>Пароль должен состоять не&nbsp;менее чем из&nbsp;6&nbsp;символов</p>
-									</div>
-								</div>
-								<div class="row align-items-center">
-									<div class="sLK__coll col-sm-auto">
-										<div class="sLK__text">Еще раз пароль:
-										</div>
-									</div>
-									<div class="col-sm col-md-5">
-										<div class="sLK__input-wrap form-group"><input class="sLK__input form-control" type="password" placeholder="*************" name="password"/>
-										</div>
-										<!-- +e.input-wrap-->
-									</div>
-								</div>
-								<div class="row">
-									<div class="sLK__coll col-sm-auto">
-									</div>
-									<div class="col">
-										<button class="sLK__btn" type="submit">Сохранить
-										</button>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+				<!-- end s-simple-content-->
+			</div>
 			<!-- start sDescr-->
 			<div class="sDescr" id="sDescr">
 				<div class="container">

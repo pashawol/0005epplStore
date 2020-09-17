@@ -245,11 +245,11 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// let screenName;
-	// screenName = 'main.jpg';
-	// screenName
-	// 	? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
-	// 	: '';
+	let screenName;
+	screenName = 'basket.png';
+	screenName
+		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
+		: '';
 	// /добавляет подложку для pixel perfect
 
 

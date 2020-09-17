@@ -1,0 +1,81 @@
+mixin sBasket()
+	// start sBasket
+	+b.sBasket#checkout-cart&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Кошик для покупок
+			form(method="post" enctype="multipart/form-data")
+				.table-responsive
+					table.table
+						thead
+							tr
+								td
+								td Наименование
+								td Цена
+								td Колличество
+								td Стоимость
+								td
+						+tbodyItem('Apple-watch.png')
+						+tbodyItem('catalogImg-11promax.png')
+				.row
+					.col-lg-9.align-self-start
+						+e.promoCode
+							.row.align-items-start
+								.col-md-auto
+									p #[strong У вас есть промокод?] Введите промокод и получите скидку на заказ
+								.col-md
+									+input('Ввести промокод')
+								.col-md-auto
+									+e.btn(type='submit') Получить
+					.col-lg
+						+e.total
+							.row.justify-content-between
+								.col-auto
+									span Товары:
+									span Итого:
+								.col-auto
+									b 12 990 грн
+									b 25 980 грн
+							+e.btn(href="#") Оформить заказ
+
+	// end sBasket
+
+mixin tbodyItem(i)
+	tbody
+		tr
+			td(rowspan="2")
+				+e.imgWrap(href="#")
+					+pic(`${i}`,'','')
+			td
+				+e.name(href="#") Apple Watch Nike Series&nbsp;5, 44&nbsp;мм, корпус из&nbsp;алюминия серебристого цвета, спортивный ремешок Nike &laquo;чистая платина/чёрный&raquo;
+			td 
+				+e.price 12 990 грн
+			td 
+				+e.quantity
+					+e.minus(type="submit" data-toggle="tooltip" title="" data-original-title="Видалити")
+					+input('1','numb')
+					+e.plus(type="button" data-toggle="tooltip" title="" onclick="cart.remove('22');" data-original-title="Оновити")
+			td 
+				+e.totalPrice 12 990 грн
+			td 
+				+e.btnCancel(type="submit")
+					+icon('cancel')
+		tr
+			td
+				+e.data
+					span MX3V2RU/A
+					span Цвет: «чистая платина/чёрный»
+			td(colspan="2")
+				+e.accessories(href="#") Выбор аксессуаров
+			td
+		tr
+			td
+			td(colspan="2")
+				+e.recomend Рекомендую до покупки
+				+e.checkboxWrap
+					+in-c('checkbox','1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)','glass')
+					+e.accessoryPrice 249 грн
+				+e.checkboxWrap
+					+in-c('checkbox','1 х Гарантия от магазина на срок 12 месяцев для Iphone ','guarantee')
+					+e.accessoryPrice 999 грн
+			td

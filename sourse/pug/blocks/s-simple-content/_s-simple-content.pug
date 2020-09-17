@@ -1,0 +1,545 @@
+mixin s-simple-content()
+	.container
+		ul.breadcrumb
+			li
+				a(href='http://eppl.alekslv.in.net/index.php?route=common/home')
+					svg.icon.icon-home
+						use(xlink:href='/catalog/view/theme/eppl/img/svg/sprite.svg#home')
+			li
+				a(href='http://eppl.alekslv.in.net/index.php?route=checkout/cart') &Kcy;&ocy;&shcy;&icy;&kcy;
+			li
+				a(href='http://eppl.alekslv.in.net/index.php?route=checkout/simplecheckout') &Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;
+		.row
+			#content.col-sm-12
+				h1 &Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;
+				style.
+				.simple-content
+					script(type='text/javascript').
+						var startSimpleInterval_0 = window.setInterval(function(){
+						if (typeof jQuery !== 'undefined' && typeof Simplecheckout === "function" && jQuery.isReady) {
+						window.clearInterval(startSimpleInterval_0);
+						var simplecheckout_0 = new Simplecheckout({
+						mainRoute: "checkout/simplecheckout",
+						additionalParams: "",
+						additionalPath: "",
+						mainUrl: "index.php?route=checkout/simplecheckout&group=0",
+						mainContainer: "#simplecheckout_form_0",
+						currentTheme: "",
+						loginBoxBefore: "",
+						displayProceedText: 1,
+						scrollToError: 1,
+						scrollToPaymentForm: 1,
+						notificationDefault: 1,
+						notificationToasts: 0,
+						notificationCheckForm: 0,
+						notificationCheckFormText: "",
+						useAutocomplete: 0,
+						useGoogleApi: 0,
+						useStorage: 0,
+						popup: 0,
+						agreementCheckboxStep: '0',
+						enableAutoReloaingOfPaymentFrom: 0,
+						javascriptCallback: function() {try{ $('#cart > ul').load('index.php?route=common/cart/info ul li');
+						/*$('nav#top').load('index.php?route=common/simple_connector/header #top > div');*/ } catch (e) {console.log(e)}},
+						stepButtons: {"1":"\\u041e\u0444\u043e\u0440\u043c\u0438\u0442\u0438 \u0437\u0430\u043c\u043e\u0432\u043b\u0435\u043d\u043d\u044f"},
+						menuType: 1,
+						languageCode: "uk-ua"
+						});
+						if (typeof toastr !== 'undefined') {
+						toastr.options.positionClass = "toast-top-right";
+						toastr.options.timeOut = "5000";
+						toastr.options.progressBar = true;
+						}
+						$(document).ajaxComplete(function(e, xhr, settings) {
+						if (settings.url.indexOf("route=module/cart&remove") > 0 || (settings.url.indexOf("route=module/cart") > 0 && settings.type == "POST") || settings.url.indexOf("route=checkout/cart/add") > 0 || settings.url.indexOf("route=checkout/cart/remove") > 0) {
+						window.resetSimpleQuantity = true;
+						simplecheckout_0.reloadAll();
+						}
+						});
+						$(document).ajaxSend(function(e, xhr, settings) {
+						if (settings.url.indexOf("checkout/simplecheckout&group") > 0 && typeof window.resetSimpleQuantity !== "undefined" && window.resetSimpleQuantity) {
+						settings.data = settings.data.replace(/quantity.+?&/g,"");
+						window.resetSimpleQuantity = false;
+						}
+						});
+						simplecheckout_0.init();
+						}
+						},0);
+					#simplecheckout_form_0
+						.simplecheckout
+							.simplecheckout-step(style='')
+								.simplecheckout-left-column
+									#simplecheckout_customer.simplecheckout-block
+										.checkout-heading.panel-heading
+											span &Pcy;&ocy;&kcy;&ucy;&pcy;&iecy;&tscy;&softcy;
+											span.checkout-heading-button
+												a(href='javascript:void(0)' data-onclick='openLoginBox') &YAcy; &zcy;&acy;&rcy;&iecy;&jukcy;&scy;&tcy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&jcy;
+										.simplecheckout-block-content
+											fieldset.form-horizontal
+												.form-group.row-customer_register
+													label.control-label.col-sm-4(for='customer_register') &Zcy;&acy;&rcy;&iecy;&jukcy;&scy;&tcy;&rcy;&ucy;&vcy;&acy;&tcy;&icy;&scy;&softcy;
+													.col-sm-8
+														div
+															.radio
+																label
+																	input#customer_register_1(type='radio' name='customer[register]' value='1' data-onchange='reloadAll')
+																	| &Tcy;&acy;&kcy;
+															.radio
+																label
+																	input#customer_register_0(type='radio' name='customer[register]' value='0' checked='checked' data-onchange='reloadAll')
+																	| &Ncy;&iukcy;
+												.form-group.row-customer_lastname
+													label.control-label.col-sm-4(for='customer_lastname') &Fcy;&Iukcy;&Ocy;
+													.col-sm-8
+														input#customer_lastname.form-control(type='text' name='customer[lastname]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='customer_lastname')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='customer_lastname' data-rule='byLength' data-length-min='1' data-length-max='32') byLength error
+												.form-group.required.row-customer_telephone
+													label.control-label.col-sm-4(for='customer_telephone') &Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;
+													.col-sm-8
+														input#customer_telephone.form-control(type='tel' name='customer[telephone]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='customer_telephone')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='customer_telephone' data-rule='byLength' data-length-min='3' data-length-max='32' data-required='true') byLength error
+												.form-group.row-customer_email
+													label.control-label.col-sm-4(for='customer_email') &Vcy;&acy;&shcy; e-mail
+													.col-sm-8
+														input#customer_email.form-control(type='email' name='customer[email]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='customer_email')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='customer_email' data-rule='api' data-method='checkEmailForUniqueness' data-filter='customer_register' data-filter-type='radio' data-filter-value='0') api error
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='customer_email' data-rule='regexp' data-regexp='.+@.+') regexp error
+												.form-group.row-customer_field20
+													label.control-label.col-sm-4(for='customer_field20') &Pcy;&iecy;&rcy;&iecy;&dcy;&zcy;&vcy;&ocy;&ncy;&iukcy;&tcy;&softcy; &mcy;&iecy;&ncy;&iukcy; &dcy;&lcy;&yacy; &pcy;&iukcy;&dcy;&tcy;&vcy;&iecy;&rcy;&dcy;&zhcy;&iecy;&ncy;&ncy;&yacy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;
+													.col-sm-8
+														div
+															.radio
+																label
+																	input(type='radio' name='customer[field20]' id='customer_field20_Так' value='Так' checked='checked' data-reload-payment-form='true')
+																	| &Tcy;&acy;&kcy;
+															.radio
+																label
+																	input(type='radio' name='customer[field20]' id='customer_field20_Ні' value='Ні' data-reload-payment-form='true')
+																	| &Ncy;&iukcy;
+									#simplecheckout_shipping.simplecheckout-block
+										.checkout-heading.panel-heading &Scy;&pcy;&ocy;&scy;&iukcy;&bcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+										.alert.alert-danger.simplecheckout-warning-block(style='display:none') &Vcy;&icy; &mcy;&acy;&jukcy;&tcy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&tcy;&icy; &scy;&pcy;&ocy;&scy;&iukcy;&bcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+										.simplecheckout-block-content
+											p
+												b &Pcy;&rcy;&ocy;&dcy;&acy;&mcy;
+											.radio
+												label(for='pickup.pickup')
+													input(type='radio' data-onchange='reloadAll' name='shipping_method' value='pickup.pickup' id='pickup.pickup' checked='checked')
+													|                                                                         &Scy;&acy;&mcy;&ocy;&vcy;&icy;&vcy;&iukcy;&zcy; &iukcy;&zcy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ucy; - 0 &gcy;&rcy;&ncy;
+											input(type='hidden' name='shipping_method_current' value='pickup.pickup')
+											input(type='hidden' name='shipping_method_checked' value='pickup.pickup')
+									#simplecheckout_shipping_address.simplecheckout-block
+										.checkout-heading.panel-heading &Acy;&dcy;&rcy;&iecy;&scy;&acy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+										.simplecheckout-block-content
+											fieldset.form-horizontal
+												.form-group.required.row-shipping_address_firstname
+													label.control-label.col-sm-4(for='shipping_address_firstname') firstname
+													.col-sm-8
+														input#shipping_address_firstname.form-control(type='text' name='shipping_address[firstname]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='shipping_address_firstname')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_firstname' data-rule='byLength' data-length-min='1' data-length-max='32' data-required='true') byLength error
+												.form-group.required.row-shipping_address_lastname
+													label.control-label.col-sm-4(for='shipping_address_lastname') &Fcy;&Iukcy;&Ocy;
+													.col-sm-8
+														input#shipping_address_lastname.form-control(type='text' name='shipping_address[lastname]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='shipping_address_lastname')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_lastname' data-rule='byLength' data-length-min='1' data-length-max='32' data-required='true') byLength error
+												.form-group.required.row-shipping_address_country_id
+													label.control-label.col-sm-4(for='shipping_address_country_id') country_id
+													.col-sm-8
+														select#shipping_address_country_id.form-control(name='shipping_address[country_id]' data-theme='bootstrap' data-onchange='reloadAll')
+															option(value='' selected='selected')  --- &Vcy;&icy;&bcy;&iecy;&rcy;&iukcy;&tcy;&softcy; --- 
+															option(value='244') Aaland Islands
+															option(value='1') Afghanistan
+															option(value='2') Albania
+															option(value='3') Algeria
+															option(value='4') American Samoa
+															option(value='5') Andorra
+															option(value='6') Angola
+															option(value='7') Anguilla
+															option(value='8') Antarctica
+															option(value='9') Antigua and Barbuda
+															option(value='10') Argentina
+															option(value='11') Armenia
+															option(value='12') Aruba
+															option(value='252') Ascension Island (British)
+															option(value='13') Australia
+															option(value='14') Austria
+															option(value='15') Azerbaijan
+															option(value='16') Bahamas
+															option(value='17') Bahrain
+															option(value='18') Bangladesh
+															option(value='19') Barbados
+															option(value='20') Belarus
+															option(value='21') Belgium
+															option(value='22') Belize
+															option(value='23') Benin
+															option(value='24') Bermuda
+															option(value='25') Bhutan
+															option(value='26') Bolivia
+															option(value='245') Bonaire, Sint Eustatius and Saba
+															option(value='27') Bosnia and Herzegovina
+															option(value='28') Botswana
+															option(value='29') Bouvet Island
+															option(value='30') Brazil
+															option(value='31') British Indian Ocean Territory
+															option(value='32') Brunei Darussalam
+															option(value='33') Bulgaria
+															option(value='34') Burkina Faso
+															option(value='35') Burundi
+															option(value='36') Cambodia
+															option(value='37') Cameroon
+															option(value='38') Canada
+															option(value='251') Canary Islands
+															option(value='39') Cape Verde
+															option(value='40') Cayman Islands
+															option(value='41') Central African Republic
+															option(value='42') Chad
+															option(value='43') Chile
+															option(value='44') China
+															option(value='45') Christmas Island
+															option(value='46') Cocos (Keeling) Islands
+															option(value='47') Colombia
+															option(value='48') Comoros
+															option(value='49') Congo
+															option(value='50') Cook Islands
+															option(value='51') Costa Rica
+															option(value='52') Cote D&apos;Ivoire
+															option(value='53') Croatia
+															option(value='54') Cuba
+															option(value='246') Curacao
+															option(value='55') Cyprus
+															option(value='56') Czech Republic
+															option(value='237') Democratic Republic of Congo
+															option(value='57') Denmark
+															option(value='58') Djibouti
+															option(value='59') Dominica
+															option(value='60') Dominican Republic
+															option(value='61') East Timor
+															option(value='62') Ecuador
+															option(value='63') Egypt
+															option(value='64') El Salvador
+															option(value='65') Equatorial Guinea
+															option(value='66') Eritrea
+															option(value='67') Estonia
+															option(value='68') Ethiopia
+															option(value='69') Falkland Islands (Malvinas)
+															option(value='70') Faroe Islands
+															option(value='71') Fiji
+															option(value='72') Finland
+															option(value='74') France, Metropolitan
+															option(value='75') French Guiana
+															option(value='76') French Polynesia
+															option(value='77') French Southern Territories
+															option(value='126') FYROM
+															option(value='78') Gabon
+															option(value='79') Gambia
+															option(value='80') Georgia
+															option(value='81') Germany
+															option(value='82') Ghana
+															option(value='83') Gibraltar
+															option(value='84') Greece
+															option(value='85') Greenland
+															option(value='86') Grenada
+															option(value='87') Guadeloupe
+															option(value='88') Guam
+															option(value='89') Guatemala
+															option(value='256') Guernsey
+															option(value='90') Guinea
+															option(value='91') Guinea-Bissau
+															option(value='92') Guyana
+															option(value='93') Haiti
+															option(value='94') Heard and Mc Donald Islands
+															option(value='95') Honduras
+															option(value='96') Hong Kong
+															option(value='97') Hungary
+															option(value='98') Iceland
+															option(value='99') India
+															option(value='100') Indonesia
+															option(value='101') Iran (Islamic Republic of)
+															option(value='102') Iraq
+															option(value='103') Ireland
+															option(value='254') Isle of Man
+															option(value='104') Israel
+															option(value='105') Italy
+															option(value='106') Jamaica
+															option(value='107') Japan
+															option(value='257') Jersey
+															option(value='108') Jordan
+															option(value='109') Kazakhstan
+															option(value='110') Kenya
+															option(value='111') Kiribati
+															option(value='253') Kosovo, Republic of
+															option(value='114') Kuwait
+															option(value='115') Kyrgyzstan
+															option(value='116') Lao People&apos;s Democratic Republic
+															option(value='117') Latvia
+															option(value='118') Lebanon
+															option(value='119') Lesotho
+															option(value='120') Liberia
+															option(value='121') Libyan Arab Jamahiriya
+															option(value='122') Liechtenstein
+															option(value='123') Lithuania
+															option(value='124') Luxembourg
+															option(value='125') Macau
+															option(value='127') Madagascar
+															option(value='128') Malawi
+															option(value='129') Malaysia
+															option(value='130') Maldives
+															option(value='131') Mali
+															option(value='132') Malta
+															option(value='133') Marshall Islands
+															option(value='134') Martinique
+															option(value='135') Mauritania
+															option(value='136') Mauritius
+															option(value='137') Mayotte
+															option(value='138') Mexico
+															option(value='139') Micronesia, Federated States of
+															option(value='140') Moldova, Republic of
+															option(value='141') Monaco
+															option(value='142') Mongolia
+															option(value='242') Montenegro
+															option(value='143') Montserrat
+															option(value='144') Morocco
+															option(value='145') Mozambique
+															option(value='146') Myanmar
+															option(value='147') Namibia
+															option(value='148') Nauru
+															option(value='149') Nepal
+															option(value='150') Netherlands
+															option(value='151') Netherlands Antilles
+															option(value='152') New Caledonia
+															option(value='153') New Zealand
+															option(value='154') Nicaragua
+															option(value='155') Niger
+															option(value='156') Nigeria
+															option(value='157') Niue
+															option(value='158') Norfolk Island
+															option(value='112') North Korea
+															option(value='159') Northern Mariana Islands
+															option(value='160') Norway
+															option(value='161') Oman
+															option(value='162') Pakistan
+															option(value='163') Palau
+															option(value='247') Palestinian Territory, Occupied
+															option(value='164') Panama
+															option(value='165') Papua New Guinea
+															option(value='166') Paraguay
+															option(value='167') Peru
+															option(value='168') Philippines
+															option(value='169') Pitcairn
+															option(value='170') Poland
+															option(value='171') Portugal
+															option(value='172') Puerto Rico
+															option(value='173') Qatar
+															option(value='174') Reunion
+															option(value='175') Romania
+															option(value='176') Russian Federation
+															option(value='177') Rwanda
+															option(value='178') Saint Kitts and Nevis
+															option(value='179') Saint Lucia
+															option(value='180') Saint Vincent and the Grenadines
+															option(value='181') Samoa
+															option(value='182') San Marino
+															option(value='183') Sao Tome and Principe
+															option(value='184') Saudi Arabia
+															option(value='185') Senegal
+															option(value='243') Serbia
+															option(value='186') Seychelles
+															option(value='187') Sierra Leone
+															option(value='188') Singapore
+															option(value='189') Slovak Republic
+															option(value='190') Slovenia
+															option(value='191') Solomon Islands
+															option(value='192') Somalia
+															option(value='193') South Africa
+															option(value='194') South Georgia &amp; South Sandwich Islands
+															option(value='113') South Korea
+															option(value='248') South Sudan
+															option(value='195') Spain
+															option(value='196') Sri Lanka
+															option(value='249') St. Barthelemy
+															option(value='197') St. Helena
+															option(value='250') St. Martin (French part)
+															option(value='198') St. Pierre and Miquelon
+															option(value='199') Sudan
+															option(value='200') Suriname
+															option(value='201') Svalbard and Jan Mayen Islands
+															option(value='202') Swaziland
+															option(value='203') Sweden
+															option(value='204') Switzerland
+															option(value='205') Syrian Arab Republic
+															option(value='206') Taiwan
+															option(value='207') Tajikistan
+															option(value='208') Tanzania, United Republic of
+															option(value='209') Thailand
+															option(value='210') Togo
+															option(value='211') Tokelau
+															option(value='212') Tonga
+															option(value='213') Trinidad and Tobago
+															option(value='255') Tristan da Cunha
+															option(value='214') Tunisia
+															option(value='215') Turkey
+															option(value='216') Turkmenistan
+															option(value='217') Turks and Caicos Islands
+															option(value='218') Tuvalu
+															option(value='219') Uganda
+															option(value='220') Ukraine
+															option(value='221') United Arab Emirates
+															option(value='222') United Kingdom
+															option(value='223') United States
+															option(value='224') United States Minor Outlying Islands
+															option(value='225') Uruguay
+															option(value='226') Uzbekistan
+															option(value='227') Vanuatu
+															option(value='228') Vatican City State (Holy See)
+															option(value='229') Venezuela
+															option(value='230') Viet Nam
+															option(value='231') Virgin Islands (British)
+															option(value='232') Virgin Islands (U.S.)
+															option(value='233') Wallis and Futuna Islands
+															option(value='234') Western Sahara
+															option(value='235') Yemen
+															option(value='238') Zambia
+															option(value='239') Zimbabwe
+														.simplecheckout-rule-group(data-for='shipping_address_country_id')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_country_id' data-rule='notEmpty' data-not-empty='1' data-required='true') notEmpty error
+												.form-group.required.row-shipping_address_zone_id
+													label.control-label.col-sm-4(for='shipping_address_zone_id') zone_id
+													.col-sm-8
+														select#shipping_address_zone_id.form-control(name='shipping_address[zone_id]' data-theme='bootstrap' data-onchange='reloadAll')
+															option(value='' selected='selected')  --- &Vcy;&icy;&bcy;&iecy;&rcy;&iukcy;&tcy;&softcy; --- 
+															option(value='0' selected='selected')  --- &Ncy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&ncy;&ocy; --- 
+														.simplecheckout-rule-group(data-for='shipping_address_zone_id')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_zone_id' data-rule='notEmpty' data-not-empty='1' data-required='true') notEmpty error
+												.form-group.required.row-shipping_address_city
+													label.control-label.col-sm-4(for='shipping_address_city') city
+													.col-sm-8
+														input#shipping_address_city.form-control(type='text' name='shipping_address[city]' value='' placeholder='' data-onchange='reloadAll')
+														.simplecheckout-rule-group(data-for='shipping_address_city')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_city' data-rule='byLength' data-length-min='2' data-length-max='128' data-required='true') byLength error
+												.form-group.required.row-shipping_address_postcode
+													label.control-label.col-sm-4(for='shipping_address_postcode') postcode
+													.col-sm-8
+														input#shipping_address_postcode.form-control(type='text' name='shipping_address[postcode]' value='' placeholder='' data-onchange='reloadAll')
+														.simplecheckout-rule-group(data-for='shipping_address_postcode')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_postcode' data-rule='byLength' data-length-min='2' data-length-max='10' data-required='true') byLength error
+												.form-group.required.row-shipping_address_address_1
+													label.control-label.col-sm-4(for='shipping_address_address_1') address_1
+													.col-sm-8
+														input#shipping_address_address_1.form-control(type='text' name='shipping_address[address_1]' value='' placeholder='' data-reload-payment-form='true')
+														.simplecheckout-rule-group(data-for='shipping_address_address_1')
+															.simplecheckout-error-text.simplecheckout-rule(style='display:none;' data-for='shipping_address_address_1' data-rule='byLength' data-length-min='3' data-length-max='128' data-required='true') byLength error
+											input#shipping_address_current_address_id(type='hidden' name='shipping_address[current_address_id]' value='0')
+									#simplecheckout_payment.simplecheckout-block
+										.checkout-heading.panel-heading &Scy;&pcy;&ocy;&scy;&iukcy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;
+										.alert.alert-danger.simplecheckout-warning-block(style='display:none') &Vcy;&icy; &mcy;&acy;&jukcy;&tcy;&iecy; &vcy;&icy;&bcy;&rcy;&acy;&tcy;&icy; &scy;&pcy;&ocy;&scy;&iukcy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;
+										.simplecheckout-block-content
+											.radio
+												label(for='cheque')
+													input#cheque(type='radio' data-onchange='reloadAll' name='payment_method' value='cheque' checked='checked')
+													|                             &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &gcy;&ocy;&tcy;&iukcy;&vcy;&kcy;&ocy;&yucy;
+											.radio
+												label(for='cod')
+													input#cod(type='radio' data-onchange='reloadAll' name='payment_method' value='cod')
+													|                             &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &pcy;&rcy;&icy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&tscy;&iukcy;
+											input(type='hidden' name='payment_method_current' value='cheque')
+											input(type='hidden' name='payment_method_checked' value='cheque')
+									#simplecheckout_payment_form.simplecheckout-block(style='margin: 0px; padding: 0px;')
+									#simplecheckout_comment.simplecheckout-block
+										.checkout-heading.panel-heading &Kcy;&ocy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;
+										.simplecheckout-block-content
+											textarea#comment.form-control(name='comment' placeholder='' data-reload-payment-form='true')
+								.simplecheckout-right-column
+									#simplecheckout_cart.simplecheckout-block
+										.table-responsive
+											table.simplecheckout-cart
+												colgroup
+													col.image
+													col.name
+													col.model
+													col.quantity
+													col.price
+													col.total
+													col.remove
+												thead
+													tr
+														th.image &Fcy;&ocy;&tcy;&ocy;
+														th.name &Ncy;&acy;&jcy;&mcy;&iecy;&ncy;&ucy;&vcy;&acy;&ncy;&ncy;&yacy; &tcy;&ocy;&vcy;&acy;&rcy;&ucy;
+														th.model &Mcy;&ocy;&dcy;&iecy;&lcy;&softcy;
+														th.quantity
+															span(title='Кількість') &Kcy;&iukcy;&lcy;&softcy;&kcy;.
+														th.price &TScy;&iukcy;&ncy;&acy;
+														th.total &Rcy;&acy;&zcy;&ocy;&mcy;
+														th.remove
+												tbody
+													tr
+														td.image
+															a(href='http://eppl.alekslv.in.net/index.php?route=product/product&product_id=40')
+																img(src='http://eppl.alekslv.in.net/image/cache/catalog/8DC6BA5B-9B63-43C8-8A41-AE3B7CEBA5F7-250x200.jpeg' alt='iPhone 11 128Gb Black (MWLE2)' title='iPhone 11 128Gb Black (MWLE2)')
+														td.name
+															.image
+																a(href='http://eppl.alekslv.in.net/index.php?route=product/product&product_id=40')
+																	img(src='http://eppl.alekslv.in.net/image/cache/catalog/8DC6BA5B-9B63-43C8-8A41-AE3B7CEBA5F7-250x200.jpeg' alt='iPhone 11 128Gb Black (MWLE2)' title='iPhone 11 128Gb Black (MWLE2)')
+															a(href='http://eppl.alekslv.in.net/index.php?route=product/product&product_id=40') iPhone 11 128Gb Black (MWLE2)
+															.options
+														td.model MWLE2
+														td.quantity
+															.input-group.btn-block(style='max-width: 200px;')
+																span.input-group-btn
+																	button.btn.btn-primary(data-onclick='decreaseProductQuantity' data-toggle='tooltip' type='submit' data-original-title='' title='')
+																		i.fa.fa-minus
+																input.form-control(type='text' data-onchange='changeProductQuantity' name='quantity[61]' value='1' size='1')
+																span.input-group-btn
+																	button.btn.btn-primary(data-onclick='increaseProductQuantity' data-toggle='tooltip' type='submit' data-original-title='' title='')
+																		i.fa.fa-plus
+																	button.btn.btn-danger(data-onclick='removeProduct' data-product-key='61' data-toggle='tooltip' type='button' data-original-title='' title='')
+																		i.fa.fa-times-circle
+														td.price
+															div 24600 &gcy;&rcy;&ncy;
+														td.total 24600 &gcy;&rcy;&ncy;
+														td.remove
+										#total_sub_total.simplecheckout-cart-total
+											span
+												b &Scy;&ucy;&mcy;&acy;:
+											span.simplecheckout-cart-total-value 24600 &gcy;&rcy;&ncy;
+											span.simplecheckout-cart-total-remove
+										#total_shipping.simplecheckout-cart-total
+											span
+												b &Scy;&acy;&mcy;&ocy;&vcy;&icy;&vcy;&iukcy;&zcy; &iukcy;&zcy; &mcy;&acy;&gcy;&acy;&zcy;&icy;&ncy;&ucy;:
+											span.simplecheckout-cart-total-value 0 &gcy;&rcy;&ncy;
+											span.simplecheckout-cart-total-remove
+										#total_total.simplecheckout-cart-total
+											span
+												b &Rcy;&acy;&zcy;&ocy;&mcy;:
+											span.simplecheckout-cart-total-value 24600 &gcy;&rcy;&ncy;
+											span.simplecheckout-cart-total-remove
+										.simplecheckout-cart-total
+											span.inputs
+												| &Kcy;&ucy;&pcy;&ocy;&ncy;:&nbsp;
+												input.form-control(type='text' data-onchange='reloadAll' name='coupon' value='')
+										.simplecheckout-cart-total
+											span.inputs
+												| &Pcy;&ocy;&dcy;&acy;&rcy;&ucy;&ncy;&kcy;&ocy;&vcy;&icy;&jcy; &scy;&iecy;&rcy;&tcy;&icy;&fcy;&iukcy;&kcy;&acy;&tcy;:&nbsp;
+												input.form-control(type='text' name='voucher' data-onchange='reloadAll' value='')
+										.simplecheckout-cart-total.simplecheckout-cart-buttons
+											span.inputs.buttons
+												a#simplecheckout_button_cart.button.btn-primary.button_oc.btn(data-onclick='reloadAll')
+													span &Ocy;&ncy;&ocy;&vcy;&icy;&tcy;&icy;
+										input#simplecheckout_remove(type='hidden' name='remove' value='')
+										#simplecheckout_cart_total(style='display:none;') 1 &tcy;&ocy;&vcy;&acy;&rcy;(&iukcy;&vcy;) - 24600 &gcy;&rcy;&ncy;
+								#simplecheckout_summary.simplecheckout-block(data-hide='true' style='display: none;')
+									.checkout-heading.panel-heading &Zcy;&acy;&gcy;&acy;&lcy;&softcy;&ncy;&acy; &iukcy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&iukcy;&yacy; &pcy;&ocy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yucy;
+							#simplecheckout_bottom(style='width:100%;height:1px;clear:both;')
+							#simplecheckout_proceed_payment.simplecheckout-proceed-payment(style='display:none;') &Zcy;&acy;&chcy;&iecy;&kcy;&acy;&jcy;&tcy;&iecy; ... &Vcy;&iukcy;&dcy;&bcy;&ucy;&vcy;&acy;&jukcy;&tcy;&softcy;&scy;&yacy; &pcy;&iecy;&rcy;&iecy;&khcy;&iukcy;&dcy; &dcy;&ocy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;
+							#buttons.simplecheckout-button-block.buttons
+								.simplecheckout-button-right
+									a#simplecheckout_button_confirm.button.btn-primary.button_oc.btn(data-onclick='createOrder')
+										span &Ocy;&fcy;&ocy;&rcy;&mcy;&icy;&tcy;&icy; &zcy;&acy;&mcy;&ocy;&vcy;&lcy;&iecy;&ncy;&ncy;&yacy;
+								.simplecheckout-button-left
+
+
+	// end s-simple-content
