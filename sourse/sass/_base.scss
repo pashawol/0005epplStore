@@ -616,3 +616,149 @@ iframe {
 	background-color: #6fd200;
 	border-color: #6fd200;
 }
+
+.simplecheckout-right-column {
+	width: 100%;
+	max-width: none;
+	min-width: auto;
+	float: none;
+	.table-responsive {
+		overflow: visible;
+	}
+}
+
+.simplecheckout-left-column {
+	float: none;
+	width: 100%;
+	max-width: none;
+	min-width: auto;
+}
+
+.simplecheckout-step {
+	display: flex;
+	flex-direction: column-reverse;
+
+
+	textarea {
+		resize: none;
+		border-radius: 4px;
+		margin-top: 20px !important;
+	}
+
+	.name {
+		a {
+			color: $body-color;
+		}
+	}
+
+	.image {
+		@include media-breakpoint-down(md) {
+			max-width: 20%;
+		}
+		img {
+				max-width: 120px;
+				@media only screen and (max-width: 640px) {
+					max-width: 100%;
+					height: auto;
+				}
+		}
+	}
+
+	.form-control {
+		border-radius: 4px;
+		padding: 10px 5px;
+		min-height: auto;
+	}
+
+	.quantity {
+		@include media-breakpoint-down(md) {
+			flex-grow: 1;
+			flex-shrink: 0;
+			width: 100%;
+		}
+
+		// @include media-breakpoint-up(sm) {
+		// 	width: rem(100);
+		// }
+		button {
+			border-radius: 50% !important;
+			width: 23px;
+			height: 23px;
+			display: block;
+			position: relative;
+		}
+		.input-group-btn {
+			display: flex;
+			align-items: center;
+		}
+		.input-group {
+			display: flex;
+			// justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+		}
+		
+
+		.form-control {
+			border: none;
+			box-shadow: none;
+			text-align: center;
+			min-width: auto !important;
+			width: 40px !important;
+			display: block;
+			margin-left: rem(24) !important;
+			margin-right: rem(3) !important;
+			flex: 0 0 auto;
+		}
+
+		.btn-danger {
+			margin-left: 3px;
+		}
+		min-width: auto !important;
+	}
+}
+
+
+.simplecheckout {
+	button.button, a.button {
+		color: #fff !important;
+		&:hover {
+			border-color: $body-color !important;
+			background-color: #fff !important;
+			color: $body-color !important;
+		}
+	}
+}
+
+.simplecheckout-cart {
+	thead {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	tbody tr{
+		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-wrap: wrap;
+			border: none;
+
+			td {
+				border: none;
+			}
+
+			.name {
+				// width: 60%;
+				@media only screen and (max-width: 640px) {
+					width: 100%;
+					display: flex;
+					align-items: center;
+
+					a {
+						display: block;
+					}
+				}
+
+			}
+		}
+	}
+}

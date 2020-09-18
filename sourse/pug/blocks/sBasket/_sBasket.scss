@@ -97,7 +97,9 @@
 				&:nth-child(3) {
 					td {
 						&:not(:nth-child(2)) {
-							display: none;
+							@include media-breakpoint-down(md) {
+								display: none;
+							}
 						}
 					}
 				}
@@ -112,6 +114,7 @@
 			td {
 				@include media-breakpoint-down(md) {
 					flex: 0 0 auto;
+					max-width: 100%;
 				}
 				border: none;
 				white-space: normal !important;
@@ -229,8 +232,6 @@
 		}
 	}
 
-	&__imgWrap {
-	}
 
 	&__recomend {
 		@include media-breakpoint-up(md) {
@@ -251,10 +252,12 @@
 	}
 
 	.custom-input {
+		flex: 1 0 0%;
 		flex-shrink: 0;
 		margin-left: 0;
 		margin-right: 20px;
 		position: relative;
+		padding-right: 10px;
 
 		&__text {
 			font-weight: 300;
@@ -277,6 +280,7 @@
 	&__accessoryPrice {
 		// align-self: start;
 		font-weight: 600;
+		flex: 0 0 auto;
 
 	}
 
