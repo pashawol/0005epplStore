@@ -618,25 +618,40 @@ iframe {
 }
 
 .simplecheckout-right-column {
-	width: 100%;
-	max-width: none;
-	min-width: auto;
-	float: none;
+	width: 100% !important;
+	max-width: none !important;
+	@include media-breakpoint-up(lg) {
+		max-width: rem(270) !important;
+	}
+	@include media-breakpoint-down(lg) {
+		padding-top: rem(30);
+	}
+	float: none !important;
 	.table-responsive {
 		overflow: visible;
+	}
+	@media only screen and (max-width: 640px) {
+		.simplecheckout-cart td.name div.image  {
+			display: none;
+		}
 	}
 }
 
 .simplecheckout-left-column {
-	float: none;
-	width: 100%;
-	max-width: none;
-	min-width: auto;
+	float: none !important;
+	width: 100% !important;
+	max-width: none !important;
+	min-width: auto !important;
 }
 
 .simplecheckout-step {
 	display: flex;
-	flex-direction: column-reverse;
+	@include media-breakpoint-down(lg) {
+		display: flex;
+		flex-direction: column;
+
+	}
+	// flex-direction: column-reverse;
 
 
 	textarea {
@@ -718,6 +733,11 @@ iframe {
 	}
 }
 
+.row, .container {
+	&::before, &::after {
+		display: none;
+	}
+}
 
 .simplecheckout {
 	button.button, a.button {
@@ -728,19 +748,35 @@ iframe {
 			color: $body-color !important;
 		}
 	}
+
+	.simplecheckout-button-right {
+		float: left;
+	}
+}
+
+.simplecheckout-cart-total {
+	background-color: $gray-200
 }
 
 .simplecheckout-cart {
+	border: none !important;
+	background-color: $gray-200 !important;
 	thead {
-		@include media-breakpoint-down(md) {
-			display: none;
+		// @include media-breakpoint-down(md) {
+		// 	display: none;
+		// }
+
+		th {
+			background-color: $gray-200
 		}
 	}
+
+	
 	tbody tr{
 		@include media-breakpoint-down(md) {
-			display: flex;
-			flex-wrap: wrap;
-			border: none;
+			// display: flex;
+			// flex-wrap: wrap;
+			// border: none;
 
 			td {
 				border: none;
@@ -750,15 +786,30 @@ iframe {
 				// width: 60%;
 				@media only screen and (max-width: 640px) {
 					width: 100%;
-					display: flex;
-					align-items: center;
+					// display: flex;
+					// align-items: center;
 
-					a {
-						display: block;
-					}
+					// a {
+					// 	display: block;
+					// }
 				}
 
 			}
 		}
 	}
+	th {
+		border: none;
+	}
+}
+
+
+.checkout-heading {
+	font-size: rem(30);
+	font-weight: 400;
+	border: none;
+	background-color: #fff !important;
+}
+
+#simplecheckout_cart .form-control {
+	background-color: $light;
 }

@@ -62,7 +62,7 @@
 		.swiper-container{
 			height: 190px;
 			@include media-breakpoint-up(sm){
-				height: auto;
+				height: 100%;
 			}
 		}
 		//slide
@@ -389,7 +389,7 @@
 			}
 			input:checked + .memory-item{
 				background-color: $primary;
-				color: $white;
+				color: $white !important;
 			}
 
 			.memory-item{
@@ -408,10 +408,14 @@
 
 				font-size: rem(13px);
 				line-height: 1;
+				color: $body-color;
 
 				&:hover{
 					box-shadow: 0 0 15px -10px rgba(0,0,0, .34);
 					background-color: lighten($light, 5);
+				}
+				&.active {
+					color: #fff;
 				}
 			}
 		}

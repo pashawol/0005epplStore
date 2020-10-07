@@ -194,6 +194,9 @@
 		font-size: 8px;
 		color: $body-color;
 		font-weight: 300;
+		&.active {
+			// color: #fff;
+		}
 	}
 
 	&__title {

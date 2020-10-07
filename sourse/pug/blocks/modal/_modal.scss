@@ -215,19 +215,27 @@
 }
 
 #one-click {
+	max-width: 400px;
 	.form-group {
 		margin-bottom: 20px;
 		label {
 			padding-left: 10px;
 			padding-bottom: 10px;
 		}
+		input {
+			border-radius: 4px;
+		}
 	}
+
 	
-	button {
+	button.btn {
 		@extend .btn;
 		@extend .btn-outline-dark;
 		display: block;
 		width: 100%;
+		max-width: 200px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
