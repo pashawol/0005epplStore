@@ -434,53 +434,58 @@ function eventHandler() {
 	})
 
 	//.buy-with-slider-js
-	let buyWithSlider = new Swiper('.buy-with-slider-js', {
-		//loop: true,
+	$('.sBuyWith__slider').each(function () {
+		let buyWithSlider = new Swiper($(this).find('.buy-with-slider-js'), {
+			//loop: true,
+			slidesPerColumnFill: 'row',
 
-		slidesPerColumnFill: 'row',
+			breakpoints: {
+				1: {
+					spaceBetween: 15,
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+				},
+				575: {
+					slidesPerColumn: 2,
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				768: {
+					slidesPerView: 3,
+					slidesPerColumn: 1,
+					spaceBetween: 20,
+				},
+				1200: {
+					slidesPerView: 4,
+					slidesPerColumn: 1,
+					spaceBetween: 30,
+				},
+			},
 
-		breakpoints: {
-			1: {
-				spaceBetween: 15,
-				slidesPerView: 2,
-				slidesPerColumn: 2,
+			//pagination
+			pagination: {
+				el: $(this).find('.buy-with-pugin'),
+				clickable: true,
 			},
-			575: {
-				slidesPerColumn: 2,
-				slidesPerView: 2,
-				spaceBetween: 15,
+			//nav
+			navigation: {
+				nextEl: $(this).find('.buy-with-next'),
+				prevEl: $(this).find('.buy-with-prev'),
 			},
-			768: {
-				slidesPerView: 3,
-				slidesPerColumn: 1,
-				spaceBetween: 20,
-			},
-			1200: {
-				slidesPerView: 4,
-				slidesPerColumn: 1,
-				spaceBetween: 30,
-			},
-		},
 
-		//pagination
-		pagination: {
-			el: $(this).find('.buy-with-pugin'),
-			clickable: true,
-		},
-		//nav
-		navigation: {
-			nextEl: '.buy-with-next',
-			prevEl: '.buy-with-prev',
-		},
-
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 4,
-		},
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 4,
+			},
+		});
 	});
 
 	$('.modalBasket-js').click(function(){
-		buyWithSlider.update();
+
+		let modalWinSlider = document.querySelector('.modal-win .buy-with-slider-js');
+		window.setTimeout(function (){
+			modalWinSlider.swiper.update();
+		}, 10);
 	})
 
 
@@ -514,6 +519,9 @@ function eventHandler() {
 			star.classList.remove('hover-paint-js');
 		}
 	});
+
+	//junk
+
 
 	//end luckyoneJs
 

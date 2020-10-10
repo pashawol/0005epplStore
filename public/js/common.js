@@ -409,48 +409,53 @@ function eventHandler() {
 		}, 300);
 	}); //.buy-with-slider-js
 
-	var buyWithSlider = new Swiper('.buy-with-slider-js', {
-		//loop: true,
-		slidesPerColumnFill: 'row',
-		breakpoints: {
-			1: {
-				spaceBetween: 15,
-				slidesPerView: 2,
-				slidesPerColumn: 2
+	$('.sBuyWith__slider').each(function () {
+		var buyWithSlider = new Swiper($(this).find('.buy-with-slider-js'), {
+			//loop: true,
+			slidesPerColumnFill: 'row',
+			breakpoints: {
+				1: {
+					spaceBetween: 15,
+					slidesPerView: 2,
+					slidesPerColumn: 2
+				},
+				575: {
+					slidesPerColumn: 2,
+					slidesPerView: 2,
+					spaceBetween: 15
+				},
+				768: {
+					slidesPerView: 3,
+					slidesPerColumn: 1,
+					spaceBetween: 20
+				},
+				1200: {
+					slidesPerView: 4,
+					slidesPerColumn: 1,
+					spaceBetween: 30
+				}
 			},
-			575: {
-				slidesPerColumn: 2,
-				slidesPerView: 2,
-				spaceBetween: 15
+			//pagination
+			pagination: {
+				el: $(this).find('.buy-with-pugin'),
+				clickable: true
 			},
-			768: {
-				slidesPerView: 3,
-				slidesPerColumn: 1,
-				spaceBetween: 20
+			//nav
+			navigation: {
+				nextEl: $(this).find('.buy-with-next'),
+				prevEl: $(this).find('.buy-with-prev')
 			},
-			1200: {
-				slidesPerView: 4,
-				slidesPerColumn: 1,
-				spaceBetween: 30
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 4
 			}
-		},
-		//pagination
-		pagination: {
-			el: $(this).find('.buy-with-pugin'),
-			clickable: true
-		},
-		//nav
-		navigation: {
-			nextEl: '.buy-with-next',
-			prevEl: '.buy-with-prev'
-		},
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 4
-		}
+		});
 	});
 	$('.modalBasket-js').click(function () {
-		buyWithSlider.update();
+		var modalWinSlider = document.querySelector('.modal-win .buy-with-slider-js');
+		window.setTimeout(function () {
+			modalWinSlider.swiper.update();
+		}, 10);
 	}); //stars js
 
 	$('.star-js').click(function () {
@@ -493,7 +498,8 @@ function eventHandler() {
 		} finally {
 			_iterator.f();
 		}
-	}); //end luckyoneJs
+	}); //junk
+	//end luckyoneJs
 }
 
 ;
