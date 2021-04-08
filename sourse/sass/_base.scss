@@ -635,6 +635,7 @@ iframe {
 			display: none;
 		}
 	}
+
 }
 
 .simplecheckout-left-column {
@@ -754,18 +755,11 @@ iframe {
 	}
 }
 
-.simplecheckout-cart-total {
-	background-color: $gray-200
-}
-
 .simplecheckout-cart {
 	border: none !important;
 	background-color: $gray-200 !important;
 	thead {
-		// @include media-breakpoint-down(md) {
-		// 	display: none;
-		// }
-
+		display: none;
 		th {
 			background-color: $gray-200
 		}
@@ -773,25 +767,26 @@ iframe {
 
 	
 	tbody tr{
+		display: flex;
+		padding-bottom: rem(15);
+		margin-bottom: rem(15);
+		flex-direction: column;
+		border: none;
+		border-bottom: solid 1px rgba($color: #272f39, $alpha: 0.11);
+
+		td {
+			display: block;
+		}
+		// text-align: left !important;
 		@include media-breakpoint-down(md) {
-			// display: flex;
-			// flex-wrap: wrap;
-			// border: none;
 
 			td {
 				border: none;
 			}
 
 			.name {
-				// width: 60%;
 				@media only screen and (max-width: 640px) {
 					width: 100%;
-					// display: flex;
-					// align-items: center;
-
-					// a {
-					// 	display: block;
-					// }
 				}
 
 			}
@@ -800,6 +795,26 @@ iframe {
 	th {
 		border: none;
 	}
+
+	td {
+		border: none;
+	}
+
+	// tbody tr {
+	// }
+
+	th.name, td.total, td.name {
+		display: block !important;
+		text-align: left !important;
+	}
+
+	td.total, td.name {
+		border: none;
+	}
+}
+
+.simplecheckout-cart td.name {
+	text-align: left;
 }
 
 
@@ -813,3 +828,181 @@ iframe {
 #simplecheckout_cart .form-control {
 	background-color: $light;
 }
+
+#simplecheckout_cart {
+	background-color: $gray-200;
+	padding: rem(20);
+}
+
+#simplecheckout_shipping .simplecheckout-block-content {//обертка кнопок способа доставки
+	justify-content: flex-start !important;
+}//обертка кнопок способа доставки
+
+.simplecheckout-cart-total {// обертка кнопки оформить заказ
+	background-color: $gray-200;
+	text-align: left !important;
+	display: flex;
+	justify-content: center;
+	border: none !important;
+
+	&::after {
+		display: none !important;
+	}
+}// обертка кнопки оформить заказ
+
+.simplecheckout-cart-buttons {//обертка кнопки оформить заказ
+	// border: none !important;
+}//обертка кнопки оформить заказ
+
+#total_sub_total, #total_total {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 300;
+
+	.simplecheckout-cart-total-remove {
+		display: none;
+	}
+
+	.simplecheckout-cart-total-value {
+		font-weight: 600;
+	}
+}
+
+.simplecheckout-block-content {//кнопки доставки и селекты
+	justify-content: flex-start;
+
+	.form_radio_btn {// кнопка доставки
+
+		&:not(:last-child) {
+			margin-right: rem(13);
+		}
+
+		label {
+			font-weight: 300;
+			border-radius: 4px;
+			padding: rem(12) rem(22);
+		}
+		@include mt;
+		&:hover {
+			opacity: .6;
+		}
+	}// кнопка доставки
+
+	.select2-container--bootstrap .select2-selection--single {
+		height: 48px;
+    padding: 13px 24px 13px 12px;
+	}
+
+	.select2-container--bootstrap .select2-selection--single .select2-selection__arrow b {
+		border: none;
+		width: 13px;
+		height: 8px;
+		background-image: url('../img/cevron-down.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}//кнопки доставки 
+
+.checkout-heading {
+	.checkout-heading-button {
+		a {
+			color: #8b8b8b;
+			font-size: 15px;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+.payment_method {display: inline-block;}
+
+.payment_method label{
+	margin-bottom: 8px;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	padding-left: 0;
+	input {
+		position: absolute;
+		// opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+	}
+
+	.payment_method_span {
+		position: relative;
+		padding-left: 28px;
+		padding-right: 30px;
+		&::after {
+			content: '';
+			width: 19px;
+			height: 19px;
+			border-radius: 10px;
+			background-color: #f4f4f4;
+			position: absolute;
+			left: 0;
+			@include a-cent(y);
+		}
+	}
+
+	input:checked + .payment_method_span::after {
+		background-color: #74dc00;
+	}
+
+	input:checked + .payment_method_span::before {
+		content: '';
+		position: absolute;
+		z-index: 2;
+		border-radius: 50%;
+		width: 5px;
+		height: 5px;
+		background-color: #000;
+		left: 7px;
+		@include a-cent(y);
+	}
+}
+
+.field20MyClass {
+	position: relative;
+	cursor: pointer;
+	input {
+		position: absolute;
+		// opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		clip: rect(0 0 0 0 );
+		overflow: hidden;
+	}
+
+	input + label::before {
+		content: '';
+		left: 8px;
+		@include a-cent(y);
+		width: 19px;
+		height: 19px;
+		border-radius: 2px;
+		background-color: #6fd200;
+	}
+
+	label {
+		padding-left: 30px !important;
+	}
+
+	input:checked + label::after {
+		content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
+		position: absolute;
+		@include a-cent(y);
+		left: 11px;
+	}
+}
+

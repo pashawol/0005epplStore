@@ -263,6 +263,7 @@
 			}
 		}
 		.sliderCategory__slideWrap {
+			justify-content: flex-start;
 			padding: 18px 23px;
 			@include media-breakpoint-up(lg) {
 				padding: 33px 20px 30px;
@@ -272,12 +273,12 @@
 			margin-bottom: 0 !important;
 			img {
 				@include media-breakpoint-down(sm) {
-					width: 58%;
+					width: 100%;
 				}
 			}
 		}
 		.sliderCategory__title {
-			margin-top: auto;
+			// margin-top: auto;
 			font-size: $em-base;
 			@include media-breakpoint-down(md) {
 				font-size: 9px;

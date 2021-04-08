@@ -746,7 +746,7 @@
 			line-height: (16/14);
 		}
 		p{
-			display: inline;
+			// display: inline;
 			@include media-breakpoint-up(sm){
 				display: block;
 			}

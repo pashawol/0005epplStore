@@ -83,6 +83,7 @@
 	//dropdown
 	.dropdown {
 		outline: none !important;
+		position: static;
 		@include media-breakpoint-up(sm) {
 			position: relative;
 		}
@@ -149,6 +150,7 @@
 		}
 
 		&--search {
+
 			.dropdown-toggle {
 				&::before {
 					content: none;
@@ -294,6 +296,9 @@
 
 	&__basket {
 		background-color: #fff;
+		@include media-breakpoint-down(md) {
+			padding-left: 15px;
+		}
 		table {
 			td {
 				padding-top: 22px;

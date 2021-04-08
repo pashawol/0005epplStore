@@ -103,7 +103,7 @@ $h: 1px;
 
 	&__inner {
 		background-color: #fff;
-		padding: 51px 0;
+		padding: 51px 0 150px;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
@@ -168,5 +168,36 @@ $h: 1px;
 	text-align: center;
 	a {
 		color: $body-color;
+	}
+}
+
+.MobileMenuToggle {
+	.dropdown-toggle {
+		pointer-events: none;
+	}
+	.dropdown-menu {
+		position: static;
+		display: block;
+		box-shadow: none;
+		border: none;
+		width: 100%;
+	}
+
+	.topLine__lk {
+		padding: 0 15px;
+		ul {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border: none;
+			li a {
+				text-align: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+		}
 	}
 }

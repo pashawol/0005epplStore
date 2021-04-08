@@ -162,11 +162,15 @@
 		height: 110px;
 		@include media-breakpoint-up(sm) {
 			height: 220px;
+			// @include block(100,90);
 			margin-bottom: 12px;
 		}
 		img {
 			@include media-breakpoint-down(sm) {
-				max-width: 60px;
+				// max-width: 60px;
+				@include a-cent;
+				// width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -227,6 +231,9 @@
 	&__imgWrap {
 		position: relative;
 		max-width: 245px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(15);
+		}
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
@@ -333,4 +340,9 @@
 		font-weight: 600;
 		text-decoration: line-through;
 	}
+}
+
+.price-old {
+	text-decoration: line-through;
+	color: #a1a1a1;
 }
