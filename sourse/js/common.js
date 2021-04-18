@@ -313,13 +313,6 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 	JSCCommon.customRange();
 	// JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-	let screenName;
-	screenName = '03.png';
-	screenName
-		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
-		: '';
-	// /добавляет подложку для pixel perfect
 	function whenResize() {
 		var topH = document.querySelector('header').scrollHeight;
 		var stickyElement = document.querySelector('.top-nav');
@@ -431,8 +424,12 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 20,
 		loop: true,
-		thumbs: {
-			swiper: prodCardThumb
+		breakpoints: {
+			576: {
+				thumbs: {
+					swiper: prodCardThumb
+				},
+			},
 		},
 		lazy: {
 			loadPrevNext: true,
