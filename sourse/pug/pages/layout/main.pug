@@ -7,6 +7,7 @@ include ../../blocks/footer/_footer.pug
 include ../../blocks/modal/_modal.pug
 include js-css.pug
 
+include ../../blocks/sProdCard/_sProdCard.pug
 include ../../blocks/header/_header.pug
 include ../../blocks/topLine/_topLine.pug
 include ../../blocks/top-nav/_top-nav.pug 
@@ -21,10 +22,10 @@ html(lang="ru")
 
 		block title
 			title title
-		meta(name="description", content="о чем страница")
+		meta(name="description" content="о чем страница")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport", content="width=device-width, shrink-to-fit=no")
-		link(rel='shortcut icon',   type="image/png",  href='img/favicon/favicon.png') 
+		meta(name="viewport" content="width=device-width, shrink-to-fit=no")
+		link(rel='shortcut icon' type="image/png" href='img/favicon/favicon.png') 
 		<meta name="format-detection" content="telephone=no">
 		link(rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png" )
 		meta( property="og:type" content="website")
@@ -38,7 +39,7 @@ html(lang="ru")
 		meta( property="og:image:height" content="504")
 
 		// Custom Browsers Color
-		meta(name='theme-color', content='#3361d8')
+		meta(name='theme-color' content='#3361d8')
 		+allcss()
 	block variables
 	body(class= mainPage)
@@ -48,5 +49,4 @@ html(lang="ru")
 				h3 content
 		+modal()
 		+allcjs()
-		
-		
+

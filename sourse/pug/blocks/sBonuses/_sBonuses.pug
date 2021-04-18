@@ -1,0 +1,31 @@
+mixin sBonuses()
+	// start sBonuses
+	+b.SECTION.sBonuses.section#sBonuses&attributes(attributes)
+		.container
+			.row 
+				.col-lg-7.align-self-start
+					+e.wrap 
+						+b.section-title 
+							h2 Бонусная программа
+				+e.bannerCol.col-lg 
+					+e.bannerWrap
+						+pic('bonuses.png')
+				.col-lg-7
+					+e.wrap--subtitle 
+						+e.subtitle Даже если ваша карта не&nbsp;активирована, вы&nbsp;уже можете накапливать бонусы.<br> Для оплаты бонусами до&nbsp;10% стоимости новых покупок, карту необходимо активировать.
+			+e.row.row 
+				mixin item(i,title,text) 
+					+e.col.col-sm-6.col-md-4.col-lg-3
+						+e.item
+							+pic(`bonuses-${i}.png`,'','lazy','')
+							+e.itemTittle!= title
+							p!= text
+				+item('1',`Один бонус — один рубль`,`Простая и&nbsp;понятная система начисления баллов`)
+				+item('2',`Получайте бонусы`,`Получайте за&nbsp;каждую покупку от&nbsp;3% до&nbsp;5% бонусами от&nbsp;суммы заказа на&nbsp;бонусную карту`)
+				+item('3',`Расплачивайтесь бонусами`,`Оплачивайте бонусами до&nbsp;10% от&nbsp;стоимости покупки в&nbsp;магазинах и&nbsp;на&nbsp;нашем сайте`)
+				+item('4',`В день рождения — подарок`,`Получайте двойные бонусы за&nbsp;неделю до&nbsp;и&nbsp;в&nbsp;течение недели после дня рождения`)
+				+item('5',`300 бонусов за рекомендацию`,`Рекомендуйте нас друзьям! Вы&nbsp;с&nbsp;другом получите по&nbsp;300 бонусов на&nbsp;карту`)
+				+item('6',`Личный кабинет`,`В&nbsp;личном кабинете вы&nbsp;увидите актуальный баланс карты почетного покупателя`)
+				+item('7',`Хочу такую карту!`,`Получите карту при покупке в&nbsp;магазине или на&nbsp;сайте. Также оформить карту можно сейчас`)
+
+	// end sBonuses

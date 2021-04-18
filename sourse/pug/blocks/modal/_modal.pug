@@ -85,6 +85,72 @@ mixin modal()
 			+e.BUTTON.proceed(type="button" data-fancybox-close="" title="Закрыть") Продолжить покупки
 			+e.toBasket(href="#") Перейти в корзину
 		+sBuyWith(class="d-none d-lg-block")
-		
 
+	+b.modal-win(id="modal-trade-in" class="modal-trade-in " style="display: none" )
+		+form-wrap
+			+e.title Сдайте нам своё старое устройство и&nbsp;обменяйте его на&nbsp;новое с&nbsp;доплатой
+			+e.subtitle Программа Trade-in&nbsp;&mdash; это удобный и&nbsp;экологический способ покупки новых устройств. Теперь Вам есть куда можно принести свои устройства Apple, которые&nbsp;Вы решили обновить, при этом получить для себя выгоду и&nbsp;пользу окружающей среде.
+			+e.lightBlock
+				.row.align-items-center 
+					.col-sm-auto 
+						+e.trade Хочу сдать:
+					.col
+						+modalDropdown
+				+b.prod-chars
+					+charsItem('Накопитель:')
+						+e.memory-list
+							+memoryRadioItem('64 ГБ')
+							+memoryRadioItem('128 ГБ')(checked)
+							+memoryRadioItem('256 ГБ')
+			+e.lightBlock
+				.row.align-items-center 
+					.col-sm-auto 
+						+e.trade И получить:
+					.col
+
+						+modalDropdown
+				+b.prod-chars
+					+charsItem('Накопитель:')
+						+e.memory-list
+							+memoryRadioItem('64 ГБ')
+							+memoryRadioItem('128 ГБ')(checked)
+							+memoryRadioItem('256 ГБ')
+					+charsItem('Цвет:')
+						+e.color-list
+							+colorRadioItem('#fb4f4f')
+							+colorRadioItem('#757e74')(checked)
+							+colorRadioItem('#000000')
+							+colorRadioItem('#ffffff', 'white-circle')
+							+colorRadioItem('#e6cf72')
+			+e.buttonsWrap.row 
+				.col-sm-7
+					+input('Телефон', 'tel')
+				.col-sm
+					+e.btn.btn.btn-primary(type='submit') Забронировать
 	// end modals
+
+mixin modalDropdown(title)
+	+b.modalDropdown
+		+e.head.accardion-js Apple Iphone 6s
+		+e.hidden.accardion-toggle-js
+			+b.tabs
+				+e.caption
+					+e.btn.active Iphone
+					+e.btn Ipad
+					+e.btn Imac
+					+e.btn Watch
+				+e.wrap
+					mixin content
+						+e.content&attributes(attributes)
+							+e.item(type="button") Watch 1 первое поколение
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+							+e.item(type="button") Watch Series 1
+					+content().active
+					+content()
+					+content()
+					+content()

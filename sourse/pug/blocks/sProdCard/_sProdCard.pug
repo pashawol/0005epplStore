@@ -3,36 +3,63 @@ mixin sProdCard()
 	+b.sProdCard.section#sProdCard&attributes(attributes)
 		+e.container.container
 			+e.row.row
-				.col-lg-6
-					+e.sliders-cont
-						+e.slider
-							.swiper-container.prod-card-slider-js
-								.swiper-wrapper
-									+prodCardSlide(1)
-									+prodCardSlide(2)
-									+prodCardSlide(3)
-									+prodCardSlide(2)
-									+prodCardSlide(1)
-									+prodCardSlide(3)
-						+e.thumbs
-							.swiper-container.prod-card-thumb-js
-								.swiper-wrapper
-									+prodCardThumb(1)
-									+prodCardThumb(2)
-									+prodCardThumb(3)
-									+prodCardThumb(2)
-									+prodCardThumb(1)
-									+prodCardThumb(3)
-							.swiper-prev-frame.prod-card-th-prev
-								+icon('chevron-left')
-							.swiper-next-frame.prod-card-th-next
-								+icon('chevron-right')
+				+e.lCol.col-lg-6
+					+b.cardDescr
+						+e.row.row.align-items-center
+							.col-auto
+								+e.article-txt XR34760009854
+							.col-auto
+								+b.stars-cont
+									+e.star.filled-star
+										+icon('star')
+									+e.star.filled-star
+										+icon('star')
+									+e.star.filled-star
+										+icon('star')
+									+e.star.filled-star
+										+icon('star')
+									+e.star.empty-star
+										+icon('star')
+									+e.reviews Нет отзывов
+						+e.status.bg-primary.color-white Новинка
+						+e.status.bg-danger.color-white Отсутствует
+						+e.status.bg-warning Ожидается
+					+e.sliders-cont 
+						+e.buttonsWrap 
+							+e.like(type="button")
+								img(src="img/@2x/heart.png" alt="" loading='lazy')
+							+e.compare(type="button")
+								img(src="img/@2x/compare.png" alt="" loading='lazy')
+						+e.sliderRow.row
+							.col-4.d-none.d-md-block
+								+e.thumbs
+									.swiper-container.prod-card-thumb-js
+										.swiper-wrapper
+											+prodCardThumb(1)
+											+prodCardThumb(2)
+											+prodCardThumb(3)
+											+prodCardThumb(2)
+											+prodCardThumb(1)
+											+prodCardThumb(3)
+									.swiper-prev-frame.prod-card-th-prev
+										+icon('chevron-left')
+									.swiper-next-frame.prod-card-th-next
+										+icon('chevron-right')
+							.col-md-8
+								+e.slider
+									.swiper-container.prod-card-slider-js
+										.swiper-wrapper
+											+prodCardSlide(1)
+											+prodCardSlide(2)
+											+prodCardSlide(3)
+											+prodCardSlide(2)
+											+prodCardSlide(1)
+											+prodCardSlide(3)
+									.swiper-pagination.d-md-none
 					+prodCardPills('d-none d-lg-block')
-				.col-lg-6
+				.col-lg-6.col-xl
 					+b.prod-chars
 						+e.top-items
-							+charsItem('Артикул:')
-								+e.article-txt XR34760009854
 							+charsItem('Цвет:')
 								+e.color-list
 									+colorRadioItem('#fb4f4f')
@@ -51,45 +78,52 @@ mixin sProdCard()
 							+charCheckboxItem('garanty', '999 грн')
 								| 1 х Гарантия от магазина на срок 12 месяцев для Iphone
 						+e.buy-strip
-							+e.buy-strip-price 27 990 грн
-							+e.A.to-bag-btn(href='#')
-								+icon('shopping-bag')
-								span В корзину
-							+e.A.click-btn(href='#') Купить в 1 клик
+							+e.priceWrap.row 
+								.col-auto
+									+e.buy-strip-price 27 990 грн
+								.col-auto
+									+e.buy-strip-old 27 990 грн
+							+e.btnWrap.row 
+								.col
+									+e.A.to-bag-btn(href='#')
+										.d-none.d-sm-block
+											+icon('shopping-bag')
+											span Добавить в корзину
+										span.d-sm-none Купить
+								.col
+									+e.A.click-btn(href='#') Быстрый заказ
+							+e.trade-in.link-modal(href="#modal-trade-in") Экономия в 
+								span Trade-in
+						+e.pick-up 
+							span Забрать в городе: 
+							+input('Москва','select')
 						+e.lower-pills
-							+prodCharLowerItem(1, 'Доставка')
-								p У&nbsp;відділення Нової Пошти вашого міста.
-								p Адресна доставка кур&rsquo;єром Нової Пошти.
-								p
-									| Адресна доставка кур&rsquo;єром по&nbsp;місту (вартість та&nbsp;умови
-									br
-									| доставки уточнюйте при оформленні замовлення)
-							+prodCharLowerItem(2, 'Оплата')
-								p Онлайн оплата банківською картою онлайн.
-								p Накладеним платижем при доставці Нова Пошта.
-								p Готівкою при отриманні.
-							+prodCharLowerItem(3, 'Гарантия')
-								p
-									| Надаємо гарантійний термін 3 місяці від магазину (включно
-									|
-									br
-									| 12 місяців від виробника).
-								p
-									| Гарантійне обслуговування виконується виключно
-									|
-									br
-									| авторизованими сервісними центрами Apple.
-					+prodCardPills('d-lg-none')
-	// end sProdCard
+							+prodCharLowerItem('1.png')
+								+e.pill-title-wrap
+									+e.pill-title Доставка с Яндекс Go за 24 часа
+								+e.pill-descr При оплате на сайте, при заказе до 20:00
+							+prodCharLowerItem('2.png')
+								+e.pill-title-wrap
+									+e.pill-title Стандартная доставка
+								+e.pill-descr Послезавтра, в воскресенье, 13 декабря
+							+prodCharLowerItem('3.png')
+								+e.pill-title-wrap
+									+e.pill-title Забрать в магазине
+								+e.pill-descr 2 магазина
+						+e.guarantee Гарантия 12 месяцев, обмен/возврат товара в течении 14 дней
+					//- +prodCardPills('d-lg-none')
+					// end sProdCard
 mixin prodCharLowerItem(imgNum, pillName)
 	+e.lower-pill
 		+e.lower-pill-img
 			+e.inner-img-cont
-				img.lazy(src="#" data-src=`img/svg/prod-card-lower-pill-${imgNum}.svg` alt="")
-		+e.pill-name
-			+e.pill-name-inner=pillName
+				img.res-i.lazy(src="#" data-src=`img/@2x/prod-card-delivery-${imgNum}` alt="")
 		+e.pill-txt
 			block
+		+e.pill-price
+			+e.check
+				+icon('check-transparent')
+				| Бесплатно
 mixin charCheckboxItem(name, price)
 	+e.chb-item
 		label
@@ -122,28 +156,29 @@ mixin prodCardPills(PillsClass)
 	+b.prodCard-pills(class=PillsClass)
 		+e.row.row
 			+prodCardPill(1)
-				| Крупнейшая сеть Apple Premium Reseller в&nbsp;мире
+				+e.title Размер экрана
+				+e.subtitle Безрамочный дисплей, 6,1’’
 			+prodCardPill(2)
-				| Возможность
-				|
-				br
-				| росширения
-				|
-				br
-				| гарантийного срока
+				+e.title Основная камера
+				+e.subtitle 12,0 Мп + 12,0 Мп
 			+prodCardPill(3)
-				| Возврат товара
-				|
-				br
-				| в&nbsp;течении 14&nbsp;дней
+				+e.title Процессор
+				+e.subtitle Apple A14 Bionic
 			+prodCardPill(4)
-				| Авторизированные сервисные центры Apple
+				+e.title Количество ядер
+				+e.subtitle 6 ядер
+			+prodCardPill(5)
+				+e.title Фронтальная камера
+				+e.subtitle 12,0 Мп
+			+prodCardPill(6)
+				+e.title Емкость аккумулятора
+				+e.subtitle 2 200 мА
 
 mixin prodCardPill(imgNum)
-	.col-xl-6
+	.col-lg-6
 		+e.pill
 			+e.img
-				img.lazy(src="#" data-src=`img/@2x/prod-card-pill-${imgNum}.png` alt="")
+				img.lazy(src="#" data-src=`img/@2x/prod-descr-${imgNum}.png` alt="")
 			+e.txt
 				block
 

@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sPopularPosition/_sPopularPosition.pug
+include ../blocks/sDescr/_sDescr.pug
+include ../blocks/sGeneralCatalog/_sGeneralCatalog.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent
+	+mob-mnu()
+	+header() 
+		+topLine()
+		//- +top-nav()
+	+b.pageHead
+		+e.wrap
+			.container
+				+breadcrumb('', 'iphone')
+		.container
+			.row
+				.col-lg
+					h1= title
+
+
+	+sGeneralCatalog
+	//- +sForm()
+	//- +sContact()
+	//- +sContent()
+	+sPopularPosition()
+	+sDescr()
+	+sForm()
+	+footer()
+
+

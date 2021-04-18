@@ -1,0 +1,69 @@
+mixin sGeneralCatalog()
+	// start sGeneralCatalog
+	+b.sGeneralCatalog.section#sGeneralCatalog&attributes(attributes)
+		.container
+			.row
+				mixin item(img, title)
+					+e.col.col-6.col-lg-3
+						+e.item
+							+e.mainCard(href="#")
+								+e.imgWrap
+									+pic(`catalog-${img}.png`, '', 'lazy','')
+								+e.title= title 
+							ul.d-none.d-lg-block 
+								block
+				+item('1','iPhone')
+					li.d-block.tdn: a(href="#") iPhone
+					li: a(href="#") iPhone 12 Pro
+					li: a(href="#") iPhone 12
+					li: a(href="#") iPhone 11 Pro
+					li: a(href="#") iPhone 11
+					li: a(href="#") iPhone SE
+					li: a(href="#") iPhone XS
+					li: a(href="#") iPhone XR
+					li: a(href="#") iPhone X
+					li: a(href="#") iPhone 8
+					li: a(href="#") iPhone 7
+					li: a(href="#") iPhone 6s
+					li: a(href="#") iPhone 6
+					li: a(href="#") iPhone SE (1-го поколения)
+
+				+item('2','iPad')
+					li: a(href="#") iPad Pro
+					li: a(href="#") iPad Air
+					li: a(href="#") iPad
+					li: a(href="#") iPad mini
+
+				+item('3','Mac')
+					li: a(href="#") Ноутбуки
+					li: a(href="#") iMac
+					li: a(href="#") Mac Pro
+					li: a(href="#") Mac mini
+					li: a(href="#") Мониторы
+
+				+item('4','Watch')
+					li: a(href="#") Watch Series 6
+					li: a(href="#") Watch SE
+					li: a(href="#") Watch Series 5
+					li: a(href="#") Watch Series 4
+					li: a(href="#") Watch Series 3
+				+item('5','Аксессуары')
+					li: a(href="#") Для Mac
+					li: a(href="#") Для iPhone
+					li: a(href="#") Для Watch
+					li: a(href="#") Для iPad
+					li: a(href="#") Для iPod
+					li: a(href="#") AirPods
+					li: a(href="#") Наушники
+					li: a(href="#") Акустика
+				+item('6','Гаджеты')
+					li: a(href="#") Apple TV 
+					li: a(href="#") iPod
+					li: a(href="#") Квадрокоптеры
+					li: a(href="#") Экшн-камеры
+					li: a(href="#") Роботы и игрушки
+					li: a(href="#") Фото и видео
+					li: a(href="#") Здоровье и спорт
+					li: a(href="#") Дом
+					li: a(href="#") Электротранспорт
+	// end sGeneralCatalog

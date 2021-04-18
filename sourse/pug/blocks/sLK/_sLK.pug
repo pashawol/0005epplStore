@@ -242,3 +242,100 @@ mixin sLK-5()
 							.col-6.col-lg-4
 								+productItem('3','Apple iMac 27" 8 Core i9 3,6 ГГц, 64 ГБ, 2 ТБ SSD, RPro','447 990 р ')
 	// end sLK
+
+
+mixin sLK-6()
+	// start sLK
+	+b.SECTION.sLK.section#sLK&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-3
+					+b.section-title--bonuses.d-lg-none
+						h1 Бонусные балы
+						+e.text В данный момент у вас нет бонусов
+					+b.caption
+						+e.btn(href="#") Профиль
+						+e.btn(href="#") Адрес доставки
+						+e.btn.active(href="#") Бонусные балы
+						+e.btn(href="#") Мои заказы
+						+e.btn(href="#") Избранное / Возврат
+					+b.levels 
+						+e.title Уровни:
+						+e.item.active Базовый  (1%) 1 грн
+						+e.item Серебрянный (2%) 10 000 грн
+						+e.item Золотой (3%) 20 000 грн
+						+e.item Платиновый (5%) 50 000 грн
+						+e.item Брилиантовый (7%) 100 000 грн
+						+e.item Алмазный (10%) 150 000 грн
+
+
+				.col
+					+b.section-title--bonusesNew.d-none.d-lg-block
+						h1 Бонусные балы
+					+e.bonusesRow.row 
+						.col-md-6 
+							+e.item 
+								+e.itemTitle Текущий процент начисления бонусов:
+								+e.row.row.align-items-end
+									.col
+										+e.itemNum 5 
+											span %
+									.col-auto 
+										+b.hint
+											+e.main ?
+											+e.hidden Процент начисления бонусов при покупке неакционных товаров
+						.col-md-6 
+							+e.item 
+								+e.itemTitle На балансе:
+								+e.row.row.align-items-end
+									.col
+										+e.itemNum 0 
+											span.sm бонусов
+									.col-auto 
+										+b.hint
+											+e.main ?
+											+e.hidden Процент начисления бонусов при покупке неакционных товаров
+					+e.item--progress
+						+e.itemHead
+
+							mixin row(t,pr)
+								.row 
+									.col-md-5
+										.text-secondary= t
+									.col-auto
+										strong= pr
+							+row('До 7% осталось:','10 000 грн')
+							+row('Совершено покупок на сумму:','0 грн')
+						+e.giftRow.row 
+							.col 
+								+lkProgres
+							.col.col-md-12.align-self-end
+								+e.bonusesWrap
+									+e.bonusesMain
+										+e.bonusesTittle Подарок на&nbsp;ваш день рождения
+										+e.bonusesNum 200
+											span бонусов
+										+e.bonusesImgBg
+											img(src="img/@2x/bonuses-bg.png" alt="")
+
+
+mixin lkProgres
+	+e.progressWrap
+		.row 
+			.col-auto.col-md-12.oreder-md-last
+				.progress
+					.progress-bar(role='progressbar' style='width: 10%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='10')
+			.col.col-md-12.order-md-first
+				.row 
+					.col-md 
+						+e.percent.active 5%
+					.col-md 
+						+e.percent 7%
+					.col-md 
+						+e.percent 10%
+					.col-md 
+						+e.percent 12%
+					.col-md 
+						+e.percent 15%
+					.col-auto 
+						+e.percent--lastItem 17%

@@ -5,7 +5,7 @@ mixin topLine()
 			.row
 				.col-lg-auto.col 
 					+e.logo(href="/")
-						img(src="img/@2x/logo-top.png", alt="")
+						img(src="img/@2x/logo-top.png" alt="")
 				.col.d-none.d-lg-block
 					ul
 						li: a(href="#") Каталог
@@ -119,6 +119,14 @@ mixin topLine()
 											td
 												+e.btnCancel(type="submit")
 													+icon('cancel')
+									.topLine__basketFoot.pb-0.flex-column.free_shippingCart
+										.d-flex.justify-content-between.w-100.sum_free_shippingText
+											span До безкоштовної доставки залишилося
+											span.sum_free_shipping 1 500 грн
+										.w-100
+											.progress
+												.progress-bar(role='progressbar' style='width: 24%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+
 									+e.basketFoot
 										+e.basketBTN(href="#") Оформить заказ
 										+e.totalPrice 

@@ -171,7 +171,8 @@
 		}
 	}
 
-	&__proceed, &__toBasket {
+	&__proceed,
+	&__toBasket {
 		@extend .btn;
 		min-width: 130px;
 		@include media-breakpoint-down(md) {
@@ -205,8 +206,145 @@
 		font-weight: 600;
 		margin-bottom: 20px;
 	}
+	.form-wrap {
+		&__lightBlock {
+			margin-bottom: rem(20);
+			background-color: $light;
+			padding: rem(14) rem(10);
+			@include media-breakpoint-up(sm) {
+				padding: rem(30);
+			}
+		}
 
+		&__trade {
+			@extend .mono;
+			font-weight: 700;
+			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	.tabs {
+		&__caption {
+			display: flex;
+			flex-wrap: wrap;
+			@include roww(15px, m);
+			padding-bottom: rem(20);
+		}
+		&__btn {
+			background-color: transparent;
+			@extend .mono;
+			border-bottom: solid 1px transparent;
+			font-weight: 700;
+			&.active {
+				border-bottom-color: $primary;
+			}
+		}
+		&__item {
+		}
+		&__content {
+		}
 
+		&__item {
+			border: none;
+			background-color: transparent;
+			display: block;
+			padding: 0;
+			line-height: 1.5;
+			letter-spacing: 0.75px;
+		}
+	}
+
+	.btn-primary {
+		color: #fff;
+	}
+
+	.prod-chars {
+		padding-top: rem(18);
+
+		&__item {
+			margin-bottom: rem(18);
+			@include media-breakpoint-down(sm) {
+				display: block;
+			}
+		}
+
+		&__title {
+			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+}
+#modal-trade-in {
+	max-width: 569px;
+	.accardion-js {
+		&:before {
+			left: 93%;
+			transform: rotate(0deg);
+		}
+		&.active {
+			&:before {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.form-wrap {
+		&__subtitle {
+			font-size: $small;
+			padding-bottom: rem(34);
+		}
+
+		&__input {
+			@include media-breakpoint-up(sm) {
+				height: 48px;
+			}
+		}
+
+		&__btn {
+			display: block;
+			min-width: auto;
+			width: 100%;
+		}
+	}
+}
+
+.modalDropdown {
+	background-color: #fff;
+	position: relative;
+
+	&__head {
+		cursor: pointer;
+		border-radius: 4px;
+		padding: rem(12) rem(15);
+		@include media-breakpoint-up(sm) {
+			padding: rem(17) rem(19);
+		}
+		border: 1px solid #c7c7c7;
+		@include mt;
+		&.active {
+			box-shadow: 0 11px 24px rgba(85, 85, 85, 0.22);
+			border-radius: 4px 4px 0 0;
+			border-color: transparent;
+		}
+	}
+
+	&__hidden {
+		padding: rem(5) rem(15) rem(20) rem(15);
+		@include media-breakpoint-up(sm) {
+			padding: rem(10) rem(15) rem(20) rem(20);
+		}
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #fff;
+		z-index: 2;
+		display: none;
+		box-shadow: 0 24px 24px rgba(85, 85, 85, 0.22);
+		border-radius: 0 0 4px 4px;
+		width: 100%;
+	}
 }
 .fancybox-content {
 	@include media-breakpoint-down(sm) {
@@ -227,7 +365,6 @@
 		}
 	}
 
-	
 	button.btn {
 		@extend .btn;
 		@extend .btn-outline-dark;
@@ -294,7 +431,7 @@ a {
 	top: 0;
 	text-decoration: none;
 	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
+	opacity: 0.65; // padding: 0 0 18px 10px;
 	// color: #fff;
 	font-style: normal;
 	font-size: 28px;
@@ -345,39 +482,54 @@ a {
 	}
 }
 
+//
+@include media-breakpoint-up(xl) {
+}
 
-// 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(xs) {
+}
 
-@include media-breakpoint-up(xs) {}
+//
+@include media-breakpoint-between(md, xl) {
+}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-// 
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {
+}
 
-@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {
+}
 
-@include media-breakpoint-only(xl) {}
+//
+@include media-breakpoint-down(xl) {
+}
 
-// 
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {
+}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(md) {
+}
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(sm) {
+}
 
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+@include media-breakpoint-down(xs) {
+}
