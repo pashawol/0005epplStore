@@ -3,7 +3,6 @@
 1. <https://pashawol.github.io/0005epplStore/public/00-modal.html>
 1. <https://pashawol.github.io/0005epplStore/public/>
 1. <https://pashawol.github.io/0005epplStore/public/02-garanty.html>
-1. <https://pashawol.github.io/0005epplStore/public/03-product-card.html>
 1. <https://pashawol.github.io/0005epplStore/public/03-stock-news.html>
 1. <https://pashawol.github.io/0005epplStore/public/04-catalog.html>
 1. <https://pashawol.github.io/0005epplStore/public/05-news.html>
@@ -15,6 +14,10 @@
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-5.html> Избранное
 1. <https://pashawol.github.io/0005epplStore/public/09-basket.html>
 1. <https://pashawol.github.io/0005epplStore/public/10-simplecheckout.html>
+
+new
+
+1. <https://pashawol.github.io/0005epplStore/public/03-product-card.html>
 1. <https://pashawol.github.io/0005epplStore/public/11-bonuses.html>
 1. <https://pashawol.github.io/0005epplStore/public/12-catalog-new.html>
 1. <https://pashawol.github.io/0005epplStore/public/07-lk-6.html> Бонусные балы новые
