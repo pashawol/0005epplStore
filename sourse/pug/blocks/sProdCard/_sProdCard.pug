@@ -72,17 +72,21 @@ mixin sProdCard()
 									+memoryRadioItem('64 ГБ')
 									+memoryRadioItem('128 ГБ')(checked)
 									+memoryRadioItem('256 ГБ')
-						+e.chb-items
-							+charCheckboxItem('glass', '249 грн')
-								| 1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)
-							+charCheckboxItem('garanty', '999 грн')
-								| 1 х Гарантия от магазина на срок 12 месяцев для Iphone
+						+e.accardionWrap
+							+e.accardionHead.accardion-js.d-md-none Выберите услуги
+							+e.chb-items.accardion-toggle-js
+								+charCheckboxItem('glass', '249 грн')
+									| 1 х Защитное стекло Sonnex для Iphone 11 Full Stick Screen 0,24 mm (Black)
+								+charCheckboxItem('garanty', '999 грн')
+									| 1 х Гарантия от магазина на срок 12 месяцев для Iphone
 						+e.buy-strip
 							+e.priceWrap.row 
 								.col-auto
 									+e.buy-strip-price 27 990 грн
 								.col-auto
 									+e.buy-strip-old 27 990 грн
+								.col.d-md-none
+									+e.buy-strip-bonuses 456 Бонусов
 							+e.btnWrap.row 
 								.col
 									+e.A.to-bag-btn(href='#')
