@@ -1,21 +1,17 @@
-mixin bannerSled()
+mixin bannerSled(logo,title,price,img)
 	.swiper-slide
 		+e.slideWrap&attributes(attributes)
 			.container
 				.row
 					+e.picCol.col-lg-6.order-lg-last
-						picture
-							source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/banner.webp` type="image/webp")
-							img.swiper-lazy(src="#" data-src=`img/@2x/banner.png`, alt="")
+						+pic(`banner-${img}.png`,'',0)
 					+e.col.col-lg
-						picture
-							source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/iphoneSE.webp` type="image/webp")
-							img.swiper-lazy(src="#" data-src=`img/@2x/iphoneSE.png`, alt="")
+						+pic(`banner-logo-${logo}.png`,'',0).pic-banner-logo
 						+b.section-title
-							.h1 Все, как вы любите
-						+e.price от 39 990 р
-							+e.installmentPlan.d-none.d-lg-block Доступен в рассрочку
-						+e.btn(href="#") Купить
+							.h1!=title
+						+e.price!=`від ${price} грн`
+							+e.installmentPlan.d-none.d-lg-block Оплата частинами
+						+e.btn(href="#") Купити
 
 mixin categorySlide(i,t,p)
 	.swiper-slide
@@ -33,10 +29,14 @@ mixin headerBlock()
 		+b.bannerSleder
 			.swiper-container.bannerSleder-js
 				.swiper-wrapper
-					+bannerSled()(style="background-color: #e6e6e6")
-					+bannerSled()(style="background-color: #e6e6e6")
-					+bannerSled()(style="background-color: #e6e6e6")
-					+bannerSled()(style="background-color: #e6e6e6")
+					+bannerSled(1,`Покаже все, на&nbsp;що&nbsp;здатен`,`6 419`,1)
+					+bannerSled(2,`Все в&nbsp;найдосконалішому вигляді`,`9 499`,2)
+					+bannerSled(3,`Швидкість в усій красі`,`11 899`,3)
+					+bannerSled(4,`Виділятися`,`299`,4)
+					+bannerSled(5,`Знайомтесь`,`20 999`,5)
+					+bannerSled(6,`Потужно. Яскраво.<br />Чудово.`,`9 499`,6)
+					+bannerSled(7,`Який iPhone саме<br />для Вас?`,`11 899`,7)
+					+bannerSled(8,`Такого Ви&nbsp;не&nbsp;чули<br />Це&nbsp;магія`,`3 999`,8)
 				.swiper-pagination
 		+b.sliderCategory
 			.swiper-container.sliderCategory-js
